@@ -1,0 +1,57 @@
+<aside class="sidebar">
+
+  <div class="side-block">
+    <h3 class="side-title"><span class="icon">▦</span>Categories</h3>
+    <div class="cat-list">
+      <div class="cat-group-label">Microsoft</div>
+      {% for cat in ms_categories %}
+      <a href="#" class="cat-list-item">
+        <span class="cat-dot" style="background:{{ cat|category_dot }}"></span>
+        <span class="cat-name">{{ cat }}</span>
+        <span class="cat-count">{{ category_counts[cat] }}</span>
+      </a>
+      {% endfor %}
+      <div class="cat-group-label">Partner</div>
+      {% for cat in partner_categories %}
+      <a href="#" class="cat-list-item">
+        <span class="cat-dot" style="background:{{ cat|category_dot }}"></span>
+        <span class="cat-name">{{ cat }}</span>
+        <span class="cat-count">{{ category_counts[cat] }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if trending %}
+  <div class="side-block">
+    <h3 class="side-title"><span class="icon">▲</span>Trending Now</h3>
+    {% for t in trending %}
+    <div class="trending-item">
+      <span class="rank">{{ loop.index }}</span>
+      <div class="body">
+        {{ t.name }}
+        <div class="meta">{{ t.category }} · {{ t.mentions }} mentions</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if sources %}
+  <div class="side-block">
+    <h3 class="side-title"><span class="icon">📰</span>Sources Today</h3>
+    <div class="source-list">
+      {% for s in sources %}
+      <div class="source-list-item"><span>{{ s.domain }}</span><span class="count">{{ s.count }}</span></div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="newsletter">
+    <h3 class="newsletter-title">Foundry Weekly</h3>
+    <p class="newsletter-desc">週次の深掘り解説をニュースレターで。Microsoft AI の最重要トピックを日本語で。</p>
+    <a href="https://note.com/daka1" target="_blank" rel="noopener" class="newsletter-btn">Subscribe →</a>
+  </div>
+
+</aside>

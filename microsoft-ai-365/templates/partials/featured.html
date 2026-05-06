@@ -1,0 +1,27 @@
+<article class="featured">
+  <div class="featured-kicker">TOP STORY · {{ featured.category|upper }} · {{ now_jst.strftime('%d %b %Y')|upper }}</div>
+  <h1 class="featured-headline"><a href="{{ featured.url }}" target="_blank" rel="noopener">{{ featured.headline_ja or featured.title }}</a></h1>
+
+  <div class="featured-section">
+    <h3>📌 概要</h3>
+    <p>{{ featured.overview }}</p>
+  </div>
+
+  <div class="featured-section">
+    <h3>🆕 What's New / Update</h3>
+    <p>{{ featured.whats_new }}</p>
+  </div>
+
+  <div class="featured-section">
+    <h3>💡 Key Takeaway</h3>
+    <p>{{ featured.key_takeaway }}</p>
+  </div>
+
+  <div class="featured-meta">
+    <span>📰 {{ featured.domain }}</span>
+    <span>📅 {{ featured._relative_time if featured._relative_time is defined else featured.published[:10] }}</span>
+    {% if featured.tags %}
+    <span>🏷 {{ featured.tags|join(' · ') }}</span>
+    {% endif %}
+  </div>
+</article>

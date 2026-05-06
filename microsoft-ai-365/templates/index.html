@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ site_title }} — {{ site_tagline }}</title>
+<meta name="description" content="Microsoft AI、Azure、Copilot、Foundry の最新アップデートを毎日キュレーション。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-theme="light">
+
+{% include "partials/header.html" %}
+
+<div class="subbar">
+  <div class="subbar-inner">
+    <div class="subbar-stats">
+      <span><span class="live-dot"></span><b>Live</b></span>
+      <span><b>{{ total_today }}</b> stories today</span>
+      <span><b>{{ n_sources }}</b> sources</span>
+      <span><b>{{ total_this_month }}</b> this month</span>
+      <span>Updated <b>{{ update_time_jst }}</b></span>
+    </div>
+    <div>Curated by GPT-5.4 mini · {{ site_author }}</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <main>
+
+    {# =============== ZONE 1: Microsoft =============== #}
+    <div class="zone-banner">
+      <div class="zone-banner-icon">
+        <span class="brand-logo" style="width:28px;height:28px;">
+          <span></span><span></span><span></span><span></span>
+        </span>
+      </div>
+      <div class="zone-banner-text">
+        <div class="zone-banner-title">Microsoft AI Updates</div>
+        <div class="zone-banner-subtitle">9 categories · Microsoft 公式ブログ・Tech Community・Dev Blog から</div>
+      </div>
+      <div class="zone-banner-counts"><b>{{ total_ms }}</b> stories</div>
+    </div>
+
+    {% if featured %}
+    {% include "partials/featured.html" %}
+    {% endif %}
+
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title"><span class="icon">▎</span>Today's Stories</h2>
+        <span class="section-meta">{{ today_str }} · {{ ms_articles|length }} items</span>
+      </div>
+      {% for art in ms_articles %}
+        {% include "partials/story.html" %}
+      {% else %}
+        <p class="empty-state">本日の Microsoft 関連の新着記事はまだありません。</p>
+      {% endfor %}
+    </section>
+
+    {# =============== ZONE 2: Partner =============== #}
+    {% if openai_articles or anthropic_articles %}
+    <div class="zone-divider">
+      <span class="zone-divider-text">↓ Partner Updates ↓</span>
+    </div>
+
+    <div class="zone-banner partner-zone">
+      <div class="zone-banner-icon" style="font-size:24px;">🤝</div>
+      <div class="zone-banner-text">
+        <div class="zone-banner-title">Partner Updates</div>
+        <div class="zone-banner-subtitle">Microsoft 戦略パートナーの公式アップデート</div>
+      </div>
+      <div class="zone-banner-counts"><b>{{ total_openai + total_anthropic }}</b> stories</div>
+    </div>
+
+    {% if openai_articles %}
+    <section class="section">
+      <div class="section-head partner-head">
+        <h2 class="section-title"><span class="icon">●</span>OpenAI</h2>
+        <span class="section-meta">openai.com/news · {{ openai_articles|length }} items</span>
+      </div>
+      {% for art in openai_articles %}
+        {% include "partials/story.html" %}
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    {% if anthropic_articles %}
+    <section class="section">
+      <div class="section-head anthropic-head">
+        <h2 class="section-title"><span class="icon">◆</span>Anthropic</h2>
+        <span class="section-meta">anthropic.com/news · {{ anthropic_articles|length }} items</span>
+      </div>
+      {% for art in anthropic_articles %}
+        {% include "partials/story.html" %}
+      {% endfor %}
+    </section>
+    {% endif %}
+    {% endif %}
+
+  </main>
+
+  {% include "partials/sidebar.html" %}
+
+</div>
+
+{% include "partials/footer.html" %}
+
+<script src="assets/app.js"></script>
+</body>
+</html>

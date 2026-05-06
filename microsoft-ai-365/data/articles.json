@@ -1,0 +1,62 @@
+[
+  {
+    "url": "https://techcommunity.microsoft.com/example/foundry-ga",
+    "title": "Microsoft Foundry Agent Service、Observability と Network Isolation が GA",
+    "published": "2026-05-06T05:00:00+00:00",
+    "source_name": "Tech Community - Azure AI",
+    "source_domain": "techcommunity.microsoft.com",
+    "category": "Microsoft Foundry",
+    "is_partner": false,
+    "overview": "Microsoft Foundry Agent Service は2025年10月に Preview として公開された Microsoft のマネージドエージェント基盤で、エンタープライズ向けの AI エージェント開発・運用を統合的に支える製品。今回 GA に伴い、エンタープライズ採用に必要なObservability および Private Networking 機能群が一斉に解禁された。",
+    "whats_new": "今回の発表で Observability と Private Networking の一般提供（GA）が宣言された。Hub-Project モデルに完全対応し、VNet 統合および Network Security Perimeter 経由でのプライベート接続が可能に。エージェントの実行トレース、トークン使用量、レイテンシをネイティブに可視化できる新ダッシュボードも搭載。日本リージョン（東京・大阪）でも同時 GA となり、データ常駐性要件を満たした本番運用が可能となった。APIM AI Gateway との統合も強化され、レート制限・監査ログがマルチプロバイダで統一管理できる。",
+    "key_takeaway": "金融・公共セクターのデータ常駐要件を満たせるため、本番採用が現実的に。特に既存の Foundry Classic 利用顧客は2026年内の新ポータル移行検討が必要。日本国内のメガバンクや官公庁案件で PoC を進めている顧客は、この GA を契機に本格展開フェーズに入れる。Observability の標準実装により、エージェント運用の可観測性確保コストが大幅に下がる点も重要。",
+    "tags": ["Foundry", "Agent Service", "VNet", "GA", "Observability"],
+    "processed_at": "2026-05-06T07:00:00+00:00",
+    "tokens_used": 2845
+  },
+  {
+    "url": "https://techcommunity.microsoft.com/example/m365-cowork",
+    "title": "Microsoft 365 Copilot — Cowork のカスタムスキル SKILL.md 仕様が標準化",
+    "published": "2026-05-06T03:00:00+00:00",
+    "source_name": "Tech Community - M365",
+    "source_domain": "techcommunity.microsoft.com",
+    "category": "M365 Copilot",
+    "is_partner": false,
+    "overview": "M365 Copilot Cowork は、業務担当者が独自のスキルをノーコードで構築・共有できる新しいエージェント基盤。今回、カスタムスキルの定義フォーマット SKILL.md が正式仕様化された。",
+    "whats_new": "OneDrive 配置のスキル定義フォーマット SKILL.md が標準仕様としてリリース。Markdown ベースで記述でき、メタデータ・パラメータ定義・実行手順を統合的に記述可能。Claude Cowork との互換性も担保され、skill ポータビリティが大幅に向上した。社内のスキルマーケットプレイスとして共有・配布できる仕組みも提供。",
+    "key_takeaway": "業務部門が IT 部門に依存せずスキルを開発・運用できる環境が整い、エンタープライズの業務 AI 民主化が一段進む。skill の社内流通を促進するガバナンス設計が次の検討課題に。",
+    "tags": ["M365 Copilot", "Cowork", "SKILL.md", "OneDrive"],
+    "processed_at": "2026-05-06T07:00:00+00:00",
+    "tokens_used": 2103
+  },
+  {
+    "url": "https://anthropic.com/news/claude-opus-47-azure",
+    "title": "Anthropic Claude Opus 4.7 が Microsoft Foundry でサポート開始",
+    "published": "2026-05-06T01:00:00+00:00",
+    "source_name": "Anthropic News",
+    "source_domain": "anthropic.com",
+    "category": "Anthropic",
+    "is_partner": true,
+    "overview": "Anthropic の最上位モデル Claude Opus 4.7 が Microsoft Foundry の Model Catalog に追加され、エンタープライズユーザーが Azure 環境内で利用可能となった。",
+    "whats_new": "Claude 4.7 ファミリーの最上位モデル Opus 4.7 が Foundry Model Catalog で GA。APIM AI Gateway 経由でのレート制限・監査ログ・セマンティックキャッシュ機能も同時対応。日本リージョンでの提供は段階的に拡大予定。",
+    "key_takeaway": "Microsoft 中心のエンタープライズアーキテクチャを保ったまま、最高峰の推論性能を持つ Claude を統合可能に。マルチモデル戦略を取る顧客にとって、Foundry の Model Catalog が事実上のプロバイダ統合基盤として機能し始めた象徴的な動き。",
+    "tags": ["Claude", "Opus 4.7", "Foundry", "Model Catalog"],
+    "processed_at": "2026-05-06T07:00:00+00:00",
+    "tokens_used": 1892
+  },
+  {
+    "url": "https://openai.com/news/codex-cli-foundry",
+    "title": "OpenAI Codex CLI — VS Code 拡張で Microsoft Foundry とシームレス連携",
+    "published": "2026-05-06T00:00:00+00:00",
+    "source_name": "OpenAI News",
+    "source_domain": "openai.com",
+    "category": "OpenAI",
+    "is_partner": true,
+    "overview": "OpenAI Codex CLI に Microsoft Foundry Agent Service との直接連携機能が追加され、開発者は VS Code から Foundry 環境のエージェントを呼び出せるようになった。",
+    "whats_new": "Codex CLI の VS Code 拡張で、Foundry Agent Service へのネイティブ接続をサポート。コード生成タスクをエージェント化し、CI/CD パイプラインに組み込むサンプルも公開された。GitHub Copilot との併用パターンも公式ガイドで紹介。",
+    "key_takeaway": "Microsoft 環境内で OpenAI ツールチェインを統合的に運用可能になり、開発者ワークフローの選択肢が広がる。エンタープライズ開発組織は Codex CLI と GitHub Copilot を併用するハイブリッド構成を検討する価値がある。",
+    "tags": ["Codex", "VS Code", "Foundry", "Agent Service"],
+    "processed_at": "2026-05-06T07:00:00+00:00",
+    "tokens_used": 1734
+  }
+]
