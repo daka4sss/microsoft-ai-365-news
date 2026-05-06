@@ -2,9 +2,13 @@ name: Daily Update
 
 on:
   schedule:
-    # JST 07:00 = UTC 22:00 (previous day)
+    # JST 07:00 = UTC 22:00 (previous day) — フル更新（毎朝の定期）
     - cron: "0 22 * * *"
+    # 3時間ごとに差分取得（新着ゼロなら LLM 課金なしで早期終了）
+    - cron: "0 */3 * * *"
   workflow_dispatch:  # Allow manual trigger from Actions tab
+  repository_dispatch:
+    types: [rss-updated]  # 外部（IFTTT/Zapier等）からの速報トリガ用
 
 permissions:
   contents: write  # Required to commit data/ and docs/ back to the repo

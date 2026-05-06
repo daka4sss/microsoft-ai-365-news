@@ -151,7 +151,7 @@ RSS_SOURCES = [
 # ============================================================
 
 # How many days back to keep on the front page
-DAYS_ON_FRONTPAGE = 1
+DAYS_ON_FRONTPAGE = 30
 
 # How many days of articles to keep total (older are pruned)
 ARCHIVE_RETENTION_DAYS = 90

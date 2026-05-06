@@ -56,10 +56,14 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 # ============================================================
 def make_client() -> AsyncOpenAI:
     validate_env()
-    token_provider = get_bearer_token_provider(
+    sync_token_provider = get_bearer_token_provider(
         DefaultAzureCredential(),
         "https://cognitiveservices.azure.com/.default",
     )
+
+    async def token_provider() -> str:
+        return sync_token_provider()
+
     return AsyncOpenAI(
         api_key=token_provider,
         base_url=AZURE_OPENAI_BASE_URL,
