@@ -29,7 +29,7 @@
 
 <div class="cat-nav-wrap">
   <nav class="cat-nav">
-    <a href="#" class="active" data-filter="all">All <span class="num">121</span></a>
+    <a href="#" class="active" data-filter="all">All <span class="num">123</span></a>
     <span class="sep"></span>
     <span class="cat-nav-section-label ms">Microsoft</span>
     <a href="#" data-filter="Microsoft Overview">Microsoft Overview <span class="num">4</span></a>
@@ -37,8 +37,8 @@
     <a href="#" data-filter="Copilot Studio">Copilot Studio <span class="num">4</span></a>
     <a href="#" data-filter="Microsoft Foundry">Microsoft Foundry <span class="num">29</span></a>
     <a href="#" data-filter="Azure AI Infra">Azure AI Infra <span class="num">7</span></a>
-    <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">21</span></a>
-    <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">9</span></a>
+    <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">22</span></a>
+    <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">10</span></a>
     <a href="#" data-filter="AI Security">AI Security <span class="num">10</span></a>
     <span class="sep"></span>
     <span class="cat-nav-section-label">Partner</span>
@@ -51,10 +51,10 @@
   <div class="subbar-inner">
     <div class="subbar-stats">
       <span><span class="live-dot"></span><b>Live</b></span>
-      <span><b>121</b> stories today</span>
+      <span><b>123</b> stories today</span>
       <span><b>13</b> sources</span>
-      <span><b>121</b> this month</span>
-      <span>Updated <b>04:16 JST</b></span>
+      <span><b>123</b> this month</span>
+      <span>Updated <b>06:50 JST</b></span>
     </div>
     <div>Curated by GPT-5.4 mini · @daka1</div>
   </div>
@@ -74,7 +74,7 @@
         <div class="zone-banner-title">Microsoft AI Updates</div>
         <div class="zone-banner-subtitle">9 categories · Microsoft 公式ブログ・Tech Community・Dev Blog から</div>
       </div>
-      <div class="zone-banner-counts"><b>88</b> stories</div>
+      <div class="zone-banner-counts"><b>90</b> stories</div>
     </div>
 
 <article class="featured" data-category="Microsoft Foundry" data-tags="Microsoft Foundry|IBM Granite 4.1|NVIDIA Nemotron|Qwen3.6-35B-A3B|multimodal" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/now-in-foundry-ibm-granite-4-1-nvidia-nemotron-nano-omni-and/ba-p/4516858">
@@ -98,20 +98,78 @@
 
   <div class="featured-meta">
     <span>📰 techcommunity.microsoft.com</span>
-    <span>📅 2h ago</span>
+    <span>📅 5h ago</span>
     <span>🏷 Microsoft Foundry · IBM Granite 4.1 · NVIDIA Nemotron · Qwen3.6-35B-A3B · multimodal</span>
   </div>
 </article>
     <section class="section">
       <div class="section-head">
         <h2 class="section-title"><span class="icon">▎</span>Today's Stories</h2>
-        <span class="section-meta">Thu, May 07, 2026 · 87 items</span>
+        <span class="section-meta">Thu, May 07, 2026 · 89 items</span>
       </div>
       <div class="stories-grid">
-<article class="story" data-category="Data &amp; Fabric" data-tags="OneLake catalog|Foundry|Microsoft Fabric|GA" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-catalog-is-now-natively-available-in-Foundry-Generally/ba-p/5178376">
+<article class="story" data-category="Dev Tools" data-tags="GitHub Copilot Coding Agent|Agent Mode|Computer Use|GitHub Actions|Trust Layer" data-url="https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic/">
+  <div class="story-meta-top">
+    <span class="tag cat-dev">Dev Tools</span>
+    <span class="story-time">34m ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic/" target="_blank" rel="noopener">GitHub Copilot Coding Agentの検証を非決定的挙動に対応させる方法</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">github.blog — GitHub Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>GitHub Blogの記事で、GitHub Copilot Coding Agent（Agent Mode）やComputer Useのようなエージェント型処理では、同じ成果に至る経路が複数あり、従来の決定的なテスト手法では誤検知が起きやすいと解説している。GitHub ActionsでのCIを前提に、固定手順ではなく成果ベースで検証する考え方へ転換する内容。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>本記事の新規性は、エージェントの検証を「手順の一致」ではなく「本質的な結果の達成」で評価するTrust Layerの考え方を示した点にある。ロード画面の有無や遅延、UI遷移の違いのような偶発要素を許容しつつ、検索結果の表示やデータ保存の成否など必須状態だけを検証対象にする。Assertion-based testing、record-and-replay、visual regression、ML oracleの限界も整理し、非決定的な実行でもCIで扱える検証設計への移行を提案している。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>エージェントを実運用に入れるほど、テストは「同じ操作を再現できるか」ではなく「成功に必要な状態を満たしたか」を問う必要がある。金融・公共・製造のように誤検知が運用負荷や停止につながる現場では、偶発ノイズと重大失敗を切り分ける設計が重要になる。既存CIを置き換えるより、成果ベースの検証層を追加する発想が現実的である。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#GitHub Copilot Coding Agent</span><span class="story-tag-chip">#Agent Mode</span><span class="story-tag-chip">#Computer Use</span><span class="story-tag-chip">#GitHub Actions</span><span class="story-tag-chip">#Trust Layer</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Livy API|High Concurrency|Spark Automation|Preview|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/High-Concurrency-Support-for-the-Fabric-Livy-API-Scalable-Spark/ba-p/5178390">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">39m ago</span>
+    <span class="story-time">50m ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/High-Concurrency-Support-for-the-Fabric-Livy-API-Scalable-Spark/ba-p/5178390" target="_blank" rel="noopener">Fabric Livy API の高同時実行対応をPreview提供</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog が、Fabric の Livy API における高同時実行サポートをPreviewとして紹介した記事です。Spark の自動化やバッチ実行をより多くの要求で安定させるための機能追加で、Fabric 上での Spark ワークロード運用を拡張する内容です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の更新は、Fabric Livy API に高同時実行（High Concurrency）サポートを追加した Preview 提供です。これにより、同時に多数の API 呼び出しが発生する Spark 自動化シナリオでも、よりスケーラブルにジョブを投入・制御できるようになります。記事では、Fabric 上での Spark Automation を大規模環境に対応させるための改善として位置づけられており、従来よりも高い負荷下での運用を想定しています。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Fabric で Spark を API 経由で自動化している企業にとって、同時実行性の向上は運用安定性と処理拡張性に直結します。特に、複数チームや多数のジョブが並列に走る金融・製造・公共のバッチ基盤では、待ち時間や失敗率の抑制に有効です。Preview のため、本番適用前には既存の呼び出しパターンと負荷特性を確認するのが重要です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Fabric Livy API</span><span class="story-tag-chip">#High Concurrency</span><span class="story-tag-chip">#Spark Automation</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Microsoft Fabric</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake catalog|Foundry|Microsoft Fabric|GA" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-catalog-is-now-natively-available-in-Foundry-Generally/ba-p/5178376">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">3h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-catalog-is-now-natively-available-in-Foundry-Generally/ba-p/5178376" target="_blank" rel="noopener">FoundryでOneLake catalogがネイティブ提供に</a>
@@ -140,7 +198,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Microsoft Sentinel|Microsoft Security Copilot|MCP Server|Phishing triage agent|Automatic attack disruption" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/06/microsoft-named-an-overall-leader-in-kuppingercole-analysts-2026-emerging-ai-security-operations-center-soc-report/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">3h ago</span>
+    <span class="story-time">5h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/06/microsoft-named-an-overall-leader-in-kuppingercole-analysts-2026-emerging-ai-security-operations-center-soc-report/" target="_blank" rel="noopener">KuppingerColeでMicrosoftがAI SOCの総合リーダーに</a>
@@ -169,7 +227,7 @@
 </article><article class="story" data-category="AI Security" data-tags="macOS|ClickFix|Infostealer|Gatekeeper|LaunchAgents" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/06/clickfix-campaign-uses-fake-macos-utilities-lures-deliver-infostealers/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">3h ago</span>
+    <span class="story-time">6h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/06/clickfix-campaign-uses-fake-macos-utilities-lures-deliver-infostealers/" target="_blank" rel="noopener">ClickFix型偽 macOS ツールで情報窃取を拡散</a>
@@ -198,7 +256,7 @@
 </article><article class="story" data-category="Microsoft Foundry" data-tags="Microsoft Foundry|GPT-chat-latest|GPT-5.5 Instant|tool calling|RAG" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-openai-s-newest-chat-model-in-microsoft-foundry/ba-p/4516848">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Microsoft Foundry</span>
-    <span class="story-time">21h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-openai-s-newest-chat-model-in-microsoft-foundry/ba-p/4516848" target="_blank" rel="noopener">Microsoft FoundryでOpenAIの最新 chat モデル提供開始</a>
@@ -227,7 +285,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake security|Microsoft Fabric|GA|fine-grained access control|Data Lake" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-security-Generally-Available/ba-p/5176756">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">22h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-security-Generally-Available/ba-p/5176756" target="_blank" rel="noopener">OneLake security が一般提供に到達</a>
@@ -256,7 +314,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|Capacity health|timepoint summary|timepoint detail|chargeback" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Providing-more-insights-amp-tools-Capacity-health-timepoint/ba-p/5176753">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">23h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Providing-more-insights-amp-tools-Capacity-health-timepoint/ba-p/5176753" target="_blank" rel="noopener">Capacity healthとchargebackが一般提供に</a>
@@ -285,7 +343,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake|Dremio|Microsoft Fabric|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Bring-your-Dremio-data-into-OneLake-Preview/ba-p/5171986">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">23h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Bring-your-Dremio-data-into-OneLake-Preview/ba-p/5171986" target="_blank" rel="noopener">Dremio のデータを OneLake に取り込む Preview</a>
@@ -314,7 +372,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|Eventstreams|SQL Operator|リアルタイム処理|Generally Available" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Simplify-Real-Time-Pipelines-with-the-Fabric-Eventstreams-SQL/ba-p/5171983">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">23h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Simplify-Real-Time-Pipelines-with-the-Fabric-Eventstreams-SQL/ba-p/5171983" target="_blank" rel="noopener">Fabric Eventstreams の SQL Operator が一般提供に</a>
@@ -343,7 +401,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="On-premises data gateway|Microsoft Fabric|Data gateway|Fabric Blog" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/On-premises-data-gateway-April-2026-release/ba-p/5171981">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">23h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/On-premises-data-gateway-April-2026-release/ba-p/5171981" target="_blank" rel="noopener">On-premises data gateway の2026年4月リリース</a>
@@ -372,7 +430,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Eventstreams|workspace monitoring|Microsoft Fabric|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Monitor-your-Eventstreams-with-workspace-monitoring-Preview/ba-p/5161116">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">23h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Monitor-your-Eventstreams-with-workspace-monitoring-Preview/ba-p/5161116" target="_blank" rel="noopener">Eventstreams を workspace monitoring で監視可能にする Preview</a>
@@ -923,7 +981,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="Microsoft Teams SDK|Python|Microsoft Graph|OAuth|Teams agent" data-url="https://devblogs.microsoft.com/microsoft365dev/python-support-for-the-microsoft-teams-sdk-is-now-generally-available/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">4d ago</span>
+    <span class="story-time">5d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://devblogs.microsoft.com/microsoft365dev/python-support-for-the-microsoft-teams-sdk-is-now-generally-available/" target="_blank" rel="noopener">Microsoft Teams SDKでPython対応がGAに</a>
@@ -1097,7 +1155,7 @@
 </article><article class="story" data-category="Microsoft Foundry" data-tags="Prompt flow|Microsoft Agent Framework|Microsoft Foundry|Azure Machine Learning|Deprecation" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/prompt-flow-is-being-retired/ba-p/4513587">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Microsoft Foundry</span>
-    <span class="story-time">5d ago</span>
+    <span class="story-time">6d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/prompt-flow-is-being-retired/ba-p/4513587" target="_blank" rel="noopener">Prompt flow終了へ、Agent Frameworkへ移行</a>
@@ -1300,7 +1358,7 @@
 </article><article class="story" data-category="M365 Copilot" data-tags="Teams SDK|Teams CLI|agent skill|manifest|app registration" data-url="https://devblogs.microsoft.com/microsoft365dev/from-prompt-to-production-teams-agent-setup-simplified/">
   <div class="story-meta-top">
     <span class="tag cat-m365">M365 Copilot</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://devblogs.microsoft.com/microsoft365dev/from-prompt-to-production-teams-agent-setup-simplified/" target="_blank" rel="noopener">Teams agent の登録と導入を CLI で簡素化</a>
@@ -2657,7 +2715,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">19h ago</span>
+    <span class="story-time">21h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/introducing-b2b-signals" target="_blank" rel="noopener">フロンティア企業がAI優位を築く方法</a>
@@ -2687,7 +2745,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">19h ago</span>
+    <span class="story-time">21h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/introducing-chatgpt-futures-class-of-2026" target="_blank" rel="noopener">ChatGPT Futures 2026年版の学生26人を紹介</a>
@@ -2837,7 +2895,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/openai-pwc-finance-collaboration" target="_blank" rel="noopener">OpenAIとPwC、CFO業務の再設計で協業</a>
@@ -2927,7 +2985,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/where-the-goblins-came-from" target="_blank" rel="noopener">GPT-5の「goblin」出力拡散の経緯と対策</a>
@@ -3236,7 +3294,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">3h ago</span>
+    <span class="story-time">5h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/higher-limits-spacex" target="_blank" rel="noopener">Claudeの利用上限拡大とSpaceXとの計算資源契約</a>
@@ -3386,7 +3444,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">5d ago</span>
+    <span class="story-time">6d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/engineering/april-23-postmortem" target="_blank" rel="noopener">Claude Code品質低下報告の原因と修正内容を公表</a>
@@ -3799,11 +3857,11 @@
     <h3 class="side-title"><span class="icon">📰</span>Sources Today</h3>
     <div class="source-list">
       <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">29</span></div>
-      <div class="source-list-item"><span>community.fabric.microsoft.com</span><span class="count">21</span></div>
+      <div class="source-list-item"><span>community.fabric.microsoft.com</span><span class="count">22</span></div>
       <div class="source-list-item"><span>openai.com</span><span class="count">19</span></div>
       <div class="source-list-item"><span>anthropic.com/news</span><span class="count">10</span></div>
       <div class="source-list-item"><span>microsoft.com/security</span><span class="count">9</span></div>
-      <div class="source-list-item"><span>github.blog</span><span class="count">7</span></div>
+      <div class="source-list-item"><span>github.blog</span><span class="count">8</span></div>
       <div class="source-list-item"><span>devblogs.microsoft.com/foundry</span><span class="count">6</span></div>
       <div class="source-list-item"><span>powerplatform.microsoft.com</span><span class="count">4</span></div>
       <div class="source-list-item"><span>azure.microsoft.com</span><span class="count">4</span></div>
