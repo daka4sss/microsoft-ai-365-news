@@ -1,0 +1,90 @@
+name: Manual Range Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: "開始日 (YYYY-MM-DD, 例: 2026-04-01)"
+        required: true
+        type: string
+      end_date:
+        description: "終了日 (YYYY-MM-DD, 例: 2026-04-30)"
+        required: true
+        type: string
+
+permissions:
+  contents: write  # Required to commit data/ and docs/ back to the repo
+  id-token: write  # Required for OIDC authentication to Azure
+  pages: write     # Required for GitHub Pages deployment
+
+concurrency:
+  group: daily-update      # daily-update ワークフローと同じグループ → 同時実行を防ぐ
+  cancel-in-progress: false
+
+jobs:
+  manual-update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Fetch articles in date range
+        env:
+          START_DATE: ${{ inputs.start_date }}
+          END_DATE: ${{ inputs.end_date }}
+        run: python -m src.fetch_range
+
+      - name: Classify & summarize
+        env:
+          AZURE_OPENAI_BASE_URL: ${{ secrets.AZURE_OPENAI_BASE_URL }}
+          AZURE_OPENAI_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
+        run: python -m src.classify_summarize
+
+      - name: Render site
+        run: python -m src.render_site
+
+      - name: Commit & push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🗓 Manual update ${{ inputs.start_date }} ~ ${{ inputs.end_date }}"
+            git push
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
