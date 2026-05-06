@@ -109,8 +109,8 @@ RSS_SOURCES = [
     },
     {
         "name": "Microsoft Fabric Blog",
-        "url": "https://blog.fabric.microsoft.com/en-US/blog/feed/",
-        "domain": "blog.fabric.microsoft.com",
+        "url": "https://community.fabric.microsoft.com/oxcrx34285/rss/board?board.id=fbc_fabricupdatesblogs",
+        "domain": "community.fabric.microsoft.com",
         "hint": "Data & Fabric",
     },
     {
@@ -127,15 +127,21 @@ RSS_SOURCES = [
     },
     {
         "name": "Tech Community - Microsoft Foundry",
-        "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/bg-p/azure-ai-foundry-blog/rss",
+        "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=azure-ai-foundry-blog",
         "domain": "techcommunity.microsoft.com",
         "hint": "Microsoft Foundry",
     },
     {
         "name": "Tech Community - Azure Integration Services",
-        "url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/bg-p/IntegrationsonAzureBlog/rss",
+        "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=IntegrationsonAzureBlog",
         "domain": "techcommunity.microsoft.com",
         "hint": "Azure Integration Services",
+    },
+    {
+        "name": "Microsoft Foundry Dev Blog",
+        "url": "https://devblogs.microsoft.com/foundry/feed/",
+        "domain": "devblogs.microsoft.com/foundry",
+        "hint": "Microsoft Foundry",
     },
     # --- Partner Official ---
     {
@@ -143,12 +149,6 @@ RSS_SOURCES = [
         "url": "https://openai.com/news/rss.xml",
         "domain": "openai.com",
         "hint": "OpenAI",
-    },
-    {
-        "name": "Anthropic News",
-        "url": "https://www.anthropic.com/news/rss.xml",
-        "domain": "anthropic.com",
-        "hint": "Anthropic",
     },
 ]
 
