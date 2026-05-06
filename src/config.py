@@ -32,7 +32,6 @@ MICROSOFT_CATEGORIES = [
     "Azure AI Infra",
     "Data & Fabric",
     "Dev Tools",
-    "Agent 365",
     "AI Security",
 ]
 
@@ -52,7 +51,6 @@ CATEGORY_CSS = {
     "Azure AI Infra": "cat-infra",
     "Data & Fabric": "cat-data",
     "Dev Tools": "cat-dev",
-    "Agent 365": "cat-agent",
     "AI Security": "cat-security",
     "OpenAI": "cat-openai",
     "Anthropic": "cat-anthropic",

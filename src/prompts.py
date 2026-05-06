@@ -33,8 +33,9 @@ ARTICLE_SCHEMA = {
             "type": "string",
             "enum": ALL_CATEGORIES,
             "description": (
-                "記事の最適なカテゴリを11個から1つ選ぶ。"
-                "Microsoft 公式発信は9つのMSカテゴリのいずれか。"
+                "記事の最適なカテゴリを10個から1つ選ぶ。"
+                "Microsoft 公式発信は8つのMSカテゴリのいずれか。"
+                "AI Security はエージェントセキュリティ（Entra Agent ID 等）も含む。"
                 "OpenAI 公式は 'OpenAI'、Anthropic 公式は 'Anthropic'。"
             ),
         },
@@ -123,7 +124,7 @@ def build_user_prompt(article: dict) -> str:
 {article.get('content', '')[:6000]}
 
 【出力指示】
-1. category: 11カテゴリから1つ選択（記事内容ベースで判定）
+1. category: 10カテゴリから1つ選択（記事内容ベースで判定）
 2. is_partner: OpenAI/Anthropic公式発信のみ true
 3. headline_ja: 日本語見出し30-50文字
 4. overview: 概要 150-250文字

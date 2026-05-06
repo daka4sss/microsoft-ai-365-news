@@ -78,7 +78,6 @@ def category_dot(category: str) -> str:
         "Azure AI Infra": "#00a4ef",
         "Data & Fabric": "#0b6b4f",
         "Dev Tools": "#2d2d2d",
-        "Agent 365": "#b85a00",
         "AI Security": "#a4262c",
         "OpenAI": "#10a37f",
         "Anthropic": "#cc785c",
@@ -103,25 +102,43 @@ def category_counts(articles: list[dict]) -> dict[str, int]:
     return {c: counts.get(c, 0) for c in ALL_CATEGORIES}
 
 
-def trending_topics(articles: list[dict], top_n: int = 5) -> list[dict]:
-    """タグの出現頻度から Trending を算出。"""
-    tag_counter: Counter[str] = Counter()
-    tag_to_category: dict[str, str] = {}
+def tags_by_category(articles: list[dict], top_per_cat: int = 5) -> list[dict]:
+    """各タグの主出現カテゴリーを判定し、カテゴリー別に頻度降順で集約。
 
+    戻り値の構造:
+        [
+            {"category": "Microsoft Foundry",
+             "tags": [{"name": "Foundry", "count": 12}, ...]},
+            ...
+        ]
+    """
+    tag_cat_counts: dict[str, Counter] = defaultdict(Counter)
     for art in articles:
+        cat = art.get("category", "")
+        if not cat:
+            continue
         for tag in art.get("tags", []):
-            tag_counter[tag] += 1
-            if tag not in tag_to_category:
-                tag_to_category[tag] = art.get("category", "")
+            tag_cat_counts[tag][cat] += 1
 
-    trending = []
-    for tag, count in tag_counter.most_common(top_n):
-        trending.append({
-            "name": tag,
-            "category": tag_to_category.get(tag, ""),
-            "mentions": count,
+    primary: dict[str, tuple[str, int]] = {}
+    for tag, cat_counts in tag_cat_counts.items():
+        top_cat, _ = cat_counts.most_common(1)[0]
+        primary[tag] = (top_cat, sum(cat_counts.values()))
+
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for tag, (cat, total) in primary.items():
+        groups[cat].append({"name": tag, "count": total})
+
+    result = []
+    for cat in ALL_CATEGORIES:
+        if cat not in groups:
+            continue
+        sorted_tags = sorted(groups[cat], key=lambda t: (-t["count"], t["name"]))
+        result.append({
+            "category": cat,
+            "tags": sorted_tags[:top_per_cat],
         })
-    return trending
+    return result
 
 
 def source_counts(articles: list[dict]) -> list[dict]:
@@ -148,7 +165,6 @@ def pick_featured(articles: list[dict]) -> dict | None:
         "Microsoft Foundry": 100,
         "Microsoft Overview": 90,
         "M365 Copilot": 80,
-        "Agent 365": 75,
         "Copilot Studio": 70,
         "Azure AI Infra": 65,
         "Data & Fabric": 60,
@@ -229,7 +245,7 @@ def build_context(articles_all: list[dict]) -> dict:
         "ms_categories": MICROSOFT_CATEGORIES,
         "partner_categories": PARTNER_CATEGORIES,
         "all_categories": ALL_CATEGORIES,
-        "trending": trending_topics(todays, top_n=5),
+        "tag_groups": tags_by_category(todays, top_per_cat=5),
         "sources": source_counts(todays)[:12],
         "n_sources": len(source_counts(todays)),
     }

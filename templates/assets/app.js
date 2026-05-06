@@ -16,29 +16,48 @@ function toggleTheme() {
   } catch(e) {}
 })();
 
-// ===== Category Filter =====
-function setFilter(cat) {
-  try { localStorage.setItem('ai365-filter', cat); } catch(e) {}
+// ===== Filter (mutually exclusive: category | tag | all) =====
+function setFilter(type, value) {
+  const key = type === 'all' ? 'all' : `${type}:${value}`;
+  try { localStorage.setItem('ai365-filter', key); } catch(e) {}
 
-  // Update active state
+  const isAll = type === 'all';
+  const isTag = type === 'tag';
+  const isCat = type === 'category';
+
+  // Top nav active state — only highlight when filtering by category (or "all")
   document.querySelectorAll('.cat-nav a[data-filter]').forEach(a => {
-    a.classList.toggle('active', a.dataset.filter === cat);
+    const active = !isTag && (isAll ? a.dataset.filter === 'all' : a.dataset.filter === value);
+    a.classList.toggle('active', active);
   });
 
-  const all = cat === 'all';
+  // Sidebar tag pill active state
+  document.querySelectorAll('.tag-pill[data-tag]').forEach(p => {
+    p.classList.toggle('active', isTag && p.dataset.tag === value);
+  });
 
-  // Filter story cards
+  const matches = el => {
+    if (isAll) return true;
+    if (isTag) {
+      const tags = (el.dataset.tags || '').split('|').filter(Boolean);
+      return tags.includes(value);
+    }
+    if (isCat) {
+      return el.dataset.category === value;
+    }
+    return true;
+  };
+
   document.querySelectorAll('.story[data-category]').forEach(el => {
-    el.style.display = (all || el.dataset.category === cat) ? '' : 'none';
+    el.style.display = matches(el) ? '' : 'none';
   });
 
-  // Filter featured article
   const featured = document.querySelector('.featured[data-category]');
   if (featured) {
-    featured.style.display = (all || featured.dataset.category === cat) ? '' : 'none';
+    featured.style.display = matches(featured) ? '' : 'none';
   }
 
-  // Show/hide "no results" message per stories-grid
+  // "No results" message per stories-grid
   document.querySelectorAll('.stories-grid').forEach(grid => {
     const visible = [...grid.querySelectorAll('.story')].filter(s => s.style.display !== 'none').length;
     let msg = grid.querySelector('.filter-empty');
@@ -46,10 +65,12 @@ function setFilter(cat) {
       msg = document.createElement('p');
       msg.className = 'filter-empty empty-state';
       msg.style.gridColumn = '1 / -1';
-      msg.textContent = 'このカテゴリーの記事はありません。';
       grid.appendChild(msg);
     }
-    msg.style.display = (!all && visible === 0) ? '' : 'none';
+    msg.textContent = isTag
+      ? `#${value} に一致する記事はありません。`
+      : 'このカテゴリーの記事はありません。';
+    msg.style.display = (!isAll && visible === 0) ? '' : 'none';
   });
 }
 
@@ -134,20 +155,50 @@ function initNewArticles() {
 document.addEventListener('DOMContentLoaded', () => {
   initNewArticles();
 
-  // Event delegation for category filter
+  // Category nav → filter by category (data-filter="all" treated as type "all")
   const nav = document.querySelector('.cat-nav');
   if (nav) {
     nav.addEventListener('click', e => {
       const a = e.target.closest('a[data-filter]');
       if (!a) return;
       e.preventDefault();
-      setFilter(a.dataset.filter);
+      const v = a.dataset.filter;
+      if (v === 'all') {
+        setFilter('all');
+      } else {
+        setFilter('category', v);
+      }
     });
   }
+
+  // Sidebar tag pills → filter by tag, click again on active tag to clear
+  document.addEventListener('click', e => {
+    const pill = e.target.closest('.tag-pill[data-tag]');
+    if (!pill) return;
+    e.preventDefault();
+    if (pill.classList.contains('active')) {
+      setFilter('all');
+    } else {
+      setFilter('tag', pill.dataset.tag);
+    }
+  });
 
   // Restore saved filter
   try {
     const saved = localStorage.getItem('ai365-filter');
-    if (saved) setFilter(saved);
+    if (saved) {
+      if (saved === 'all') {
+        setFilter('all');
+      } else {
+        const idx = saved.indexOf(':');
+        if (idx > 0) {
+          const type = saved.slice(0, idx);
+          const value = saved.slice(idx + 1);
+          if (type === 'category' || type === 'tag') {
+            setFilter(type, value);
+          }
+        }
+      }
+    }
   } catch(e) {}
 });

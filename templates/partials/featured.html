@@ -1,4 +1,4 @@
-<article class="featured" data-category="{{ featured.category }}" data-url="{{ featured.url }}">
+<article class="featured" data-category="{{ featured.category }}" data-tags="{{ featured.tags|join('|') if featured.tags else '' }}" data-url="{{ featured.url }}">
   <div class="featured-kicker">TOP STORY · {{ featured.category|upper }} · {{ now_jst.strftime('%d %b %Y')|upper }}</div>
   <h1 class="featured-headline"><a href="{{ featured.url }}" target="_blank" rel="noopener">{{ featured.headline_ja or featured.title }}</a></h1>
 

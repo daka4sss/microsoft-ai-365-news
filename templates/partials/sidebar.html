@@ -1,39 +1,23 @@
 <aside class="sidebar">
 
+  {% if tag_groups %}
   <div class="side-block">
-    <h3 class="side-title"><span class="icon">▦</span>Categories</h3>
-    <div class="cat-list">
-      <div class="cat-group-label">Microsoft</div>
-      {% for cat in ms_categories %}
-      <a href="#" class="cat-list-item">
-        <span class="cat-dot" style="background:{{ cat|category_dot }}"></span>
-        <span class="cat-name">{{ cat }}</span>
-        <span class="cat-count">{{ category_counts[cat] }}</span>
-      </a>
-      {% endfor %}
-      <div class="cat-group-label">Partner</div>
-      {% for cat in partner_categories %}
-      <a href="#" class="cat-list-item">
-        <span class="cat-dot" style="background:{{ cat|category_dot }}"></span>
-        <span class="cat-name">{{ cat }}</span>
-        <span class="cat-count">{{ category_counts[cat] }}</span>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-
-  {% if trending %}
-  <div class="side-block">
-    <h3 class="side-title"><span class="icon">▲</span>Trending Now</h3>
-    {% for t in trending %}
-    <div class="trending-item">
-      <span class="rank">{{ loop.index }}</span>
-      <div class="body">
-        {{ t.name }}
-        <div class="meta">{{ t.category }} · {{ t.mentions }} mentions</div>
+    <h3 class="side-title"><span class="icon">▦</span>Tags</h3>
+    <div class="tag-groups">
+      {% for group in tag_groups %}
+      <div class="tag-group">
+        <div class="tag-group-label">
+          <span class="cat-dot" style="background:{{ group.category|category_dot }}"></span>
+          {{ group.category }}
+        </div>
+        <div class="tag-pills">
+          {% for tag in group.tags %}
+          <button type="button" class="tag-pill" data-tag="{{ tag.name }}">#{{ tag.name }}</button>
+          {% endfor %}
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
   {% endif %}
 
