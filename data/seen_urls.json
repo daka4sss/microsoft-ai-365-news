@@ -43,6 +43,7 @@
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Monitor-your-Eventstreams-with-workspace-monitoring-Preview/ba-p/5161116",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Nested-folders-support-in-shortcut-transformations-Generally/ba-p/5171995",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/On-premises-data-gateway-April-2026-release/ba-p/5171981",
+  "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-catalog-is-now-natively-available-in-Foundry-Generally/ba-p/5178376",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-security-Generally-Available/ba-p/5176756",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Outbound-access-protection-for-Data-Factory-Generally-Available/ba-p/5172006",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Pipelines-are-evolving-beyond-ETL/ba-p/5177527",
@@ -525,6 +526,7 @@
   "https://openai.com/index/introducing-chatgpt-atlas",
   "https://openai.com/index/introducing-chatgpt-edu",
   "https://openai.com/index/introducing-chatgpt-enterprise",
+  "https://openai.com/index/introducing-chatgpt-futures-class-of-2026",
   "https://openai.com/index/introducing-chatgpt-go",
   "https://openai.com/index/introducing-chatgpt-health",
   "https://openai.com/index/introducing-chatgpt-images-2-0",
@@ -1063,6 +1065,7 @@
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-openai-s-gpt-image-2-in-microsoft-foundry/ba-p/4500571",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-openai-s-newest-chat-model-in-microsoft-foundry/ba-p/4516848",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-post-stream-refinement-higher-accuracy-real-time/ba-p/4510038",
+  "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/now-in-foundry-ibm-granite-4-1-nvidia-nemotron-nano-omni-and/ba-p/4516858",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/organaize-what-happens-when-you-let-ai-agents-organize/ba-p/4509792",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/prompt-flow-is-being-retired/ba-p/4513587",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/three-tiers-of-agentic-ai-and-when-to-use-none-of-them/ba-p/4510377",
@@ -1126,5 +1129,6 @@
   "https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
-  "https://www.microsoft.com/en-us/security/blog/2026/05/06/clickfix-campaign-uses-fake-macos-utilities-lures-deliver-infostealers/"
+  "https://www.microsoft.com/en-us/security/blog/2026/05/06/clickfix-campaign-uses-fake-macos-utilities-lures-deliver-infostealers/",
+  "https://www.microsoft.com/en-us/security/blog/2026/05/06/microsoft-named-an-overall-leader-in-kuppingercole-analysts-2026-emerging-ai-security-operations-center-soc-report/"
 ]
