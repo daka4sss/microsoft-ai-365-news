@@ -25,10 +25,10 @@ SEEN_URLS_JSON = DATA_DIR / "seen_urls.json"
 # Categories (11 total: 9 Microsoft + 2 Partner)
 # ============================================================
 MICROSOFT_CATEGORIES = [
-    "Microsoft Overview",
+    "Overview",
     "M365 Copilot",
     "Copilot Studio",
-    "Microsoft Foundry",
+    "Foundry",
     "Azure AI Infra",
     "Data & Fabric",
     "Dev Tools",
@@ -44,10 +44,10 @@ ALL_CATEGORIES = MICROSOFT_CATEGORIES + PARTNER_CATEGORIES
 
 # Category → CSS class mapping (matches v3 HTML mockup)
 CATEGORY_CSS = {
-    "Microsoft Overview": "cat-overview",
+    "Overview": "cat-overview",
     "M365 Copilot": "cat-m365",
     "Copilot Studio": "cat-studio",
-    "Microsoft Foundry": "cat-foundry",
+    "Foundry": "cat-foundry",
     "Azure AI Infra": "cat-infra",
     "Data & Fabric": "cat-data",
     "Dev Tools": "cat-dev",
@@ -67,25 +67,25 @@ RSS_SOURCES = [
         "name": "Microsoft Source (News)",
         "url": "https://news.microsoft.com/feed/",
         "domain": "news.microsoft.com",
-        "hint": "Microsoft Overview",
+        "hint": "Overview",
     },
     {
         "name": "Official Microsoft Blog",
         "url": "https://blogs.microsoft.com/feed/",
         "domain": "blogs.microsoft.com",
-        "hint": "Microsoft Overview",
+        "hint": "Overview",
     },
     {
         "name": "Microsoft AI Blog",
         "url": "https://blogs.microsoft.com/ai/feed/",
         "domain": "blogs.microsoft.com/ai",
-        "hint": "Microsoft Foundry",
+        "hint": "Foundry",
     },
     {
         "name": "Azure Blog",
         "url": "https://azure.microsoft.com/en-us/blog/feed/",
         "domain": "azure.microsoft.com",
-        "hint": "Microsoft Foundry",
+        "hint": "Foundry",
     },
     {
         "name": "Microsoft 365 Blog",
@@ -127,7 +127,7 @@ RSS_SOURCES = [
         "name": "Tech Community - Microsoft Foundry",
         "url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=azure-ai-foundry-blog",
         "domain": "techcommunity.microsoft.com",
-        "hint": "Microsoft Foundry",
+        "hint": "Foundry",
     },
     {
         "name": "Tech Community - Azure Integration Services",
@@ -139,7 +139,7 @@ RSS_SOURCES = [
         "name": "Microsoft Foundry Dev Blog",
         "url": "https://devblogs.microsoft.com/foundry/feed/",
         "domain": "devblogs.microsoft.com/foundry",
-        "hint": "Microsoft Foundry",
+        "hint": "Foundry",
     },
     # --- Partner Official ---
     {
@@ -192,7 +192,7 @@ MAX_CONTENT_CHARS = 6000
 MAX_OUTPUT_TOKENS = 1500
 
 # Site metadata
-SITE_TITLE = "Microsoft AI 365"
+SITE_TITLE = "Microsoft AI News"
 SITE_TAGLINE = "Daily Tech Curation"
 SITE_AUTHOR = "@daka1"
 SITE_TIMEZONE = "Asia/Tokyo"

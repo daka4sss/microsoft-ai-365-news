@@ -71,10 +71,10 @@ def relative_time(dt: datetime, now: datetime) -> str:
 def category_dot(category: str) -> str:
     """カテゴリ別の色（CSS の cat-dot で使用）。"""
     colors = {
-        "Microsoft Overview": "#605e5c",
+        "Overview": "#605e5c",
         "M365 Copilot": "#b8004e",
         "Copilot Studio": "#5c2d91",
-        "Microsoft Foundry": "#0078d4",
+        "Foundry": "#8b5cf6",
         "Azure AI Infra": "#00a4ef",
         "Data & Fabric": "#0b6b4f",
         "Dev Tools": "#2d2d2d",
@@ -107,7 +107,7 @@ def tags_by_category(articles: list[dict], top_per_cat: int = 5) -> list[dict]:
 
     戻り値の構造:
         [
-            {"category": "Microsoft Foundry",
+            {"category": "Foundry",
              "tags": [{"name": "Foundry", "count": 12}, ...]},
             ...
         ]
@@ -160,10 +160,10 @@ def pick_featured(articles: list[dict]) -> dict | None:
     """最高スコア記事を Featured に。スコアフィールドがないので published 日と category 重要度で代用。"""
     if not articles:
         return None
-    # Microsoft Foundry > Microsoft Overview > その他 の順で優先
+    # Foundry > Overview > その他 の順で優先
     priority = {
-        "Microsoft Foundry": 100,
-        "Microsoft Overview": 90,
+        "Foundry": 100,
+        "Overview": 90,
         "M365 Copilot": 80,
         "Copilot Studio": 70,
         "Azure AI Infra": 65,
