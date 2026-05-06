@@ -126,10 +126,16 @@ RSS_SOURCES = [
         "hint": "Dev Tools",
     },
     {
-        "name": "Tech Community - AI Services",
-        "url": "https://techcommunity.microsoft.com/category/azure/blog/azure-ai-services-blog/rss",
+        "name": "Tech Community - Microsoft Foundry",
+        "url": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/bg-p/azure-ai-foundry-blog/rss",
         "domain": "techcommunity.microsoft.com",
         "hint": "Microsoft Foundry",
+    },
+    {
+        "name": "Tech Community - Azure Integration Services",
+        "url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/bg-p/IntegrationsonAzureBlog/rss",
+        "domain": "techcommunity.microsoft.com",
+        "hint": "Azure Integration Services",
     },
     # --- Partner Official ---
     {

@@ -3,7 +3,7 @@ Microsoft AI 365 - RSS Feed Fetcher
 
 設計思想:
 - 全RSSソースから新着記事を取得
-- seen_urls.json で重複検出（冪等性担保）
+- seen_urls.json で分類・要約成功済みURLを除外（冪等性担保）
 - HTML タグや余計な空白を除去してクリーンな本文を抽出
 - 失敗ソースがあっても他のソースは処理を継続（耐障害性）
 """
@@ -134,10 +134,7 @@ def main() -> Path:
     )
     logger.info(f"Wrote {len(new_articles)} new articles to {raw_path}")
 
-    # Update seen URLs (only after successful save)
-    seen.update(a["url"] for a in new_articles)
-    save_seen_urls(seen)
-    logger.info(f"Updated seen URLs: {len(seen)} total")
+    logger.info("Deferring seen_urls update until classification succeeds")
 
     return raw_path
 

@@ -45,6 +45,7 @@ from src.config import (
     ARTICLES_JSON,
     validate_env,
 )
+from src.fetch_feeds import load_seen_urls, save_seen_urls
 from src.prompts import ARTICLE_SCHEMA, SYSTEM_PROMPT, build_user_prompt
 
 logger = logging.getLogger(__name__)
@@ -230,6 +231,13 @@ async def run() -> Path:
         encoding="utf-8",
     )
     logger.info(f"💾 Saved {len(merged)} total articles to {ARTICLES_JSON}")
+
+    if succeeded:
+        seen = load_seen_urls()
+        before = len(seen)
+        seen.update(r["url"] for r in succeeded)
+        save_seen_urls(seen)
+        logger.info(f"✓ Updated seen URLs after classification: {before} → {len(seen)} total")
 
     return ARTICLES_JSON
 

@@ -1,9 +1,8 @@
 """
 Microsoft AI 365 - Date Range Fetcher
 
-指定した日付範囲の記事を全ソースから再取得し、既存の重複エントリを削除して
-raw_articles.json に書き出す。その後、classify_summarize → render_site を
-実行することで手動でサイトを更新できる。
+指定した日付範囲の記事を全ソースから再取得し、raw_articles.json に書き出す。
+その後、classify_summarize → render_site を実行することで手動でサイトを更新できる。
 
 使い方:
   START_DATE=2026-04-01 END_DATE=2026-04-30 python -m src.fetch_range
@@ -15,8 +14,8 @@ import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-from src.config import RSS_SOURCES, DATA_DIR, ARTICLES_JSON
-from src.fetch_feeds import fetch_one_source, load_seen_urls, save_seen_urls
+from src.config import RSS_SOURCES, DATA_DIR
+from src.fetch_feeds import fetch_one_source
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -29,7 +28,7 @@ def parse_iso(s: str) -> datetime:
 def main(start_date: str, end_date: str) -> Path:
     """
     [start_date, end_date] の範囲（両端含む）の記事を取得し、
-    articles.json から旧エントリを削除した上で raw_articles.json に書き出す。
+    raw_articles.json に書き出す。既存 articles.json は分類成功後の merge で上書きされる。
     """
     start = datetime.fromisoformat(start_date).replace(tzinfo=timezone.utc)
     end   = datetime.fromisoformat(end_date).replace(tzinfo=timezone.utc) + timedelta(days=1)
@@ -59,41 +58,17 @@ def main(start_date: str, end_date: str) -> Path:
     # 3. URL で重複排除（複数ソースが同じ記事を配信するケース対策）
     by_url = {a["url"]: a for a in ranged}
     ranged = list(by_url.values())
-    ranged_urls = {a["url"] for a in ranged}
     logger.info(f"After URL dedup: {len(ranged)} unique articles")
 
-    # 4. articles.json から同 URL の旧エントリを削除（古い方を消して再分類）
+    # 4. raw_articles.json に書き出し（classify_summarize が読む）
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    existing: list[dict] = []
-    if ARTICLES_JSON.exists():
-        try:
-            existing = json.loads(ARTICLES_JSON.read_text(encoding="utf-8"))
-        except Exception as e:
-            logger.warning(f"Failed to load articles.json: {e}. Treating as empty.")
-
-    removed_count = sum(1 for a in existing if a["url"] in ranged_urls)
-    cleaned = [a for a in existing if a["url"] not in ranged_urls]
-
-    ARTICLES_JSON.write_text(
-        json.dumps(cleaned, indent=2, ensure_ascii=False),
-        encoding="utf-8",
-    )
-    logger.info(f"Removed {removed_count} old entries from articles.json ({len(cleaned)} remaining)")
-
-    # 5. raw_articles.json に書き出し（classify_summarize が読む）
     raw_path = DATA_DIR / "raw_articles.json"
     raw_path.write_text(
         json.dumps(ranged, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
     logger.info(f"Wrote {len(ranged)} articles to {raw_path}")
-
-    # 6. seen_urls を更新（日次バッチがこれらを再取得しないよう）
-    seen = load_seen_urls()
-    before = len(seen)
-    seen.update(ranged_urls)
-    save_seen_urls(seen)
-    logger.info(f"Updated seen_urls: {before} → {len(seen)} URLs")
+    logger.info("Deferring articles.json and seen_urls updates until classification succeeds")
 
     return raw_path
 
