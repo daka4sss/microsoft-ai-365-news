@@ -23,15 +23,24 @@ python -m src.classify_summarize # Stage 2: LLM classify → data/articles.json
 python -m src.render_site       # Stage 3: Jinja2 render → docs/index.html
 ```
 
+## Authentication
+
+This project uses **Entra ID (keyless) authentication** — no API key is stored anywhere.
+
+**Local development**: Run `az login` once. `DefaultAzureCredential` picks up `AzureCliCredential` automatically.
+
+**GitHub Actions**: Uses OIDC (Workload Identity Federation) via `azure/login@v2`. No `AZURE_CLIENT_SECRET` required.
+
 ## Environment Variables
 
 Copy `.env.example` to `.env` and fill in:
 
 | Variable | Description |
 |---|---|
-| `AZURE_OPENAI_API_KEY` | Azure OpenAI key |
 | `AZURE_OPENAI_BASE_URL` | Must end with `/openai/v1/` (trailing slash required) |
-| `AZURE_OPENAI_DEPLOYMENT` | Deployment name (e.g. `gpt-4o-mini`) |
+| `AZURE_OPENAI_DEPLOYMENT` | Deployment name (e.g. `gpt-5-4-mini`) |
+
+`AZURE_OPENAI_API_KEY` is **not used**. Auth is handled by `DefaultAzureCredential` (`azure-identity`).
 
 ## Architecture
 
@@ -71,12 +80,23 @@ Each article record includes: `url`, `title`, `content`, `published`, `source_na
 
 `.github/workflows/daily-update.yml` — Triggers at `0 22 * * *` (UTC) = 07:00 JST. Runs `python -m src.run_all`, commits `data/` and `docs/` changes back to the repo, then deploys `docs/` to GitHub Pages.
 
-Secrets required: `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_BASE_URL`, `AZURE_OPENAI_DEPLOYMENT`.
+**GitHub Secrets required:**
+
+| Secret | Purpose |
+|---|---|
+| `AZURE_CLIENT_ID` | Service principal App ID (for OIDC) |
+| `AZURE_TENANT_ID` | Azure tenant ID (for OIDC) |
+| `AZURE_SUBSCRIPTION_ID` | Azure subscription ID (for OIDC) |
+| `AZURE_OPENAI_BASE_URL` | Endpoint ending with `/openai/v1/` |
+| `AZURE_OPENAI_DEPLOYMENT` | Deployment name |
+
+Auth flow: `azure/login@v2` (OIDC) → `DefaultAzureCredential` → `get_bearer_token_provider` → `AsyncOpenAI(api_key=token_provider)`.
 
 GitHub Pages must be configured to use **GitHub Actions** as source (not "Deploy from branch").
 
 ## Key Implementation Details
 
+- **Entra ID auth**: `DefaultAzureCredential` + `get_bearer_token_provider("https://cognitiveservices.azure.com/.default")` passed as `api_key` to `AsyncOpenAI`. Token refresh is automatic.
 - **Responses API**: Uses `client.responses.create()` (not `chat.completions`). The `AZURE_OPENAI_BASE_URL` must end with `/openai/v1/` for this endpoint to resolve correctly.
 - **Concurrency**: `LLM_CONCURRENCY = 5` async tasks controlled by `asyncio.Semaphore`. Reduce to 3 if hitting 429 rate limit errors.
 - **Retry policy**: Tenacity with exponential backoff (4–60 s), max 4 attempts.
