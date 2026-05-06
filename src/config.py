@@ -151,6 +151,22 @@ RSS_SOURCES = [
 ]
 
 # ============================================================
+# Anthropic Custom Collector
+# ============================================================
+# Anthropic は公式 RSS を提供していないため、sitemap.xml + 個別記事ページの
+# OG メタタグから情報を取得する独立 collector を src/sources/anthropic.py に実装。
+# enabled=False に切り替えるだけで完全無効化できる (RSS パイプラインへの影響ゼロ)。
+ANTHROPIC_CONFIG = {
+    "enabled": True,
+    "sitemap_url": "https://www.anthropic.com/sitemap.xml",
+    "path_prefixes": ["/news/", "/engineering/"],  # News と Engineering 両方対象
+    "lookback_days": 15,                            # 差分実行時の過去N日窓
+    "fetch_concurrency": 3,                         # 個別ページ並列取得数
+    "request_timeout": 15,                          # 個別記事ページ用タイムアウト(秒)
+    "sitemap_timeout": 30,                          # sitemap.xml 用タイムアウト(秒)
+}
+
+# ============================================================
 # Runtime settings
 # ============================================================
 
