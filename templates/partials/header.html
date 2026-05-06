@@ -5,7 +5,7 @@
         <span></span><span></span><span></span><span></span>
       </span>
       <div class="brand-text">
-        <span class="brand-name">Microsoft <span class="ai365">AI 365</span></span>
+        <span class="brand-name">Microsoft News</span>
         <span class="brand-tag">{{ site_tagline }}</span>
       </div>
     </div>
@@ -20,12 +20,10 @@
   <nav class="cat-nav">
     <a href="#" class="active" data-filter="all">All <span class="num">{{ total_today }}</span></a>
     <span class="sep"></span>
-    <span class="cat-nav-section-label ms">Microsoft</span>
     {% for cat in ms_categories %}
     <a href="#" data-filter="{{ cat }}">{{ cat }} <span class="num">{{ category_counts[cat] }}</span></a>
     {% endfor %}
     <span class="sep"></span>
-    <span class="cat-nav-section-label">Partner</span>
     <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">{{ category_counts['OpenAI'] }}</span></a>
     <a href="#" class="anthropic-tab" data-filter="Anthropic">Anthropic <span class="num">{{ category_counts['Anthropic'] }}</span></a>
     <button class="mark-read-btn" id="mark-all-read" style="display:none">✓ 0件 既読にする</button>

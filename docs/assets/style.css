@@ -56,7 +56,6 @@ a:hover { color:var(--link-hover); text-decoration:underline; }
 .brand-logo span:nth-child(4){background:#ffb900;}
 .brand-text { display:flex; align-items:baseline; gap:8px; }
 .brand-name { font-weight:600; font-size:17px; color:var(--ink); letter-spacing:-0.005em; }
-.brand-name .ai365 { color:var(--azure-600); font-weight:700; }
 .brand-tag {
   font-size:11px; color:var(--muted);
   border-left:1px solid var(--rule); padding-left:10px; font-weight:400;
