@@ -17,6 +17,9 @@ permissions:
   id-token: write  # Required for OIDC authentication to Azure
   pages: write     # Required for GitHub Pages deployment
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 concurrency:
   group: daily-update      # daily-update ワークフローと同じグループ → 同時実行を防ぐ
   cancel-in-progress: false
