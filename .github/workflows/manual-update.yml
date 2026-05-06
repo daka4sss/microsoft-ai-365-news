@@ -17,9 +17,6 @@ permissions:
   id-token: write  # Required for OIDC authentication to Azure
   pages: write     # Required for GitHub Pages deployment
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 concurrency:
   group: daily-update      # daily-update ワークフローと同じグループ → 同時実行を防ぐ
   cancel-in-progress: false
@@ -31,12 +28,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 1
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
           cache: "pip"
@@ -47,7 +44,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Azure login (OIDC)
-        uses: azure/login@v2
+        uses: azure/login@v3
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
