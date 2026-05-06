@@ -19,7 +19,9 @@ from src.config import (
     RSS_SOURCES,
     SEEN_URLS_JSON,
     DATA_DIR,
+    ANTHROPIC_CONFIG,
 )
+from src.sources.anthropic import fetch_recent as fetch_anthropic_recent
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -117,6 +119,10 @@ def main() -> Path:
     all_articles = []
     for source in RSS_SOURCES:
         all_articles.extend(fetch_one_source(source))
+
+    # Anthropic custom collector (sitemap-based, no RSS available)
+    if ANTHROPIC_CONFIG.get("enabled", False):
+        all_articles.extend(fetch_anthropic_recent())
 
     # Filter out already-seen URLs
     new_articles = [a for a in all_articles if a["url"] not in seen]

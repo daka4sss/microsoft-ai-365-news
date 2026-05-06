@@ -14,8 +14,9 @@ import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-from src.config import RSS_SOURCES, DATA_DIR
+from src.config import RSS_SOURCES, DATA_DIR, ANTHROPIC_CONFIG
 from src.fetch_feeds import fetch_one_source
+from src.sources.anthropic import fetch_range as fetch_anthropic_range
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -39,6 +40,11 @@ def main(start_date: str, end_date: str) -> Path:
     all_articles: list[dict] = []
     for source in RSS_SOURCES:
         all_articles.extend(fetch_one_source(source))
+
+    # Anthropic custom collector (date range mode)
+    if ANTHROPIC_CONFIG.get("enabled", False):
+        all_articles.extend(fetch_anthropic_range(start, end))
+
     logger.info(f"Total fetched across all sources: {len(all_articles)}")
 
     # 2. 公開日が [start, end) に収まる記事のみに絞る
