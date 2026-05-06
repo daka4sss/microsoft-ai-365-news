@@ -29,22 +29,23 @@
 
 <div class="cat-nav-wrap">
   <nav class="cat-nav">
-    <a href="#" class="active">All <span class="num">18</span></a>
+    <a href="#" class="active" data-filter="all">All <span class="num">18</span></a>
     <span class="sep"></span>
     <span class="cat-nav-section-label ms">Microsoft</span>
-    <a href="#cat-1">Microsoft Overview <span class="num">0</span></a>
-    <a href="#cat-2">M365 Copilot <span class="num">4</span></a>
-    <a href="#cat-3">Copilot Studio <span class="num">1</span></a>
-    <a href="#cat-4">Microsoft Foundry <span class="num">0</span></a>
-    <a href="#cat-5">Azure AI Infra <span class="num">1</span></a>
-    <a href="#cat-6">Data &amp; Fabric <span class="num">0</span></a>
-    <a href="#cat-7">Dev Tools <span class="num">3</span></a>
-    <a href="#cat-8">Agent 365 <span class="num">1</span></a>
-    <a href="#cat-9">AI Security <span class="num">2</span></a>
+    <a href="#" data-filter="Microsoft Overview">Microsoft Overview <span class="num">0</span></a>
+    <a href="#" data-filter="M365 Copilot">M365 Copilot <span class="num">4</span></a>
+    <a href="#" data-filter="Copilot Studio">Copilot Studio <span class="num">1</span></a>
+    <a href="#" data-filter="Microsoft Foundry">Microsoft Foundry <span class="num">0</span></a>
+    <a href="#" data-filter="Azure AI Infra">Azure AI Infra <span class="num">1</span></a>
+    <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">0</span></a>
+    <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">3</span></a>
+    <a href="#" data-filter="Agent 365">Agent 365 <span class="num">1</span></a>
+    <a href="#" data-filter="AI Security">AI Security <span class="num">2</span></a>
     <span class="sep"></span>
     <span class="cat-nav-section-label">Partner</span>
-    <a href="#openai" class="openai-tab">OpenAI <span class="num">6</span></a>
-    <a href="#anthropic" class="anthropic-tab">Anthropic <span class="num">0</span></a>
+    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">6</span></a>
+    <a href="#" class="anthropic-tab" data-filter="Anthropic">Anthropic <span class="num">0</span></a>
+    <button class="mark-read-btn" id="mark-all-read" style="display:none">✓ 0件 既読にする</button>
   </nav>
 </div>
 <div class="subbar">
@@ -54,7 +55,7 @@
       <span><b>18</b> stories today</span>
       <span><b>8</b> sources</span>
       <span><b>18</b> this month</span>
-      <span>Updated <b>21:49 JST</b></span>
+      <span>Updated <b>22:08 JST</b></span>
     </div>
     <div>Curated by GPT-5.4 mini · @daka1</div>
   </div>
@@ -77,7 +78,7 @@
       <div class="zone-banner-counts"><b>12</b> stories</div>
     </div>
 
-<article class="featured">
+<article class="featured" data-category="M365 Copilot" data-url="https://blogs.microsoft.com/blog/2026/05/05/how-frontier-firms-are-rebuilding-the-operating-model-for-the-age-of-ai/">
   <div class="featured-kicker">TOP STORY · M365 COPILOT · 06 MAY 2026</div>
   <h1 class="featured-headline"><a href="https://blogs.microsoft.com/blog/2026/05/05/how-frontier-firms-are-rebuilding-the-operating-model-for-the-age-of-ai/" target="_blank" rel="noopener">Frontier Firm時代の業務モデルをCopilotで再設計</a></h1>
 
@@ -108,7 +109,7 @@
         <span class="section-meta">Wed, May 06, 2026 · 11 items</span>
       </div>
       <div class="stories-grid">
-<article class="story">
+<article class="story" data-category="Dev Tools" data-url="https://github.blog/open-source/maintainers/welcome-to-maintainer-month-celebrating-the-people-behind-the-code/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
     <span class="story-time">22h ago</span>
@@ -137,7 +138,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#GitHub</span><span class="story-tag-chip">#open source maintainers</span><span class="story-tag-chip">#pull request controls</span><span class="story-tag-chip">#Maintainer Month</span><span class="story-tag-chip">#OSS</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="M365 Copilot" data-url="https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/05/copilot-cowork-from-conversation-to-action-across-skills-integrations-and-devices/">
   <div class="story-meta-top">
     <span class="tag cat-m365">M365 Copilot</span>
     <span class="story-time">1d ago</span>
@@ -166,7 +167,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Copilot Cowork</span><span class="story-tag-chip">#Microsoft 365</span><span class="story-tag-chip">#skills</span><span class="story-tag-chip">#integrations</span><span class="story-tag-chip">#devices</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="M365 Copilot" data-url="https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/05/microsoft-365-copilot-human-agency-and-the-opportunity-for-every-organization/">
   <div class="story-meta-top">
     <span class="tag cat-m365">M365 Copilot</span>
     <span class="story-time">1d ago</span>
@@ -195,7 +196,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Microsoft 365 Copilot</span><span class="story-tag-chip">#Copilot</span><span class="story-tag-chip">#human agency</span><span class="story-tag-chip">#agents</span><span class="story-tag-chip">#生産性</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="Azure AI Infra" data-url="https://azure.microsoft.com/en-us/blog/azure-iaas-defense-in-depth-built-on-secure-by-design-principles/">
   <div class="story-meta-top">
     <span class="tag cat-infra">Azure AI Infra</span>
     <span class="story-time">1d ago</span>
@@ -224,7 +225,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Azure IaaS</span><span class="story-tag-chip">#Secure by design</span><span class="story-tag-chip">#Trusted Launch</span><span class="story-tag-chip">#Azure Private Link</span><span class="story-tag-chip">#Confidential computing</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="AI Security" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
     <span class="story-time">1d ago</span>
@@ -253,7 +254,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#AiTM</span><span class="story-tag-chip">#Microsoft Defender for Office 365</span><span class="story-tag-chip">#CAPTCHA</span><span class="story-tag-chip">#Phishing</span><span class="story-tag-chip">#token compromise</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="Dev Tools" data-url="https://github.blog/open-source/register-now-for-openclaw-after-hours-github/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
     <span class="story-time">1d ago</span>
@@ -282,7 +283,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#OpenClaw</span><span class="story-tag-chip">#GitHub HQ</span><span class="story-tag-chip">#agentic systems</span><span class="story-tag-chip">#Microsoft Build 2026</span><span class="story-tag-chip">#open source framework</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="AI Security" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
     <span class="story-time">4d ago</span>
@@ -311,7 +312,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#CVE-2026-31431</span><span class="story-tag-chip">#Linux kernel</span><span class="story-tag-chip">#Kubernetes</span><span class="story-tag-chip">#Microsoft Defender XDR</span><span class="story-tag-chip">#CISA KEV</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="Dev Tools" data-url="https://devblogs.microsoft.com/microsoft365dev/python-support-for-the-microsoft-teams-sdk-is-now-generally-available/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
     <span class="story-time">4d ago</span>
@@ -340,7 +341,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Microsoft Teams SDK</span><span class="story-tag-chip">#Python</span><span class="story-tag-chip">#Microsoft Graph</span><span class="story-tag-chip">#OAuth</span><span class="story-tag-chip">#agent framework</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="Copilot Studio" data-url="https://www.microsoft.com/en-us/power-platform/blog/2026/05/01/business-skills/">
   <div class="story-meta-top">
     <span class="tag cat-studio">Copilot Studio</span>
     <span class="story-time">4d ago</span>
@@ -369,7 +370,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Dataverse</span><span class="story-tag-chip">#Business skills</span><span class="story-tag-chip">#Copilot Studio</span><span class="story-tag-chip">#Dataverse MCP server</span><span class="story-tag-chip">#Power Apps</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="M365 Copilot" data-url="https://devblogs.microsoft.com/microsoft365dev/sponsor-group-type-requirements-for-agent-identities/">
   <div class="story-meta-top">
     <span class="tag cat-m365">M365 Copilot</span>
     <span class="story-time">4d ago</span>
@@ -398,7 +399,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Entra Agent ID</span><span class="story-tag-chip">#dynamic membership groups</span><span class="story-tag-chip">#Microsoft 365 groups</span><span class="story-tag-chip">#role-assignable groups</span><span class="story-tag-chip">#agent identities</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="Agent 365" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/">
   <div class="story-meta-top">
     <span class="tag cat-agent">Agent 365</span>
     <span class="story-time">4d ago</span>
@@ -449,7 +450,7 @@
         <span class="section-meta">openai.com/news · 6 items</span>
       </div>
       <div class="stories-grid">
-<article class="story">
+<article class="story" data-category="OpenAI" data-url="https://openai.com/index/gpt-5-5-instant-system-card">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
@@ -479,7 +480,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#GPT-5.5 Instant</span><span class="story-tag-chip">#System Card</span><span class="story-tag-chip">#OpenAI</span><span class="story-tag-chip">#safety evaluation</span><span class="story-tag-chip">#model risk</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="OpenAI" data-url="https://openai.com/index/mrc-supercomputer-networking">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
@@ -509,7 +510,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#MRC</span><span class="story-tag-chip">#Multipath Reliable Connection</span><span class="story-tag-chip">#OCP</span><span class="story-tag-chip">#supercomputer networking</span><span class="story-tag-chip">#large-scale AI training</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="OpenAI" data-url="https://openai.com/index/gpt-5-5-instant">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
@@ -539,7 +540,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#GPT-5.5 Instant</span><span class="story-tag-chip">#ChatGPT</span><span class="story-tag-chip">#personalization controls</span><span class="story-tag-chip">#hallucinations</span><span class="story-tag-chip">#default model</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="OpenAI" data-url="https://openai.com/index/new-ways-to-buy-chatgpt-ads">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
@@ -569,7 +570,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#ChatGPT ads</span><span class="story-tag-chip">#Ads Manager</span><span class="story-tag-chip">#CPC bidding</span><span class="story-tag-chip">#measurement tools</span><span class="story-tag-chip">#privacy</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="OpenAI" data-url="https://openai.com/index/openai-pwc-finance-collaboration">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
@@ -599,7 +600,7 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#OpenAI</span><span class="story-tag-chip">#PwC</span><span class="story-tag-chip">#AI agents</span><span class="story-tag-chip">#CFO</span><span class="story-tag-chip">#finance workflows</span>  </div>
-</article><article class="story">
+</article><article class="story" data-category="OpenAI" data-url="https://openai.com/index/delivering-low-latency-voice-ai-at-scale">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>

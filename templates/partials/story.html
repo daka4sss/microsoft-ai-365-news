@@ -1,4 +1,4 @@
-<article class="story">
+<article class="story" data-category="{{ art.category }}" data-url="{{ art.url }}">
   <div class="story-meta-top">
     <span class="tag {{ art.category|category_css }}">{{ art.category }}</span>
     {% if art.is_partner %}
