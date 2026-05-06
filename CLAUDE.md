@@ -18,9 +18,13 @@ pip install -r requirements.txt
 python -m src.run_all
 
 # Run individual stages
-python -m src.fetch_feeds       # Stage 1: fetch RSS → data/raw_articles.json
+python -m src.fetch_feeds        # Stage 1: fetch RSS → data/raw_articles.json
 python -m src.classify_summarize # Stage 2: LLM classify → data/articles.json
-python -m src.render_site       # Stage 3: Jinja2 render → docs/index.html
+python -m src.render_site        # Stage 3: Jinja2 render → docs/index.html
+
+# Backfill a specific date range (skips seen_urls filter)
+START_DATE=2026-04-01 END_DATE=2026-04-30 python -m src.fetch_range
+# Then run classify + render to complete backfill
 ```
 
 ## Authentication
@@ -62,6 +66,8 @@ fetch_feeds.py → classify_summarize.py → render_site.py
 
 **`src/run_all.py`** — Sequential orchestrator: fetch → classify → render. Exits 0 on success, 1 on failure.
 
+**`src/fetch_range.py`** — Manual backfill tool. Fetches all sources for a `[START_DATE, END_DATE)` window, bypassing `seen_urls.json`. Writes to `raw_articles.json` for subsequent classify → render. Triggered by `manual-update.yml` workflow or via env vars locally.
+
 ## Data Files
 
 | File | Persistence | Purpose |
@@ -78,7 +84,15 @@ Each article record includes: `url`, `title`, `content`, `published`, `source_na
 
 ## CI/CD
 
-`.github/workflows/daily-update.yml` — Triggers at `0 22 * * *` (UTC) = 07:00 JST. Runs `python -m src.run_all`, commits `data/` and `docs/` changes back to the repo, then deploys `docs/` to GitHub Pages.
+Three workflows in `.github/workflows/`:
+
+| Workflow | Trigger | Purpose |
+|---|---|---|
+| `daily-update.yml` | `0 22 * * *` (UTC) = 07:00 JST + every 3 hours + `workflow_dispatch` + `repository_dispatch` | Full pipeline (`run_all`) + Pages deploy |
+| `manual-update.yml` | `workflow_dispatch` (inputs: `start_date`, `end_date`) | Backfill range: `fetch_range` → `classify_summarize` → `render_site` |
+| `main.yml` | `workflow_dispatch` | Azure OIDC login smoke test (`az account show`) |
+
+The every-3-hour trigger on `daily-update.yml` is a differential fetch — exits early if no new articles.
 
 **GitHub Secrets required:**
 

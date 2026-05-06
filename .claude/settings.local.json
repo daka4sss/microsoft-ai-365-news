@@ -9,7 +9,10 @@
       "Bash(git push *)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\daka\\\\vscode\\\\microsoft-ai-365-news\" -Recurse -File)",
       "Bash(Select-Object -ExpandProperty FullName)",
-      "Bash(Sort-Object)"
+      "Bash(Sort-Object)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\daka\\\\vscode\\\\microsoft-ai-365-news\" -Recurse -Include \"*.html\", \"*.css\", \"*.py\")",
+      "Bash(Select-Object FullName)",
+      "Bash(.venv\\\\Scripts\\\\python.exe -m src.render_site)"
     ]
   }
 }

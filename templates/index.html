@@ -51,11 +51,13 @@
         <h2 class="section-title"><span class="icon">▎</span>Today's Stories</h2>
         <span class="section-meta">{{ today_str }} · {{ ms_articles|length }} items</span>
       </div>
-      {% for art in ms_articles %}
-        {% include "partials/story.html" %}
-      {% else %}
-        <p class="empty-state">本日の Microsoft 関連の新着記事はまだありません。</p>
-      {% endfor %}
+      <div class="stories-grid">
+        {% for art in ms_articles %}
+          {% include "partials/story.html" %}
+        {% else %}
+          <p class="empty-state">本日の Microsoft 関連の新着記事はまだありません。</p>
+        {% endfor %}
+      </div>
     </section>
 
     {# =============== ZONE 2: Partner =============== #}
@@ -79,9 +81,11 @@
         <h2 class="section-title"><span class="icon">●</span>OpenAI</h2>
         <span class="section-meta">openai.com/news · {{ openai_articles|length }} items</span>
       </div>
-      {% for art in openai_articles %}
-        {% include "partials/story.html" %}
-      {% endfor %}
+      <div class="stories-grid">
+        {% for art in openai_articles %}
+          {% include "partials/story.html" %}
+        {% endfor %}
+      </div>
     </section>
     {% endif %}
 
@@ -91,9 +95,11 @@
         <h2 class="section-title"><span class="icon">◆</span>Anthropic</h2>
         <span class="section-meta">anthropic.com/news · {{ anthropic_articles|length }} items</span>
       </div>
-      {% for art in anthropic_articles %}
-        {% include "partials/story.html" %}
-      {% endfor %}
+      <div class="stories-grid">
+        {% for art in anthropic_articles %}
+          {% include "partials/story.html" %}
+        {% endfor %}
+      </div>
     </section>
     {% endif %}
     {% endif %}

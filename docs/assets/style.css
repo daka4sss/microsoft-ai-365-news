@@ -222,15 +222,37 @@ a:hover { color:var(--link-hover); text-decoration:underline; }
 }
 [data-theme="dark"] .featured-meta { border-top-color:var(--rule); }
 
-/* Story */
-.story { display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--rule); }
-.story:last-child { border-bottom:none; }
-.story-rank {
-  font-size:13px; font-weight:600; color:var(--muted-2);
-  min-width:28px; padding-top:2px; text-align:right;
-  font-variant-numeric:tabular-nums;
+/* Stories Grid */
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
 }
-.story-body { flex:1; min-width:0; }
+.stories-grid .empty-state { grid-column: 1 / -1; }
+
+/* Story */
+.story {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  transition: box-shadow .15s, transform .15s, border-color .15s;
+  min-width: 0;
+}
+.story:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,.10);
+  border-color: var(--azure-300);
+  transform: translateY(-2px);
+}
+[data-theme="dark"] .story { background: var(--bg-2); }
+[data-theme="dark"] .story:hover {
+  border-color: var(--azure-600);
+  box-shadow: 0 4px 16px rgba(0,0,0,.35);
+}
 .story-meta-top {
   display:flex; align-items:center; gap:8px; margin-bottom:6px;
   font-size:11px; flex-wrap:wrap;
@@ -297,7 +319,7 @@ details[open] .story-summary-section-label::before { content:"▼ "; }
 }
 
 .story-tags {
-  margin-top:8px; display:flex; flex-wrap:wrap; gap:4px;
+  margin-top:auto; padding-top:10px; display:flex; flex-wrap:wrap; gap:4px;
 }
 .story-tag-chip {
   font-size:10px; color:var(--muted); background:var(--bg-3);
@@ -390,9 +412,12 @@ details[open] .story-summary-section-label::before { content:"▼ "; }
 }
 
 /* Responsive */
+@media (max-width:1080px) {
+  .stories-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width:700px) {
+  .stories-grid { grid-template-columns: 1fr; gap:14px; }
   .featured-headline { font-size:20px; }
-  .story-rank { display:none; }
   .brand-tag { display:none; }
   .header-date { display:none; }
   .zone-banner-counts { display:none; }

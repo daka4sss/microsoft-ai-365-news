@@ -1,39 +1,36 @@
 <article class="story">
-  <div class="story-rank">{{ '%02d'|format(loop.index) if loop is defined else '—' }}</div>
-  <div class="story-body">
-    <div class="story-meta-top">
-      <span class="tag {{ art.category|category_css }}">{{ art.category }}</span>
-      {% if art.is_partner %}
-      <span class="tag partner">Partner</span>
-      {% endif %}
-      <span class="story-time">{{ art._relative_time }}</span>
-    </div>
-    <h3 class="story-headline">
-      <a href="{{ art.url }}" target="_blank" rel="noopener">{{ art.headline_ja or art.title }}</a>
-    </h3>
-    <div class="story-source">
-      <span class="domain">{{ art.domain }} — {{ art.source_name }}</span>
-    </div>
-
-    <div class="story-summary">
-      <details open>
-        <summary class="story-summary-section-label">📌 概要</summary>
-        <p>{{ art.overview }}</p>
-      </details>
-      <details>
-        <summary class="story-summary-section-label">🆕 What's New / Update</summary>
-        <p>{{ art.whats_new }}</p>
-      </details>
-      <details>
-        <summary class="story-summary-section-label">💡 Key Takeaway</summary>
-        <p>{{ art.key_takeaway }}</p>
-      </details>
-    </div>
-
-    {% if art.tags %}
-    <div class="story-tags">
-      {% for tag in art.tags %}<span class="story-tag-chip">#{{ tag }}</span>{% endfor %}
-    </div>
+  <div class="story-meta-top">
+    <span class="tag {{ art.category|category_css }}">{{ art.category }}</span>
+    {% if art.is_partner %}
+    <span class="tag partner">Partner</span>
     {% endif %}
+    <span class="story-time">{{ art._relative_time }}</span>
   </div>
+  <h3 class="story-headline">
+    <a href="{{ art.url }}" target="_blank" rel="noopener">{{ art.headline_ja or art.title }}</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">{{ art.domain }} — {{ art.source_name }}</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>{{ art.overview }}</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>{{ art.whats_new }}</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>{{ art.key_takeaway }}</p>
+    </details>
+  </div>
+
+  {% if art.tags %}
+  <div class="story-tags">
+    {% for tag in art.tags %}<span class="story-tag-chip">#{{ tag }}</span>{% endfor %}
+  </div>
+  {% endif %}
 </article>
