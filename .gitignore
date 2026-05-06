@@ -22,6 +22,9 @@ ENV/
 *.swo
 .DS_Store
 
+# Claude Code local settings (personal allowlist)
+.claude/settings.local.json
+
 # Logs
 *.log
 logs/
