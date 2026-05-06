@@ -518,6 +518,7 @@
   "https://openai.com/index/introducing-activation-atlases",
   "https://openai.com/index/introducing-agentkit",
   "https://openai.com/index/introducing-apps-in-chatgpt",
+  "https://openai.com/index/introducing-b2b-signals",
   "https://openai.com/index/introducing-canvas",
   "https://openai.com/index/introducing-chatgpt-agent",
   "https://openai.com/index/introducing-chatgpt-and-whisper-apis",
@@ -1077,6 +1078,7 @@
   "https://www.anthropic.com/news/election-safeguards-update",
   "https://www.anthropic.com/news/enterprise-ai-services-company",
   "https://www.anthropic.com/news/finance-agents",
+  "https://www.anthropic.com/news/higher-limits-spacex",
   "https://www.anthropic.com/news/the-long-term-benefit-trust",
   "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand",
   "https://www.linkedin.com/posts/satyanadella_afantasticexample-of-ais-impact-on-agriculture-activity-7299602990728982528-86hu",
@@ -1123,5 +1125,6 @@
   "https://www.microsoft.com/en-us/security/blog/2026/04/30/whats-new-updated-or-recently-released-in-microsoft-security/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/",
-  "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/"
+  "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+  "https://www.microsoft.com/en-us/security/blog/2026/05/06/clickfix-campaign-uses-fake-macos-utilities-lures-deliver-infostealers/"
 ]
