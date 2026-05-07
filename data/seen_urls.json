@@ -74,6 +74,7 @@
   "https://devblogs.microsoft.com/microsoft365dev/sharepoint-framework-spfx-roadmap-update-april-2026/",
   "https://devblogs.microsoft.com/microsoft365dev/sharepoint-framework-spfx-roadmap-update-march-2026/",
   "https://devblogs.microsoft.com/microsoft365dev/sponsor-group-type-requirements-for-agent-identities/",
+  "https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/",
   "https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic/",
   "https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/",
   "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-interactive-v-non-interactive-mode/",
@@ -185,6 +186,7 @@
   "https://openai.com/index/advanced-account-security",
   "https://openai.com/index/advancing-independent-research-ai-alignment",
   "https://openai.com/index/advancing-red-teaming-with-people-and-ai",
+  "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api",
   "https://openai.com/index/adversarial-attacks-on-neural-network-policies",
   "https://openai.com/index/adversarial-training-methods-for-semi-supervised-text-classification",
   "https://openai.com/index/affective-use-study",
@@ -591,6 +593,7 @@
   "https://openai.com/index/introducing-the-realtime-api",
   "https://openai.com/index/introducing-the-stateful-runtime-environment-for-agents-in-amazon-bedrock",
   "https://openai.com/index/introducing-the-teen-safety-blueprint",
+  "https://openai.com/index/introducing-trusted-contact-in-chatgpt",
   "https://openai.com/index/introducing-upgrades-to-codex",
   "https://openai.com/index/introducing-vision-to-the-fine-tuning-api",
   "https://openai.com/index/introducing-workspace-agents-in-chatgpt",
@@ -1057,6 +1060,7 @@
   "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/reliable-blob-processing-using-azure-logic-apps-recommended/ba-p/4408091",
   "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/service-bus-sbmp-retirement-what-biztalk-server-2020-customers/ba-p/4513155",
   "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/stop-writing-plumbing-use-the-new-logic-apps-mcp-server-wizard/ba-p/4496702",
+  "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/a-new-chapter-for-realtime-ai-reasoning-translation-and-real/ba-p/4517124",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/architecting-cost-aware-llm-workloads-with-model-router-in/ba-p/4514440",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/automate-prior-authorization-with-ai-agents-now-available-as-a/ba-p/4513432",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/bring-your-own-model-to-foundry-agent-service-is-now-generally/ba-p/4515133",
@@ -1137,5 +1141,6 @@
   "https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/06/clickfix-campaign-uses-fake-macos-utilities-lures-deliver-infostealers/",
-  "https://www.microsoft.com/en-us/security/blog/2026/05/06/microsoft-named-an-overall-leader-in-kuppingercole-analysts-2026-emerging-ai-security-operations-center-soc-report/"
+  "https://www.microsoft.com/en-us/security/blog/2026/05/06/microsoft-named-an-overall-leader-in-kuppingercole-analysts-2026-emerging-ai-security-operations-center-soc-report/",
+  "https://www.microsoft.com/en-us/security/blog/2026/05/07/world-passkey-day-advancing-passwordless-authentication/"
 ]
