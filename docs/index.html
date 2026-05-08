@@ -30,16 +30,16 @@
 
 <div class="cat-nav-wrap">
   <nav class="cat-nav">
-    <a href="#" class="active" data-filter="all">All <span class="num">136</span></a>
+    <a href="#" class="active" data-filter="all">All <span class="num">138</span></a>
     <a href="#" data-filter="Overview">Overview <span class="num">3</span></a>
     <a href="#" data-filter="M365 Copilot">M365 Copilot <span class="num">5</span></a>
     <a href="#" data-filter="Copilot Studio">Copilot Studio <span class="num">4</span></a>
     <a href="#" data-filter="Foundry">Foundry <span class="num">30</span></a>
     <a href="#" data-filter="Azure AI Infra">Azure AI Infra <span class="num">9</span></a>
     <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">22</span></a>
-    <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">11</span></a>
+    <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">12</span></a>
     <a href="#" data-filter="AI Security">AI Security <span class="num">12</span></a>
-    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">25</span></a>
+    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">26</span></a>
     <a href="#" class="anthropic-tab" data-filter="Anthropic">Anthropic <span class="num">15</span></a>
     <button class="mark-read-btn" id="mark-all-read" style="display:none">✓ 0件 既読にする</button>
   </nav>
@@ -48,10 +48,10 @@
   <div class="subbar-inner">
     <div class="subbar-stats">
       <span><span class="live-dot"></span><b>Live</b></span>
-      <span><b>136</b> stories today</span>
+      <span><b>138</b> stories today</span>
       <span><b>13</b> sources</span>
-      <span><b>136</b> this month</span>
-      <span>Updated <b>07:58 JST</b></span>
+      <span><b>138</b> this month</span>
+      <span>Updated <b>10:31 JST</b></span>
     </div>
     <div>Curated by GPT-5.4 mini · @daka1</div>
   </div>
@@ -71,7 +71,7 @@
         <div class="zone-banner-title">Microsoft AI Updates</div>
         <div class="zone-banner-subtitle">9 categories · Microsoft 公式ブログ・Tech Community・Dev Blog から</div>
       </div>
-      <div class="zone-banner-counts"><b>96</b> stories</div>
+      <div class="zone-banner-counts"><b>97</b> stories</div>
     </div>
 
 <article class="featured" data-category="Foundry" data-tags="GPT-realtime-translate|GPT-realtime-whisper|GPT-realtime-2|Realtime API|Microsoft Foundry" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/a-new-chapter-for-realtime-ai-reasoning-translation-and-real/ba-p/4517124">
@@ -95,20 +95,49 @@
 
   <div class="featured-meta">
     <span>📰 techcommunity.microsoft.com</span>
-    <span>📅 4h ago</span>
+    <span>📅 7h ago</span>
     <span>🏷 GPT-realtime-translate · GPT-realtime-whisper · GPT-realtime-2 · Realtime API · Microsoft Foundry</span>
   </div>
 </article>
     <section class="section">
       <div class="section-head">
         <h2 class="section-title"><span class="icon">▎</span>Today's Stories</h2>
-        <span class="section-meta">Fri, May 08, 2026 · 95 items</span>
+        <span class="section-meta">Fri, May 08, 2026 · 96 items</span>
       </div>
       <div class="stories-grid">
-<article class="story" data-category="M365 Copilot" data-tags="Microsoft Graph|Exchange Online|mailbox import/export|EWS|GA" data-url="https://devblogs.microsoft.com/microsoft365dev/announcing-general-availability-of-the-mailbox-import-and-export-microsoft-graph-apis/">
+<article class="story" data-category="Dev Tools" data-tags="GitHub Agentic Workflows|GitHub Actions|MCP|GitHub CLI|token efficiency" data-url="https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/">
+  <div class="story-meta-top">
+    <span class="tag cat-dev">Dev Tools</span>
+    <span class="story-time">2h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/" target="_blank" rel="noopener">GitHub Agentic Workflowsのtoken効率を改善</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">github.blog — GitHub Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>GitHub Blogが、GitHub Agentic Workflowsのtoken使用量を継続的に最適化する取り組みを紹介した記事。2026年4月から、自社リポジトリで動く多数のagentic workflowsを対象に、ログ計測、監査、最適化を自動化した。対象はGitHub Actions、Claude CLI、Copilot CLI、Codex CLIで、現時点では予備的な結果を示している。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>新たに、全workflowでtoken-usage.jsonlを出力し、input/output/cache-read/cache-write tokens、model、provider、timestampを標準化して収集する仕組みを導入した。Daily Token Usage Auditorが異常増加や高コストworkflowを検出し、Daily Token Optimizerが具体的な改善案をGitHub issue化する。改善策として、未使用のMCP toolsを削除すると1回あたり8–12 KBのcontext削減、数千tokens/ runの節約を確認。また、PR diffやfile contents取得をGitHub CLIへ置き換え、LLMの推論を介さないデータ取得へ移した。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>エージェント活用が広がるほど、品質だけでなくtokenコストの可視化と制御が重要になる。特に定型化されたCI/保守workflowでは、未使用toolの削減やCLIへの置換のような設計改善が大きな効果を持つ。日本企業でも、開発生産性向上の一方で予算超過を防ぐため、agentic workflowsの継続監視と標準化された計測基盤を先に整える価値が高い。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#GitHub Agentic Workflows</span><span class="story-tag-chip">#GitHub Actions</span><span class="story-tag-chip">#MCP</span><span class="story-tag-chip">#GitHub CLI</span><span class="story-tag-chip">#token efficiency</span>  </div>
+</article><article class="story" data-category="M365 Copilot" data-tags="Microsoft Graph|Exchange Online|mailbox import/export|EWS|GA" data-url="https://devblogs.microsoft.com/microsoft365dev/announcing-general-availability-of-the-mailbox-import-and-export-microsoft-graph-apis/">
   <div class="story-meta-top">
     <span class="tag cat-m365">M365 Copilot</span>
-    <span class="story-time">1h ago</span>
+    <span class="story-time">3h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://devblogs.microsoft.com/microsoft365dev/announcing-general-availability-of-the-mailbox-import-and-export-microsoft-graph-apis/" target="_blank" rel="noopener">Mailbox import/export Microsoft Graph APIs が GA</a>
@@ -137,7 +166,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Semantic Kernel|CVE-2026-26030|CVE-2026-25592|prompt injection|RCE" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">2h ago</span>
+    <span class="story-time">5h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/" target="_blank" rel="noopener">AI agent frameworkのRCE脆弱性を解説</a>
@@ -166,7 +195,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot code review|pull request|CI|technical debt|agent-generated code" data-url="https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">3h ago</span>
+    <span class="story-time">6h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/" target="_blank" rel="noopener">Agent生成PRを見抜くレビューの要点</a>
@@ -195,7 +224,7 @@
 </article><article class="story" data-category="AI Security" data-tags="passkey|Microsoft Entra ID|Windows Hello|Microsoft Entra External ID|account recovery" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/07/world-passkey-day-advancing-passwordless-authentication/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">6h ago</span>
+    <span class="story-time">9h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/world-passkey-day-advancing-passwordless-authentication/" target="_blank" rel="noopener">World Passkey Day、パスワードレス認証を加速</a>
@@ -224,7 +253,7 @@
 </article><article class="story" data-category="Azure AI Infra" data-tags="Logic Apps Standard|Logic Apps Migration Agent|BizTalk Server|GitHub Copilot|HL7" data-url="https://techcommunity.microsoft.com/t5/azure-integration-services-blog/bringing-all-your-integration-workloads-to-logic-apps-standard/ba-p/4517262">
   <div class="story-meta-top">
     <span class="tag cat-infra">Azure AI Infra</span>
-    <span class="story-time">11h ago</span>
+    <span class="story-time">14h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/azure-integration-services-blog/bringing-all-your-integration-workloads-to-logic-apps-standard/ba-p/4517262" target="_blank" rel="noopener">Logic Apps Standard への移行を支援する Migration Agent</a>
@@ -1384,7 +1413,7 @@
 </article><article class="story" data-category="Foundry" data-tags="Microsoft Foundry|DeepSeek V4 Flash|DeepSeek V4 Pro|model catalog|agentic workflows" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-deepseek-v4-flash-and-v4-pro-in-microsoft-foundry/ba-p/4515174">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-deepseek-v4-flash-and-v4-pro-in-microsoft-foundry/ba-p/4515174" target="_blank" rel="noopener">Microsoft FoundryにDeepSeek V4 FlashとPro追加</a>
@@ -2873,20 +2902,20 @@
         <div class="zone-banner-title">Partner Updates</div>
         <div class="zone-banner-subtitle">Microsoft 戦略パートナーの公式アップデート</div>
       </div>
-      <div class="zone-banner-counts"><b>40</b> stories</div>
+      <div class="zone-banner-counts"><b>41</b> stories</div>
     </div>
 
     <section class="section">
       <div class="section-head partner-head">
         <h2 class="section-title"><span class="icon">●</span>OpenAI</h2>
-        <span class="section-meta">openai.com/news · 25 items</span>
+        <span class="section-meta">openai.com/news · 26 items</span>
       </div>
       <div class="stories-grid">
 <article class="story" data-category="OpenAI" data-tags="GPT-5.5|GPT-5.5-Cyber|Trusted Access for Cyber|vulnerability research|critical infrastructure" data-url="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">9h ago</span>
+    <span class="story-time">12h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber" target="_blank" rel="noopener">GPT-5.5とGPT-5.5-CyberでTrusted Accessを拡大</a>
@@ -2916,7 +2945,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">11h ago</span>
+    <span class="story-time">14h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/parloa" target="_blank" rel="noopener">ParloaがOpenAIモデルで音声AI顧客対応を強化</a>
@@ -2946,7 +2975,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">12h ago</span>
+    <span class="story-time">15h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api" target="_blank" rel="noopener">OpenAI APIに新しいrealtime voice modelsを追加</a>
@@ -2976,7 +3005,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">22h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/introducing-trusted-contact-in-chatgpt" target="_blank" rel="noopener">ChatGPTに信頼できる連絡先通知機能を追加</a>
@@ -3002,11 +3031,41 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#ChatGPT</span><span class="story-tag-chip">#Trusted Contact</span><span class="story-tag-chip">#OpenAI Safety</span><span class="story-tag-chip">#自傷リスク</span><span class="story-tag-chip">#通知機能</span>  </div>
-</article><article class="story" data-category="OpenAI" data-tags="Codex|agentic workflow|B2B Signals research|enterprise AI|competitive advantage" data-url="https://openai.com/index/introducing-b2b-signals">
+</article><article class="story" data-category="OpenAI" data-tags="ChatGPT Enterprise|Codex|Software development|AI-driven workflows" data-url="https://openai.com/index/simplex">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
     <span class="story-time">1d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://openai.com/index/simplex" target="_blank" rel="noopener">SimplexがCodexでソフトウェア開発を再設計</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">openai.com — OpenAI News</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>OpenAI News の記事で、Simplex が ChatGPT Enterprise と Codex を活用してソフトウェア開発の進め方を見直した事例を紹介している。設計、実装、テストにかかる時間を短縮しつつ、AI主導のワークフローを拡張している点が主題で、OpenAI 公式の事例更新として読める。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Simplex は ChatGPT Enterprise と Codex を開発プロセスに組み込み、設計・ビルド・テストの各工程を効率化した。記事では、AI を単なる補助ではなく開発フロー全体を支える仕組みとして使い、作業時間の短縮とワークフローの拡張を両立していることが新しい点として示されている。Codex の導入により、ソフトウェア開発の進め方を再設計した事例である。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>本記事は、AI 導入の効果を個別タスクの自動化ではなく、開発工程全体の再設計として捉える重要性を示す。エンタープライズにとっては、設計・実装・テストの流れを見直し、どこで ChatGPT Enterprise や Codex のような仕組みを組み込むかが競争力に直結する。特に開発生産性の向上を急ぐ組織に有用である。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#ChatGPT Enterprise</span><span class="story-tag-chip">#Codex</span><span class="story-tag-chip">#Software development</span><span class="story-tag-chip">#AI-driven workflows</span>  </div>
+</article><article class="story" data-category="OpenAI" data-tags="Codex|agentic workflow|B2B Signals research|enterprise AI|competitive advantage" data-url="https://openai.com/index/introducing-b2b-signals">
+  <div class="story-meta-top">
+    <span class="tag cat-openai">OpenAI</span>
+    <span class="tag partner">Partner</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/introducing-b2b-signals" target="_blank" rel="noopener">フロンティア企業がAI優位を築く方法</a>
@@ -3036,7 +3095,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/introducing-chatgpt-futures-class-of-2026" target="_blank" rel="noopener">ChatGPT Futures 2026年版、26人の学生を紹介</a>
@@ -3066,7 +3125,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/uber" target="_blank" rel="noopener">UberがOpenAIで配車と収益化を高速化</a>
@@ -3096,7 +3155,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/singular-bank" target="_blank" rel="noopener">Singular BankがChatGPTとCodexで業務を加速</a>
@@ -3216,7 +3275,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">2d ago</span>
+    <span class="story-time">3d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/new-ways-to-buy-chatgpt-ads" target="_blank" rel="noopener">ChatGPT広告にbeta Ads Managerを追加</a>
@@ -3276,7 +3335,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">3d ago</span>
+    <span class="story-time">4d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/delivering-low-latency-voice-ai-at-scale" target="_blank" rel="noopener">OpenAI、低遅延の音声AIを大規模提供するWebRTC再構築</a>
@@ -3306,7 +3365,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">Apr 30</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/advanced-account-security" target="_blank" rel="noopener">Advanced Account Security を導入し不正ログインを強化</a>
@@ -3645,7 +3704,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">2h ago</span>
+    <span class="story-time">5h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener">AI連携標準「Model Context Protocol」を公開</a>
@@ -3735,7 +3794,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">2d ago</span>
+    <span class="story-time">3d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">Claude Opus 4.7 GA、ソフト開発と推論を強化</a>
@@ -4187,9 +4246,9 @@
         <div class="tag-pills">
           <button type="button" class="tag-pill" data-tag="GitHub Copilot CLI">#GitHub Copilot CLI</button>
           <button type="button" class="tag-pill" data-tag="GitHub">#GitHub</button>
+          <button type="button" class="tag-pill" data-tag="GitHub Actions">#GitHub Actions</button>
           <button type="button" class="tag-pill" data-tag="pull request">#pull request</button>
           <button type="button" class="tag-pill" data-tag="/resume">#/resume</button>
-          <button type="button" class="tag-pill" data-tag="Agent Mode">#Agent Mode</button>
         </div>
       </div>
       <div class="tag-group">
@@ -4224,9 +4283,9 @@
           Anthropic
         </div>
         <div class="tag-pills">
+          <button type="button" class="tag-pill" data-tag="MCP">#MCP</button>
           <button type="button" class="tag-pill" data-tag="Claude">#Claude</button>
           <button type="button" class="tag-pill" data-tag="Claude Code">#Claude Code</button>
-          <button type="button" class="tag-pill" data-tag="MCP">#MCP</button>
           <button type="button" class="tag-pill" data-tag="Anthropic API">#Anthropic API</button>
           <button type="button" class="tag-pill" data-tag="Claude Cowork">#Claude Cowork</button>
         </div>
@@ -4238,11 +4297,11 @@
     <h3 class="side-title"><span class="icon">📰</span>Sources Today</h3>
     <div class="source-list">
       <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">30</span></div>
-      <div class="source-list-item"><span>openai.com</span><span class="count">25</span></div>
+      <div class="source-list-item"><span>openai.com</span><span class="count">26</span></div>
       <div class="source-list-item"><span>community.fabric.microsoft.com</span><span class="count">22</span></div>
       <div class="source-list-item"><span>microsoft.com/security</span><span class="count">11</span></div>
       <div class="source-list-item"><span>anthropic.com/news</span><span class="count">11</span></div>
-      <div class="source-list-item"><span>github.blog</span><span class="count">9</span></div>
+      <div class="source-list-item"><span>github.blog</span><span class="count">10</span></div>
       <div class="source-list-item"><span>devblogs.microsoft.com/foundry</span><span class="count">6</span></div>
       <div class="source-list-item"><span>devblogs.microsoft.com</span><span class="count">5</span></div>
       <div class="source-list-item"><span>azure.microsoft.com</span><span class="count">5</span></div>
