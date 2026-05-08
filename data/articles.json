@@ -1,5 +1,33 @@
 [
   {
+    "url": "https://devblogs.microsoft.com/microsoft365dev/announcing-the-public-preview-of-the-microsoft-365-copilot-agent-evaluations-tool/",
+    "title": "Announcing the public preview of the Microsoft 365 Copilot Agent Evaluations tool",
+    "content": "Today we’re announcing the public preview of the Microsoft 365 Copilot Agent Evaluations tool . The Agent Evaluations CLI tool helps developers measure and improve the quality of agents they build for Microsoft 365 Copilot. The tool provides a command-line interface that sends prompts to a deployed agent, captures responses, and scores them with the help of Azure OpenAI LLM models. It produces structured reports developers can use in their inner loop of development and in CI/CD pipelines. This release is a step toward making rigorous, repeatable evaluation a standard part of how developers build for Microsoft 365 Copilot, alongside the broader work happening across the platform, from Work IQ to agent creation with the Microsoft 365 Agents Toolkit. Why evaluations matter now Our mission is to enable Microsoft partners, ISVs, and enterprise developers to extend Microsoft 365 Copilot with custom agents, actions, and knowledge so Copilot can reason over any data and take action across any system. As agents move from demos into core business workflows, the bar for shipping rises with them. Customers expect agents that are accurate, grounded, and consistent across the breadth of real-world prompts they receive. Meeting that bar requires more than manual testing. It requires an evaluation framework that is objective, repeatable, and integrated into the developer workflow. The Agent Evaluations tool is designed to make that practical. What’s in the public preview The public preview brings the full evaluation loop into a simple command-line workflow. The CLI is designed to fit naturally into the way Microsoft 365 developers already build agents. Developers can invoke the CLI to evaluate declarative agents right inside the Microsoft 365 Agents Toolkit. The tool supports evaluation of single-turn or multi-turn conversations to make it possible to test how an agent retains context, handles follow-ups, and completes end-to-end tasks the way real users actually interact with it. The tool offers an easy experience to select which agent to run an evaluation against. The interactive agent picker ensures that testing teams alongside development teams can evaluate the agents. Responses are then scored automatically against evaluators like Coherence, Groundedness (LLM based) or ExactMatch /PartialMatch (Code based), and more evaluators . Results are emitted in an HTML scorecard report. Developers can use the scorecard as a sharable artifact that captures objective evidence of agent quality across their inner loop, code reviews, and CI/CD pipelines. You can also access the evaluation skill wherever you vibe-code with your coding agents. Get started The preview tool is free to install during public preview . You’ll need a Microsoft 365 Copilot license, an agent deployed to your tenant, Node.js 24.12.0+, admin consent to run the tool in your tenant, and an Azure OpenAI endpoint for the LLM-judge evaluators. Ask your admin to enable the tool for your tenant today . Get started: Microsoft 365 Copilot Agent Evaluations CLI overview Source & samples (GitHub): github.com/microsoft/m365-copilot-eval Agents Toolkit : Create declarative agents using Microsoft 365 Agents Toolkit | Microsoft Learn Agent evaluation skill – Use the microsoft-365-agents-toolkit@workiq skill for Claude Code and Copilot to create and evaluate agents using Agents Toolkit and Agents Evaluation Tool. We want your feedback During the preview period, we need your voice. Try the tool against your agents, file issues in the GitHub repo , and tell us which evaluators, integrations, and workflows make the biggest difference for your team. Your feedback will directly shape the path to g eneral a vailability (GA) . We can’t wait to see the high-quality, trustworthy agents for Microsoft 365 Copilot you’ll ship next. The post Announcing the public preview of the Microsoft 365 Copilot Agent Evaluations tool appeared first on Microsoft 365 Developer Blog .",
+    "published": "2026-05-08T20:51:57+00:00",
+    "source_name": "M365 Dev Blog",
+    "domain": "devblogs.microsoft.com",
+    "source_hint": "M365 Copilot",
+    "fetched_at": "2026-05-08T21:45:24.737105+00:00",
+    "category": "M365 Copilot",
+    "is_partner": false,
+    "headline_ja": "Microsoft 365 Copilot向けAgent Evaluationsを公開プレビュー",
+    "overview": "Microsoft 365 Dev Blogは、Microsoft 365 Copilot向けエージェントの品質評価を支援する「Agent Evaluations」CLIツールのPublic Previewを発表した。Azure OpenAIのLLMを使って応答を採点し、開発者が反復的に改善できるよう支援する。",
+    "whats_new": "今回のPublic Previewでは、デプロイ済みエージェントに対してプロンプトを送信し、応答を取得して自動採点するCLIワークフローが提供される。単一ターン／マルチターンの会話評価に対応し、Coherence、Groundedness（LLM based）、ExactMatch / PartialMatch（Code based）などの評価基準でスコアリングできる。結果はHTMLのscorecardレポートとして出力され、inner loop、コードレビュー、CI/CDパイプラインで共有可能な成果物として利用できる。プレビュー期間中は無料でインストールできるが、Microsoft 365 Copilot license、テナントに配置されたエージェント、Node.js 24.12.0+、テナントでのadmin consent、LLM-judge用のAzure OpenAI endpointが必要。GAに向けてフィードバック収集中。",
+    "key_takeaway": "Copilot向けエージェントはデモ品質ではなく、業務利用に耐える再現性ある評価が必要になる段階に入った。金融・公共・製造のように誤答や不整合が許されにくい環境では、開発時点で自動評価をCI/CDへ組み込む価値が大きい。品質証跡を残せるため、レビューや運用承認の材料としても有効。",
+    "tags": [
+      "Microsoft 365 Copilot",
+      "Agent Evaluations",
+      "Microsoft 365 Agents Toolkit",
+      "Azure OpenAI",
+      "CI/CD"
+    ],
+    "processed_at": "2026-05-08T21:45:49.488367+00:00",
+    "model": "gpt-5.4-mini",
+    "tokens_input": 3012,
+    "tokens_output": 467,
+    "tokens_total": 3479
+  },
+  {
     "url": "https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/",
     "title": "Active attack: Dirty Frag Linux vulnerability expands post-compromise risk",
     "content": "In this article Why Dirty Frag matters Technical overview Exploitation scenarios Mitigation guidance Post-mitigation integrity verification References A newly disclosed Linux local privilege escalation vulnerability known as “Dirty Frag” enables escalation from an unprivileged user to root through vulnerable kernel networking and memory-fragment handling components, including esp4, esp6 (CVE-2026-43284), and rxrpc (CVE-2026-43500). Public reporting and proof-of-concept activity indicate the exploit is designed to provide more reliable privilege escalation than traditional race-condition-dependent Linux local privilege escalation techniques. Dirty Frag may be leveraged after initial compromise through SSH access, web-shell execution, container escape, or compromise of a low-privileged account. Affected environments may include Ubuntu, RHEL, CentOS Stream, AlmaLinux, Fedora, openSUSE, and OpenShift deployments. Microsoft Defender is actively monitoring related activity and investigating additional detections and protections. This article details an ongoing investigation into active campaign. We will update this report as new details emerge. Why Dirty Frag matters Local privilege escalation vulnerabilities are frequently used by threat actors after initial access to expand control over a compromised environment. Once root access is obtained, attackers can disable security tooling, access sensitive credentials, tamper with logs, pivot laterally, and establish persistent access. Dirty Frag is notable because it introduces multiple kernel attack paths involving rxrpc and esp/xfrm networking components to improve exploitation reliability. Rather than relying on narrow timing windows or unstable corruption conditions often associated with Linux local privilege escalation exploits, Dirty Frag appears designed to increase consistency across vulnerable environments. This increases operational risk in environments where threat actors already possess limited local execution capability through compromised accounts, vulnerable applications, containers, or exposed administrative interfaces. Technical overview Dirty Frag abuses Linux kernel networking and memory-fragment handling behavior involving esp4, esp6, and rxrpc components. Similar to the previously disclosed CopyFail vulnerability (CVE-2026-31431), the exploit attempts to manipulate Linux page cache behavior to achieve privilege escalation. However, Dirty Frag introduces additional attack paths that expand exploitation opportunities and improve reliability. The vulnerability affects systems where vulnerable modules are present and accessible. In many enterprise environments, these components may already be enabled to support IPsec, VPN functionality, or other networking workloads. Exploitation scenarios Threat actors may leverage Dirty Frag after obtaining local code execution through several common intrusion paths, including: Compromised SSH accounts Web-shell access on internet-facing applications Container escapes into the host environment Abuse of low-privileged service accounts Post-exploitation activity following phishing or remote access compromise Once local access is established, successful exploitation may allow attackers to escalate privileges to root and gain broad control over the affected Linux host. Mitigation guidance While comprehensive remediation guidance continues to evolve, organizations should evaluate interim mitigations immediately. Recommended actions include: Disable unused rxrpc kernel modules where operationally possible Assess whether esp4, esp6, and related xfrm/IPsec functionality can be temporarily disabled safely Restrict unnecessary local shell access Harden containerized workloads Increase monitoring for abnormal privilege escalation activity Prioritize kernel patch deployment once vendor advisories are released The following example prevents vulnerable modules from loading and unloads active modules where possible: cat These mitigations should be carefully evaluated before deployment, particularly in environments relying on IPsec VPNs or RxRPC functionality. Post-mitigation integrity verification Mitigation alone may not reverse changes already introduced through successful exploitation attempts. If exploitation occurred prior to mitigation, malicious modifications may persist in memory or cached file content even after vulnerable modules are disabled. Organizations should validate the integrity of critical files and assess whether cache clearing is appropriate for their environment. echo 3 | sudo tee /proc/sys/vm/drop_caches Cache clearing can temporarily increase disk I/O and impact production performance and should be evaluated carefully before deployment. Microsoft Defender coverage Microsoft Defender provides detection coverage for possible Dirty Frag exploitation activity, including: Microsoft Defender Antivirus Exploit:Linux/DirtyFrag.A Exploit:Linux/DirtyFrag.B Trojan:Linux/DirtyFrag.Z!MTB Trojan:Linux/DirtyFrag.ZA!MTB Trojan:Linux/DirtyFrag.ZC!MTB Trojan:Linux/DirtyFrag.DA!MTB Microsoft Defender for Cloud Potential exploitation of dirtyfrag vulnerability detected Microsoft continues investigating additional detections, telemetry correlations, and posture guidance related to Dirty Frag activity. Further investigation is being conducted by Microsoft Defender towards providing stronger protection and posture recommendations is in progress. References Read about CopyFail (CVE-2026-31431), including mitigation and detection guidance here: https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/ . The post Active attack: Dirty Frag Linux vulnerability expands post-compromise risk appeared first on Microsoft Security Blog .",
@@ -81,6 +109,34 @@
     "tokens_input": 3392,
     "tokens_output": 441,
     "tokens_total": 3833
+  },
+  {
+    "url": "https://openai.com/index/running-codex-safely",
+    "title": "Running Codex safely at OpenAI",
+    "content": "How OpenAI runs Codex securely with sandboxing, approvals, network policies, and agent-native telemetry to support safe and compliant coding agent adoption.",
+    "published": "2026-05-08T12:30:00+00:00",
+    "source_name": "OpenAI News",
+    "domain": "openai.com",
+    "source_hint": "OpenAI",
+    "fetched_at": "2026-05-08T21:45:29.392022+00:00",
+    "category": "OpenAI",
+    "is_partner": true,
+    "headline_ja": "OpenAIがCodexを安全に運用するための仕組み",
+    "overview": "OpenAI News の記事で、coding agent の Codex を安全かつコンプライアンスに配慮して運用するための設計を紹介している。sandboxing、承認フロー、network policies、agent-native telemetry を組み合わせ、企業利用時のリスクを抑えながら導入しやすくする考え方を示す内容である。",
+    "whats_new": "OpenAI は、Codex を実運用で安全に使うための具体的な保護策を公開した。sandboxing により実行環境を分離し、必要に応じた approvals で操作を制御し、network policies で外部通信を制限する。さらに agent-native telemetry を活用して、エージェントの挙動を可視化し監査や運用判断に役立てる。これにより、安全性とコンプライアンスを両立しながら coding agent を企業に展開しやすくしている。",
+    "key_takeaway": "企業にとって重要なのは、coding agent を“使えるか”ではなく“安全に統制して使えるか”である。本記事は、実行分離、承認、通信制御、可観測性を組み合わせることで、金融・公共・製造などの厳格な環境でも導入検討しやすくなることを示す。既存の開発統制や監査要件にどう組み込むかが次の論点になる。",
+    "tags": [
+      "Codex",
+      "sandboxing",
+      "approvals",
+      "network policies",
+      "agent-native telemetry"
+    ],
+    "processed_at": "2026-05-08T21:45:50.127603+00:00",
+    "model": "gpt-5.4-mini",
+    "tokens_input": 2258,
+    "tokens_output": 402,
+    "tokens_total": 2660
   },
   {
     "url": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-microsoft-host-integration-server-2028-modern/ba-p/4517606",
