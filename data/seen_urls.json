@@ -85,6 +85,7 @@
   "https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/",
   "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
   "https://github.blog/news-insights/policy-news-and-insights/how-researchers-are-using-github-innovation-graph-data-to-reveal-the-digital-complexity-of-nations/",
+  "https://github.blog/news-insights/policy-news-and-insights/why-age-assurance-laws-matter-for-developers/",
   "https://github.blog/open-source/git/highlights-from-git-2-54/",
   "https://github.blog/open-source/maintainers/welcome-to-maintainer-month-celebrating-the-people-behind-the-code/",
   "https://github.blog/open-source/register-now-for-openclaw-after-hours-github/",
@@ -190,6 +191,7 @@
   "https://openai.com/index/advancing-independent-research-ai-alignment",
   "https://openai.com/index/advancing-red-teaming-with-people-and-ai",
   "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api",
+  "https://openai.com/index/advancing-youth-safety-in-emea",
   "https://openai.com/index/adversarial-attacks-on-neural-network-policies",
   "https://openai.com/index/adversarial-training-methods-for-semi-supervised-text-classification",
   "https://openai.com/index/affective-use-study",
@@ -492,6 +494,7 @@
   "https://openai.com/index/holiday-extras",
   "https://openai.com/index/horizon-1000",
   "https://openai.com/index/how-ai-training-scales",
+  "https://openai.com/index/how-chatgpt-protects-privacy",
   "https://openai.com/index/how-confessions-can-keep-language-models-honest",
   "https://openai.com/index/how-countries-can-end-the-capability-overhang",
   "https://openai.com/index/how-openai-is-approaching-2024-worldwide-elections",
@@ -1150,5 +1153,6 @@
   "https://www.microsoft.com/en-us/security/blog/2026/05/06/clickfix-campaign-uses-fake-macos-utilities-lures-deliver-infostealers/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/06/microsoft-named-an-overall-leader-in-kuppingercole-analysts-2026-emerging-ai-security-operations-center-soc-report/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
-  "https://www.microsoft.com/en-us/security/blog/2026/05/07/world-passkey-day-advancing-passwordless-authentication/"
+  "https://www.microsoft.com/en-us/security/blog/2026/05/07/world-passkey-day-advancing-passwordless-authentication/",
+  "https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/"
 ]

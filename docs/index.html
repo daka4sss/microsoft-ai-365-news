@@ -30,16 +30,16 @@
 
 <div class="cat-nav-wrap">
   <nav class="cat-nav">
-    <a href="#" class="active" data-filter="all">All <span class="num">140</span></a>
+    <a href="#" class="active" data-filter="all">All <span class="num">144</span></a>
     <a href="#" data-filter="Overview">Overview <span class="num">3</span></a>
     <a href="#" data-filter="M365 Copilot">M365 Copilot <span class="num">5</span></a>
     <a href="#" data-filter="Copilot Studio">Copilot Studio <span class="num">4</span></a>
     <a href="#" data-filter="Foundry">Foundry <span class="num">30</span></a>
     <a href="#" data-filter="Azure AI Infra">Azure AI Infra <span class="num">10</span></a>
     <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">22</span></a>
-    <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">13</span></a>
-    <a href="#" data-filter="AI Security">AI Security <span class="num">12</span></a>
-    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">26</span></a>
+    <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">14</span></a>
+    <a href="#" data-filter="AI Security">AI Security <span class="num">13</span></a>
+    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">28</span></a>
     <a href="#" class="anthropic-tab" data-filter="Anthropic">Anthropic <span class="num">15</span></a>
     <button class="mark-read-btn" id="mark-all-read" style="display:none">✓ 0件 既読にする</button>
   </nav>
@@ -48,10 +48,10 @@
   <div class="subbar-inner">
     <div class="subbar-stats">
       <span><span class="live-dot"></span><b>Live</b></span>
-      <span><b>140</b> stories today</span>
+      <span><b>144</b> stories today</span>
       <span><b>13</b> sources</span>
-      <span><b>140</b> this month</span>
-      <span>Updated <b>01:07 JST</b></span>
+      <span><b>144</b> this month</span>
+      <span>Updated <b>04:01 JST</b></span>
     </div>
     <div>Curated by GPT-5.4 mini · @daka1</div>
   </div>
@@ -71,7 +71,7 @@
         <div class="zone-banner-title">Microsoft AI Updates</div>
         <div class="zone-banner-subtitle">9 categories · Microsoft 公式ブログ・Tech Community・Dev Blog から</div>
       </div>
-      <div class="zone-banner-counts"><b>99</b> stories</div>
+      <div class="zone-banner-counts"><b>101</b> stories</div>
     </div>
 
 <article class="featured" data-category="Foundry" data-tags="GPT-realtime-translate|GPT-realtime-whisper|GPT-realtime-2|Realtime API|Microsoft Foundry" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/a-new-chapter-for-realtime-ai-reasoning-translation-and-real/ba-p/4517124">
@@ -95,20 +95,78 @@
 
   <div class="featured-meta">
     <span>📰 techcommunity.microsoft.com</span>
-    <span>📅 22h ago</span>
+    <span>📅 1d ago</span>
     <span>🏷 GPT-realtime-translate · GPT-realtime-whisper · GPT-realtime-2 · Realtime API · Microsoft Foundry</span>
   </div>
 </article>
     <section class="section">
       <div class="section-head">
         <h2 class="section-title"><span class="icon">▎</span>Today's Stories</h2>
-        <span class="section-meta">Sat, May 09, 2026 · 98 items</span>
+        <span class="section-meta">Sat, May 09, 2026 · 100 items</span>
       </div>
       <div class="stories-grid">
-<article class="story" data-category="Dev Tools" data-tags="GitHub Innovation Graph|Economic Complexity Index|GraphQL API|software bundles" data-url="https://github.blog/news-insights/policy-news-and-insights/how-researchers-are-using-github-innovation-graph-data-to-reveal-the-digital-complexity-of-nations/">
+<article class="story" data-category="AI Security" data-tags="Dirty Frag|CVE-2026-43284|CVE-2026-43500|Microsoft Defender for Cloud|Linux privilege escalation" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/">
+  <div class="story-meta-top">
+    <span class="tag cat-security">AI Security</span>
+    <span class="story-time">1h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/" target="_blank" rel="noopener">Dirty FragでLinuxの権限昇格リスクが拡大</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">microsoft.com/security — Microsoft Security Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Security Blog は、Linux のローカル権限昇格脆弱性「Dirty Frag」によるアクティブな攻撃を報告しました。esp4、esp6（CVE-2026-43284）、rxrpc（CVE-2026-43500）などの kernel networking / memory-fragment 処理を悪用し、低権限ユーザーから root へ昇格できるとしています。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の更新では、Dirty Frag が従来の race condition 依存型 LPE より再現性を高めた攻撃手法として説明されました。SSH 侵害、web shell、container escape、低権限アカウントの悪用後に利用され、Ubuntu、RHEL、CentOS Stream、AlmaLinux、Fedora、openSUSE、OpenShift に影響し得ます。Microsoft Defender Antivirus と Defender for Cloud には Exploit:Linux/DirtyFrag.* などの検知が追加され、Microsoft は追加シグナルと防御策を継続調査中です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Linux サーバーは初期侵入後に root へ到達されると、監視停止、資格情報窃取、ログ改ざん、横展開が一気に進みます。金融・公共・製造のように Linux 基盤が広い環境では、未使用の rxrpc や xfrm/IPsec 機能の棚卸し、特権昇格監視の強化、パッチ適用の即応性確保が重要です。コンテナ基盤では host 侵害への波及も前提に対応すべきです。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Dirty Frag</span><span class="story-tag-chip">#CVE-2026-43284</span><span class="story-tag-chip">#CVE-2026-43500</span><span class="story-tag-chip">#Microsoft Defender for Cloud</span><span class="story-tag-chip">#Linux privilege escalation</span>  </div>
+</article><article class="story" data-category="Dev Tools" data-tags="age assurance|open source|operating system|app store|GitHub" data-url="https://github.blog/news-insights/policy-news-and-insights/why-age-assurance-laws-matter-for-developers/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">1h ago</span>
+    <span class="story-time">2h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://github.blog/news-insights/policy-news-and-insights/why-age-assurance-laws-matter-for-developers/" target="_blank" rel="noopener">age assurance法が開発者に及ぼす影響</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">github.blog — GitHub Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>GitHub Blog が、各国で進む age assurance（年齢確認・年齢推定）法制の動向と、開発者や open source エコシステムへの影響を解説した記事。子どもの安全保護という目的を認めつつ、OS や app store、開発基盤に過度な義務を課す設計は、分散型でユーザー主導の open source 文化と衝突し得ると説明している。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>本記事は、age verification だけでなく self-attestation や age estimation まで含む age assurance の考え方を整理し、各州法が OS、device、app store、リアルタイム API を通じて年齢情報や age-range signal をアプリへ伝える設計を広げている点を示した。California AB 1043 / AB 1856、Colorado SB 26-051、Illinois HB 4140、New York S 8102 / A 8893 などを挙げ、Texas、Louisiana、Utah の app store 法にも触れている。特に、OS 提供者や open source OS の発行者を広く対象にすると、中央集権的な管理やストア外インストール制限が前提となり、open source の再利用・再配布モデルと矛盾すると警告した。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>金融・公共・製造業の開発組織でも、OS 配布、社内 app store、端末管理、open source 利用を伴う基盤は影響を受け得る。年齢信号の収集・伝播を前提とする法案は、プライバシー、運用負荷、既存アーキテクチャとの整合性を要確認で、法域ごとの対象範囲を早期に精査し、policy review と技術設計を連動させることが重要。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#age assurance</span><span class="story-tag-chip">#open source</span><span class="story-tag-chip">#operating system</span><span class="story-tag-chip">#app store</span><span class="story-tag-chip">#GitHub</span>  </div>
+</article><article class="story" data-category="Dev Tools" data-tags="GitHub Innovation Graph|Economic Complexity Index|GraphQL API|software bundles" data-url="https://github.blog/news-insights/policy-news-and-insights/how-researchers-are-using-github-innovation-graph-data-to-reveal-the-digital-complexity-of-nations/">
+  <div class="story-meta-top">
+    <span class="tag cat-dev">Dev Tools</span>
+    <span class="story-time">4h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/news-insights/policy-news-and-insights/how-researchers-are-using-github-innovation-graph-data-to-reveal-the-digital-complexity-of-nations/" target="_blank" rel="noopener">GitHub Innovation Graphで国の複雑性を可視化</a>
@@ -137,7 +195,7 @@
 </article><article class="story" data-category="Azure AI Infra" data-tags="Host Integration Server 2028|Microsoft Entra ID|Azure Arc|Visual Studio Code|IBM MQ" data-url="https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-microsoft-host-integration-server-2028-modern/ba-p/4517606">
   <div class="story-meta-top">
     <span class="tag cat-infra">Azure AI Infra</span>
-    <span class="story-time">8h ago</span>
+    <span class="story-time">11h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-microsoft-host-integration-server-2028-modern/ba-p/4517606" target="_blank" rel="noopener">Microsoft Host Integration Server 2028 を発表</a>
@@ -166,7 +224,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Agentic Workflows|GitHub Actions|MCP|GitHub CLI|token efficiency" data-url="https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">17h ago</span>
+    <span class="story-time">20h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/" target="_blank" rel="noopener">GitHub Agentic Workflowsのtoken効率を改善</a>
@@ -195,7 +253,7 @@
 </article><article class="story" data-category="M365 Copilot" data-tags="Microsoft Graph|Exchange Online|mailbox import/export|EWS|GA" data-url="https://devblogs.microsoft.com/microsoft365dev/announcing-general-availability-of-the-mailbox-import-and-export-microsoft-graph-apis/">
   <div class="story-meta-top">
     <span class="tag cat-m365">M365 Copilot</span>
-    <span class="story-time">18h ago</span>
+    <span class="story-time">21h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://devblogs.microsoft.com/microsoft365dev/announcing-general-availability-of-the-mailbox-import-and-export-microsoft-graph-apis/" target="_blank" rel="noopener">Mailbox import/export Microsoft Graph APIs が GA</a>
@@ -224,7 +282,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Semantic Kernel|CVE-2026-26030|CVE-2026-25592|prompt injection|RCE" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">19h ago</span>
+    <span class="story-time">22h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/" target="_blank" rel="noopener">AI agent frameworkのRCE脆弱性を解説</a>
@@ -253,7 +311,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot code review|pull request|CI|technical debt|agent-generated code" data-url="https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">21h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/" target="_blank" rel="noopener">Agent生成PRを見抜くレビューの要点</a>
@@ -427,7 +485,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|monitoring hub|Schedule failures|通知管理|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Manage-failure-notifications-from-the-monitoring-hub-in-Fabric/ba-p/5160381">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Manage-failure-notifications-from-the-monitoring-hub-in-Fabric/ba-p/5160381" target="_blank" rel="noopener">Fabric の monitoring hub で失敗通知を一元管理</a>
@@ -456,7 +514,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake catalog|Foundry|Microsoft Fabric|GA" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-catalog-is-now-natively-available-in-Foundry-Generally/ba-p/5178376">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-catalog-is-now-natively-available-in-Foundry-Generally/ba-p/5178376" target="_blank" rel="noopener">FoundryでOneLake catalogがネイティブ提供に</a>
@@ -485,7 +543,7 @@
 </article><article class="story" data-category="Foundry" data-tags="Foundry|IBM Granite 4.1|NVIDIA Nemotron Nano Omni|Qwen3.6-35B-A3B|multimodal" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/now-in-foundry-ibm-granite-4-1-nvidia-nemotron-nano-omni-and/ba-p/4516858">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/now-in-foundry-ibm-granite-4-1-nvidia-nemotron-nano-omni-and/ba-p/4516858" target="_blank" rel="noopener">FoundryにIBM Granite 4.1など3系統の新モデル</a>
@@ -978,7 +1036,7 @@
 </article><article class="story" data-category="Copilot Studio" data-tags="Dataverse|Microsoft 365 Copilot|Business skills|Dataverse Search|Dataverse Plugin" data-url="https://www.microsoft.com/en-us/power-platform/blog/2026/05/05/dataverse-agent-data-platform/">
   <div class="story-meta-top">
     <span class="tag cat-studio">Copilot Studio</span>
-    <span class="story-time">2d ago</span>
+    <span class="story-time">3d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/power-platform/blog/2026/05/05/dataverse-agent-data-platform/" target="_blank" rel="noopener">Dataverseをエージェント基盤へ拡張した新機能</a>
@@ -1152,7 +1210,7 @@
 </article><article class="story" data-category="Foundry" data-tags="OpenAI GPT-image-2|Microsoft Foundry|image generation|4K resolution|multilingual understanding" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-openai-s-gpt-image-2-in-microsoft-foundry/ba-p/4500571">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">3d ago</span>
+    <span class="story-time">4d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-openai-s-gpt-image-2-in-microsoft-foundry/ba-p/4500571" target="_blank" rel="noopener">OpenAI GPT-image-2がFoundryで一般提供開始</a>
@@ -1355,7 +1413,7 @@
 </article><article class="story" data-category="Copilot Studio" data-tags="Dataverse|business skills|Copilot Studio|Dataverse MCP server|Power Apps" data-url="https://www.microsoft.com/en-us/power-platform/blog/2026/05/01/business-skills/">
   <div class="story-meta-top">
     <span class="tag cat-studio">Copilot Studio</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/power-platform/blog/2026/05/01/business-skills/" target="_blank" rel="noopener">Dataverseのbusiness skillsで業務手順をエージェント化</a>
@@ -1384,7 +1442,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Entra Agent ID|dynamic membership groups|Microsoft 365 groups|role-assignable groups|agent identities" data-url="https://devblogs.microsoft.com/microsoft365dev/sponsor-group-type-requirements-for-agent-identities/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://devblogs.microsoft.com/microsoft365dev/sponsor-group-type-requirements-for-agent-identities/" target="_blank" rel="noopener">Entra Agent IDのスポンサーグループ要件を変更</a>
@@ -1529,7 +1587,7 @@
 </article><article class="story" data-category="Azure AI Infra" data-tags="Azure Integrated HSM|Azure Key Vault|Azure Managed HSM|Confidential Computing|OCP" data-url="https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm/">
   <div class="story-meta-top">
     <span class="tag cat-infra">Azure AI Infra</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 01</span>
   </div>
   <h3 class="story-headline">
     <a href="https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm/" target="_blank" rel="noopener">Azure Integrated HSMをOSS化し信頼性を強化</a>
@@ -1558,7 +1616,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot CLI|interactive mode|non-interactive mode|/resume|copilot -p" data-url="https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-interactive-v-non-interactive-mode/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 01</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-interactive-v-non-interactive-mode/" target="_blank" rel="noopener">GitHub Copilot CLIの対話モードと非対話モード</a>
@@ -2960,13 +3018,13 @@
         <div class="zone-banner-title">Partner Updates</div>
         <div class="zone-banner-subtitle">Microsoft 戦略パートナーの公式アップデート</div>
       </div>
-      <div class="zone-banner-counts"><b>41</b> stories</div>
+      <div class="zone-banner-counts"><b>43</b> stories</div>
     </div>
 
     <section class="section">
       <div class="section-head partner-head">
         <h2 class="section-title"><span class="icon">●</span>OpenAI</h2>
-        <span class="section-meta">openai.com/news · 26 items</span>
+        <span class="section-meta">openai.com/news · 28 items</span>
       </div>
       <div class="stories-grid">
 <article class="story" data-category="OpenAI" data-tags="GPT-5.5|GPT-5.5-Cyber|Trusted Access for Cyber|vulnerability research|critical infrastructure" data-url="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber">
@@ -3119,6 +3177,36 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#ChatGPT Enterprise</span><span class="story-tag-chip">#Codex</span><span class="story-tag-chip">#Software development</span><span class="story-tag-chip">#AI-driven workflows</span>  </div>
+</article><article class="story" data-category="OpenAI" data-tags="ChatGPT|privacy|training data|OpenAI News" data-url="https://openai.com/index/how-chatgpt-protects-privacy">
+  <div class="story-meta-top">
+    <span class="tag cat-openai">OpenAI</span>
+    <span class="tag partner">Partner</span>
+    <span class="story-time">2d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://openai.com/index/how-chatgpt-protects-privacy" target="_blank" rel="noopener">ChatGPTが学習とプライバシーを両立する仕組み</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">openai.com — OpenAI News</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>OpenAI News が、ChatGPT が世界について学びながらも利用者のプライバシーをどう保護するかを説明する記事です。会話データの取り扱い、学習への利用の制御、個人データを訓練データから減らす取り組みを中心に、利用者が自分の会話を AI 改善に使うかどうかを選べる点を示しています。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>本記事では、ChatGPT が会話から学習する一方で、個人データの保護を優先する方針を改めて示しています。利用者は、自分の会話が AI モデルの改善に使われるかどうかを制御でき、学習に回るデータ量を抑えるための仕組みも説明されています。公開日は 2026-05-06 で、OpenAI 公式のプライバシー説明・更新情報として位置づけられます。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>企業利用では、生成 AI の導入において性能向上だけでなく、会話データの学習利用可否や個人情報の扱いを明確にすることが重要です。特に金融・公共・製造では、従業員の入力内容がモデル改善に使われる条件を把握し、社内ポリシーと利用設定を整えることで、安心して展開しやすくなります。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#ChatGPT</span><span class="story-tag-chip">#privacy</span><span class="story-tag-chip">#training data</span><span class="story-tag-chip">#OpenAI News</span>  </div>
 </article><article class="story" data-category="OpenAI" data-tags="Codex|agentic workflow|B2B Signals research|enterprise AI|competitive advantage" data-url="https://openai.com/index/introducing-b2b-signals">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
@@ -3359,6 +3447,36 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#ChatGPT ads</span><span class="story-tag-chip">#Ads Manager</span><span class="story-tag-chip">#CPC bidding</span><span class="story-tag-chip">#measurement tools</span><span class="story-tag-chip">#privacy</span>  </div>
+</article><article class="story" data-category="OpenAI" data-tags="European Youth Safety Blueprint|EMEA Youth &amp; Wellbeing Grants|youth safety|responsible AI|education" data-url="https://openai.com/index/advancing-youth-safety-in-emea">
+  <div class="story-meta-top">
+    <span class="tag cat-openai">OpenAI</span>
+    <span class="tag partner">Partner</span>
+    <span class="story-time">3d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://openai.com/index/advancing-youth-safety-in-emea" target="_blank" rel="noopener">EMEAの若者の安全と福祉を支えるOpenAIの新施策</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">openai.com — OpenAI News</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>OpenAI Newsが、EMEA地域における若者の安全とウェルビーイングをテーマにした取り組みを紹介しています。対象はティーン、家族、教育者で、European Youth Safety Blueprint と EMEA Youth &amp; Wellbeing Grants を通じて、責任あるAI利用を前進させる内容です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の発信では、OpenAIがEuropean Youth Safety BlueprintとEMEA Youth &amp; Wellbeing Grantsを提示し、ティーンや家庭、教育現場で安全かつ責任あるAI活用を進める方針を示しました。記事本文では細かな機能仕様や金額、提供時期は明示されていませんが、地域をEMEAに絞り、若者保護と福祉支援を軸にした新しい取り組みである点が新規性です。ステータスは記事上で明示されていません。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>企業にとっては、生成AI導入が技術面だけでなく、年齢層や利用文脈に応じた安全設計、教育、ガバナンスまで含むことが重要だと示しています。特に公共・教育・金融では、若年層や家族向けサービスでのリスク管理や説明責任が競争力になります。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#European Youth Safety Blueprint</span><span class="story-tag-chip">#EMEA Youth &amp; Wellbeing Grants</span><span class="story-tag-chip">#youth safety</span><span class="story-tag-chip">#responsible AI</span><span class="story-tag-chip">#education</span>  </div>
 </article><article class="story" data-category="OpenAI" data-tags="OpenAI|PwC|AI agents|finance workflows|forecasting" data-url="https://openai.com/index/openai-pwc-finance-collaboration">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
@@ -3762,7 +3880,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">20h ago</span>
+    <span class="story-time">22h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener">AI連携標準「Model Context Protocol」を公開</a>
@@ -3822,7 +3940,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/higher-limits-spacex" target="_blank" rel="noopener">Claudeの利用上限を拡大しSpaceXと計算資源提携</a>
@@ -3972,7 +4090,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 01</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/the-long-term-benefit-trust" target="_blank" rel="noopener">Anthropic、長期的便益を重視するLTBTを公表</a>
@@ -4302,11 +4420,11 @@
           Dev Tools
         </div>
         <div class="tag-pills">
-          <button type="button" class="tag-pill" data-tag="GitHub Copilot CLI">#GitHub Copilot CLI</button>
           <button type="button" class="tag-pill" data-tag="GitHub">#GitHub</button>
+          <button type="button" class="tag-pill" data-tag="GitHub Copilot CLI">#GitHub Copilot CLI</button>
           <button type="button" class="tag-pill" data-tag="GitHub Actions">#GitHub Actions</button>
+          <button type="button" class="tag-pill" data-tag="open source">#open source</button>
           <button type="button" class="tag-pill" data-tag="pull request">#pull request</button>
-          <button type="button" class="tag-pill" data-tag="/resume">#/resume</button>
         </div>
       </div>
       <div class="tag-group">
@@ -4328,11 +4446,11 @@
           OpenAI
         </div>
         <div class="tag-pills">
-          <button type="button" class="tag-pill" data-tag="OpenAI">#OpenAI</button>
           <button type="button" class="tag-pill" data-tag="ChatGPT">#ChatGPT</button>
+          <button type="button" class="tag-pill" data-tag="OpenAI">#OpenAI</button>
           <button type="button" class="tag-pill" data-tag="Codex">#Codex</button>
-          <button type="button" class="tag-pill" data-tag="GPT-5.5 Instant">#GPT-5.5 Instant</button>
           <button type="button" class="tag-pill" data-tag="OpenAI News">#OpenAI News</button>
+          <button type="button" class="tag-pill" data-tag="GPT-5.5 Instant">#GPT-5.5 Instant</button>
         </div>
       </div>
       <div class="tag-group">
@@ -4355,10 +4473,10 @@
     <h3 class="side-title"><span class="icon">📰</span>Sources Today</h3>
     <div class="source-list">
       <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">31</span></div>
-      <div class="source-list-item"><span>openai.com</span><span class="count">26</span></div>
+      <div class="source-list-item"><span>openai.com</span><span class="count">28</span></div>
       <div class="source-list-item"><span>community.fabric.microsoft.com</span><span class="count">22</span></div>
-      <div class="source-list-item"><span>github.blog</span><span class="count">11</span></div>
-      <div class="source-list-item"><span>microsoft.com/security</span><span class="count">11</span></div>
+      <div class="source-list-item"><span>microsoft.com/security</span><span class="count">12</span></div>
+      <div class="source-list-item"><span>github.blog</span><span class="count">12</span></div>
       <div class="source-list-item"><span>anthropic.com/news</span><span class="count">11</span></div>
       <div class="source-list-item"><span>devblogs.microsoft.com/foundry</span><span class="count">6</span></div>
       <div class="source-list-item"><span>devblogs.microsoft.com</span><span class="count">5</span></div>
