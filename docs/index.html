@@ -30,16 +30,16 @@
 
 <div class="cat-nav-wrap">
   <nav class="cat-nav">
-    <a href="#" class="active" data-filter="all">All <span class="num">162</span></a>
+    <a href="#" class="active" data-filter="all">All <span class="num">164</span></a>
     <a href="#" data-filter="Overview">Overview <span class="num">4</span></a>
     <a href="#" data-filter="M365 Copilot">M365 Copilot <span class="num">6</span></a>
     <a href="#" data-filter="Copilot Studio">Copilot Studio <span class="num">4</span></a>
-    <a href="#" data-filter="Foundry">Foundry <span class="num">31</span></a>
+    <a href="#" data-filter="Foundry">Foundry <span class="num">32</span></a>
     <a href="#" data-filter="Azure AI Infra">Azure AI Infra <span class="num">10</span></a>
     <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">25</span></a>
     <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">17</span></a>
     <a href="#" data-filter="AI Security">AI Security <span class="num">15</span></a>
-    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">35</span></a>
+    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">36</span></a>
     <a href="#" class="anthropic-tab" data-filter="Anthropic">Anthropic <span class="num">15</span></a>
     <button class="mark-read-btn" id="mark-all-read" style="display:none">✓ 0件 既読にする</button>
   </nav>
@@ -48,10 +48,10 @@
   <div class="subbar-inner">
     <div class="subbar-stats">
       <span><span class="live-dot"></span><b>Live</b></span>
-      <span><b>162</b> stories today</span>
+      <span><b>164</b> stories today</span>
       <span><b>13</b> sources</span>
-      <span><b>162</b> this month</span>
-      <span>Updated <b>07:00 JST</b></span>
+      <span><b>164</b> this month</span>
+      <span>Updated <b>07:56 JST</b></span>
     </div>
     <div>Curated by GPT-5.4 mini · @daka1</div>
   </div>
@@ -71,44 +71,44 @@
         <div class="zone-banner-title">Microsoft AI Updates</div>
         <div class="zone-banner-subtitle">9 categories · Microsoft 公式ブログ・Tech Community・Dev Blog から</div>
       </div>
-      <div class="zone-banner-counts"><b>112</b> stories</div>
+      <div class="zone-banner-counts"><b>113</b> stories</div>
     </div>
 
-<article class="featured" data-category="Foundry" data-tags="Foundry Local|Live Transcription API|Responses API|text embeddings|WebGPU" data-url="https://devblogs.microsoft.com/foundry/foundry-local-v1-1/">
+<article class="featured" data-category="Foundry" data-tags="Foundry|Private Endpoint|Managed VNet|BYO VNet|Private DNS" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/private-networking-and-inference-in-microsoft-foundry/ba-p/4513822">
   <div class="featured-kicker">TOP STORY · FOUNDRY · 13 MAY 2026</div>
-  <h1 class="featured-headline"><a href="https://devblogs.microsoft.com/foundry/foundry-local-v1-1/" target="_blank" rel="noopener">Foundry Local 1.1で音声文字起こしとResponses API対応</a></h1>
+  <h1 class="featured-headline"><a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/private-networking-and-inference-in-microsoft-foundry/ba-p/4513822" target="_blank" rel="noopener">Microsoft Foundryのprivate networking設計と推論基盤</a></h1>
 
   <div class="featured-section">
     <h3>📌 概要</h3>
-    <p>Microsoft Foundry Dev Blogは、Foundry Local 1.1.0の公開を発表した。クラウド依存なしでアプリにAIを組み込めるクロスプラットフォームのローカルAI基盤に、Live Transcription、text embeddings、Responses API、WebGPUプラグイン分離、.NET互換性拡大が追加された。</p>
+    <p>本記事は、Microsoft Foundryにおけるprivate networkingを、単なるVNet設定ではなく、モデル開発・評価・提供・運用全体に影響する基盤設計として解説する。BYO VNetとManaged VNetの違い、Private Endpoint、Private DNS、outbound rules、Azure OpenAIやAzure AI Searchなど依存先との接続性を整理し、Preview/GA表記はなく、現行ドキュメントに基づく設計観点を示す。</p>
   </div>
 
   <div class="featured-section">
     <h3>🆕 What's New / Update</h3>
-    <p>今回の1.1.0では、マイク入力を用いたリアルタイム音声文字起こしのLive Transcription APIが追加され、途中結果と確定結果をis_finalで区別できる。あわせて、semantic searchやRAG向けのtext embeddings、tool callingやmultimodal vision-language inputを含むResponses APIをサポートした。さらにWebGPU execution provider pluginを別配布にして既定パッケージを小型化し、koffi FFIをカスタムNode-API C addonへ置換してJavaScriptパッケージを削減、C# SDKは低いframework versionを対象に.NET互換性を広げた。</p>
+    <p>新規機能の追加告知ではなく、Foundryのprivate networkingをどう設計すべきかを体系化した解説記事である。BYO VNetでは企業側がDNS、ルーティング、ファイアウォール、依存サービス到達性を細かく制御できる一方、Managed VNetではMicrosoft管理の境界内でPrivate EndpointとDNS解決を扱い、運用負荷を下げられる。どちらも private connectivity を提供するが、完全な顧客制御の有無が大きな違いとして明示されている。</p>
   </div>
 
   <div class="featured-section">
     <h3>💡 Key Takeaway</h3>
-    <p>オンデバイスで完結するため、低遅延・非依存ネットワーク・トークン課金なしで音声UI、会議文字起こし、RAG用途を実装しやすくなる。特に金融・公共・製造業のように接続制約やデータ所在が重要な環境で有効で、既存アプリへの組み込み候補として評価価値が高い。</p>
+    <p>金融・公共・製造のように「public exposureなし」が前提の組織では、Foundry導入可否はモデル性能よりもネットワーク到達性で決まる。本記事は、RAGやenterprise copilotで起きる失敗がDNS未設定やoutbound制限に起因し得ることを示し、BYO VNetかManaged VNetかをワークロード単位で選ぶべきだと示唆する。既存のネットワーク運用標準と整合させて設計することが重要。</p>
   </div>
 
   <div class="featured-meta">
-    <span>📰 devblogs.microsoft.com/foundry</span>
-    <span>📅 5h ago</span>
-    <span>🏷 Foundry Local · Live Transcription API · Responses API · text embeddings · WebGPU</span>
+    <span>📰 techcommunity.microsoft.com</span>
+    <span>📅 45m ago</span>
+    <span>🏷 Foundry · Private Endpoint · Managed VNet · BYO VNet · Private DNS</span>
   </div>
 </article>
     <section class="section">
       <div class="section-head">
         <h2 class="section-title"><span class="icon">▎</span>Today's Stories</h2>
-        <span class="section-meta">Wed, May 13, 2026 · 111 items</span>
+        <span class="section-meta">Wed, May 13, 2026 · 112 items</span>
       </div>
       <div class="stories-grid">
 <article class="story" data-category="Dev Tools" data-tags="GitHub Copilot|usage-based billing|flex allotment|Pro+|Max plan" data-url="https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">4h ago</span>
+    <span class="story-time">5h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/" target="_blank" rel="noopener">GitHub Copilot個人向けにflex配分とMax追加</a>
@@ -137,7 +137,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake|storage tiers|lifecycle management|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Optimize-your-storage-costs-with-OneLake-storage-tiers-and/ba-p/5179295">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">4h ago</span>
+    <span class="story-time">5h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Optimize-your-storage-costs-with-OneLake-storage-tiers-and/ba-p/5179295" target="_blank" rel="noopener">OneLake のストレージ階層とライフサイクル管理をPreview</a>
@@ -166,7 +166,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|Warehouse|Data Retention|Preview|Data Governance" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Configurable-Data-Retention-in-Microsoft-Fabric-Warehouse/ba-p/5181211">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">4h ago</span>
+    <span class="story-time">5h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Configurable-Data-Retention-in-Microsoft-Fabric-Warehouse/ba-p/5181211" target="_blank" rel="noopener">Microsoft Fabric Warehouse の保持期間を設定可能に</a>
@@ -192,6 +192,35 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Warehouse</span><span class="story-tag-chip">#Data Retention</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Data Governance</span>  </div>
+</article><article class="story" data-category="Foundry" data-tags="Foundry Local|Live Transcription API|Responses API|text embeddings|WebGPU" data-url="https://devblogs.microsoft.com/foundry/foundry-local-v1-1/">
+  <div class="story-meta-top">
+    <span class="tag cat-foundry">Foundry</span>
+    <span class="story-time">6h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://devblogs.microsoft.com/foundry/foundry-local-v1-1/" target="_blank" rel="noopener">Foundry Local 1.1で音声文字起こしとResponses API対応</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">devblogs.microsoft.com/foundry — Microsoft Foundry Dev Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Foundry Dev Blogは、Foundry Local 1.1.0の公開を発表した。クラウド依存なしでアプリにAIを組み込めるクロスプラットフォームのローカルAI基盤に、Live Transcription、text embeddings、Responses API、WebGPUプラグイン分離、.NET互換性拡大が追加された。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の1.1.0では、マイク入力を用いたリアルタイム音声文字起こしのLive Transcription APIが追加され、途中結果と確定結果をis_finalで区別できる。あわせて、semantic searchやRAG向けのtext embeddings、tool callingやmultimodal vision-language inputを含むResponses APIをサポートした。さらにWebGPU execution provider pluginを別配布にして既定パッケージを小型化し、koffi FFIをカスタムNode-API C addonへ置換してJavaScriptパッケージを削減、C# SDKは低いframework versionを対象に.NET互換性を広げた。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>オンデバイスで完結するため、低遅延・非依存ネットワーク・トークン課金なしで音声UI、会議文字起こし、RAG用途を実装しやすくなる。特に金融・公共・製造業のように接続制約やデータ所在が重要な環境で有効で、既存アプリへの組み込み候補として評価価値が高い。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Foundry Local</span><span class="story-tag-chip">#Live Transcription API</span><span class="story-tag-chip">#Responses API</span><span class="story-tag-chip">#text embeddings</span><span class="story-tag-chip">#WebGPU</span>  </div>
 </article><article class="story" data-category="AI Security" data-tags="Azure DDoS Protection|Azure Front Door|WAF|DDoS|JA4" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/12/defending-consumer-web-properties-against-modern-ddos-attacks/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
@@ -224,7 +253,7 @@
 </article><article class="story" data-category="Foundry" data-tags="Microsoft Foundry|AI agents|bug triage|test optimization|system validation" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/driving-efficiency-in-modern-system-engineering-with-ai-agents/ba-p/4516181">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">6h ago</span>
+    <span class="story-time">7h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/driving-efficiency-in-modern-system-engineering-with-ai-agents/ba-p/4516181" target="_blank" rel="noopener">AI Agentsで現代のシステム設計を効率化する方法</a>
@@ -311,7 +340,7 @@
 </article><article class="story" data-category="Foundry" data-tags="Foundry Local|GPT-5.5|Agent Framework tracing|Agent Monitoring Dashboard|Continuous evaluation" data-url="https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">14h ago</span>
+    <span class="story-time">15h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/" target="_blank" rel="noopener">Microsoft Foundryの最新更新まとめ、GPT-5.5提供開始</a>
@@ -3339,13 +3368,13 @@
         <div class="zone-banner-title">Partner Updates</div>
         <div class="zone-banner-subtitle">Microsoft 戦略パートナーの公式アップデート</div>
       </div>
-      <div class="zone-banner-counts"><b>50</b> stories</div>
+      <div class="zone-banner-counts"><b>51</b> stories</div>
     </div>
 
     <section class="section">
       <div class="section-head partner-head">
         <h2 class="section-title"><span class="icon">●</span>OpenAI</h2>
-        <span class="section-meta">openai.com/news · 35 items</span>
+        <span class="section-meta">openai.com/news · 36 items</span>
       </div>
       <div class="stories-grid">
 <article class="story" data-category="OpenAI" data-tags="Codex|Finance team|MBR|reporting pack|variance bridge" data-url="https://openai.com/academy/codex-for-work/how-finance-teams-use-codex">
@@ -3438,6 +3467,36 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Codex</span><span class="story-tag-chip">#GPT-5.5</span><span class="story-tag-chip">#OpenAI News</span><span class="story-tag-chip">#NVIDIA</span><span class="story-tag-chip">#研究開発</span>  </div>
+</article><article class="story" data-category="OpenAI" data-tags="Codex|ChatGPT|software development|AI workflows|engineering" data-url="https://openai.com/index/autoscout24">
+  <div class="story-meta-top">
+    <span class="tag cat-openai">OpenAI</span>
+    <span class="tag partner">Partner</span>
+    <span class="story-time">22h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://openai.com/index/autoscout24" target="_blank" rel="noopener">AutoScout24がCodexとChatGPTで開発を加速</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">openai.com — OpenAI News</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>OpenAI Newsの事例記事で、AutoScout24 GroupがCodexとChatGPTを活用し、開発サイクルの短縮、コード品質の向上、社内でのAI利用拡大を進めていることを紹介している。製品の新機能発表ではなく、AI支援ワークフローの導入効果を示す内容である。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>AutoScout24 Groupが、CodexとChatGPTを開発業務に組み込み、エンジニアリングの進め方を変えている点が新しい。記事では、これらのAIツールによって開発サイクルを速め、コード品質を高め、組織全体でAI活用を広げていることが示される。GAやPreviewといった製品ステータスの更新ではなく、導入事例の共有である。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>本記事は、AIを単なる問い合わせ用ツールではなく、ソフトウェア開発の実務に組み込むことで生産性と品質の両方を改善できることを示す。特に大規模な開発組織では、個人利用からチーム標準へ広げる設計が重要で、日本の金融・公共・製造業でも同様に、開発標準やガバナンスと併せて導入を進める価値がある。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Codex</span><span class="story-tag-chip">#ChatGPT</span><span class="story-tag-chip">#software development</span><span class="story-tag-chip">#AI workflows</span><span class="story-tag-chip">#engineering</span>  </div>
 </article><article class="story" data-category="OpenAI" data-tags="ChatGPT|OpenAI News|生成AI採用|利用動向|ユーザー層拡大" data-url="https://openai.com/signals/research/2026q1-update">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
@@ -4913,8 +4972,8 @@
         </div>
         <div class="tag-pills">
           <button type="button" class="tag-pill" data-tag="Microsoft Foundry">#Microsoft Foundry</button>
-          <button type="button" class="tag-pill" data-tag="Microsoft Agent Framework">#Microsoft Agent Framework</button>
           <button type="button" class="tag-pill" data-tag="Foundry">#Foundry</button>
+          <button type="button" class="tag-pill" data-tag="Microsoft Agent Framework">#Microsoft Agent Framework</button>
           <button type="button" class="tag-pill" data-tag="Foundry Agent Service">#Foundry Agent Service</button>
           <button type="button" class="tag-pill" data-tag="WebRTC">#WebRTC</button>
         </div>
@@ -5003,8 +5062,8 @@
   <div class="side-block">
     <h3 class="side-title"><span class="icon">📰</span>Sources Today</h3>
     <div class="source-list">
-      <div class="source-list-item"><span>openai.com</span><span class="count">36</span></div>
-      <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">32</span></div>
+      <div class="source-list-item"><span>openai.com</span><span class="count">37</span></div>
+      <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">33</span></div>
       <div class="source-list-item"><span>community.fabric.microsoft.com</span><span class="count">25</span></div>
       <div class="source-list-item"><span>github.blog</span><span class="count">15</span></div>
       <div class="source-list-item"><span>microsoft.com/security</span><span class="count">14</span></div>
