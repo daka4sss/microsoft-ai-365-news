@@ -33,6 +33,7 @@
   "https://blogs.microsoft.com/on-the-issues/2022/06/21/microsofts-framework-for-building-ai-systems-responsibly/",
   "https://cloudblogs.microsoft.com/industry-blog/en-gb/financial-services/2022/07/25/how-data-and-ai-will-transform-contact-centres-for-financial-services/",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Bring-your-Dremio-data-into-OneLake-Preview/ba-p/5171986",
+  "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Configurable-Data-Retention-in-Microsoft-Fabric-Warehouse/ba-p/5181211",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Cross-workspace-logging-for-MLflow-in-Microsoft-Fabric-Build/ba-p/5172000",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Customer-Managed-Keys-CMK-for-Eventhouse-Preview/ba-p/5172008",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Data-Warehouse-Monitor-A-Unified-Monitoring-Experience-for/ba-p/5180024",
@@ -48,6 +49,7 @@
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/On-premises-data-gateway-April-2026-release/ba-p/5171981",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-catalog-is-now-natively-available-in-Foundry-Generally/ba-p/5178376",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-security-Generally-Available/ba-p/5176756",
+  "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Optimize-your-storage-costs-with-OneLake-storage-tiers-and/ba-p/5179295",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Outbound-access-protection-for-Data-Factory-Generally-Available/ba-p/5172006",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Pipelines-are-evolving-beyond-ETL/ba-p/5177527",
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Providing-more-insights-amp-tools-Capacity-health-timepoint/ba-p/5176753",
@@ -89,6 +91,7 @@
   "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-oss-contributions/",
   "https://github.blog/news-insights/company-news/an-update-on-github-availability/",
   "https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/",
+  "https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/",
   "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
   "https://github.blog/news-insights/policy-news-and-insights/how-researchers-are-using-github-innovation-graph-data-to-reveal-the-digital-complexity-of-nations/",
   "https://github.blog/news-insights/policy-news-and-insights/why-age-assurance-laws-matter-for-developers/",
@@ -1038,6 +1041,7 @@
   "https://openai.com/index/webgpt",
   "https://openai.com/index/weight-normalization",
   "https://openai.com/index/welcome-pieter-and-shivon",
+  "https://openai.com/index/what-parameter-golf-taught-us",
   "https://openai.com/index/where-the-goblins-came-from",
   "https://openai.com/index/whisper",
   "https://openai.com/index/whoop",
@@ -1167,5 +1171,6 @@
   "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/07/world-passkey-day-advancing-passwordless-authentication/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/",
+  "https://www.microsoft.com/en-us/security/blog/2026/05/12/defending-consumer-web-properties-against-modern-ddos-attacks/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/"
 ]
