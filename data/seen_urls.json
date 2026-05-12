@@ -57,6 +57,7 @@
   "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Stream-SQL-Change-Events-to-Microsoft-Fabric-Eventstream-with/ba-p/5172004",
   "https://devblogs.microsoft.com/foundry/foundry-agent-service-ga/",
   "https://devblogs.microsoft.com/foundry/foundry-local-ga/",
+  "https://devblogs.microsoft.com/foundry/foundry-local-v1-1/",
   "https://devblogs.microsoft.com/foundry/from-local-to-production-the-complete-developer-journey-for-building-composing-and-deploying-ai-agents/",
   "https://devblogs.microsoft.com/foundry/introducing-the-new-hosted-agents-in-foundry-agent-service-secure-scalable-compute-built-for-agents/",
   "https://devblogs.microsoft.com/foundry/introducing-toolboxes-in-foundry/",
@@ -81,6 +82,7 @@
   "https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/",
   "https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic/",
   "https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/",
+  "https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli/",
   "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-interactive-v-non-interactive-mode/",
   "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/",
   "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/",
@@ -1085,6 +1087,7 @@
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-real-time-speech-translation-with-ai-avatars-with-azure/ba-p/4490972",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/claude-opus-4-7-is-available-on-microsoft-foundry/ba-p/4511759",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/deploying-an-agentic-service-to-microsoft-365-copilot-with/ba-p/4514197",
+  "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/driving-efficiency-in-modern-system-engineering-with-ai-agents/ba-p/4516181",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/extracting-boms-from-electrical-drawings-with-ai-azure-openai/ba-p/4506891",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/gemma-4-now-available-in-microsoft-foundry/ba-p/4510984",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/gpt-capability-in-understanding-coordinates-how-gpt-5-4/ba-p/4506726",
@@ -1163,5 +1166,6 @@
   "https://www.microsoft.com/en-us/security/blog/2026/05/06/microsoft-named-an-overall-leader-in-kuppingercole-analysts-2026-emerging-ai-security-operations-center-soc-report/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/07/world-passkey-day-advancing-passwordless-authentication/",
-  "https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/"
+  "https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/",
+  "https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/"
 ]
