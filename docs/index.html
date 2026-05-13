@@ -30,16 +30,16 @@
 
 <div class="cat-nav-wrap">
   <nav class="cat-nav">
-    <a href="#" class="active" data-filter="all">All <span class="num">175</span></a>
+    <a href="#" class="active" data-filter="all">All <span class="num">197</span></a>
     <a href="#" data-filter="Overview">Overview <span class="num">5</span></a>
     <a href="#" data-filter="M365 Copilot">M365 Copilot <span class="num">6</span></a>
     <a href="#" data-filter="Copilot Studio">Copilot Studio <span class="num">4</span></a>
-    <a href="#" data-filter="Foundry">Foundry <span class="num">34</span></a>
+    <a href="#" data-filter="Foundry">Foundry <span class="num">35</span></a>
     <a href="#" data-filter="Azure AI Infra">Azure AI Infra <span class="num">9</span></a>
-    <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">28</span></a>
+    <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">48</span></a>
     <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">19</span></a>
     <a href="#" data-filter="AI Security">AI Security <span class="num">17</span></a>
-    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">37</span></a>
+    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">38</span></a>
     <a href="#" class="anthropic-tab" data-filter="Anthropic">Anthropic <span class="num">16</span></a>
     <button class="mark-read-btn" id="mark-all-read" style="display:none">✓ 0件 既読にする</button>
   </nav>
@@ -48,10 +48,10 @@
   <div class="subbar-inner">
     <div class="subbar-stats">
       <span><span class="live-dot"></span><b>Live</b></span>
-      <span><b>175</b> stories today</span>
+      <span><b>197</b> stories today</span>
       <span><b>13</b> sources</span>
-      <span><b>175</b> this month</span>
-      <span>Updated <b>02:06 JST</b></span>
+      <span><b>197</b> this month</span>
+      <span>Updated <b>04:27 JST</b></span>
     </div>
     <div>Curated by GPT-5.4 mini · @daka1</div>
   </div>
@@ -71,44 +71,102 @@
         <div class="zone-banner-title">Microsoft AI Updates</div>
         <div class="zone-banner-subtitle">9 categories · Microsoft 公式ブログ・Tech Community・Dev Blog から</div>
       </div>
-      <div class="zone-banner-counts"><b>122</b> stories</div>
+      <div class="zone-banner-counts"><b>143</b> stories</div>
     </div>
 
-<article class="featured" data-category="Foundry" data-tags="Microsoft Foundry|Grok 4.3|xAI|Azure AI Content Safety|RAG" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-grok-4-3-on-microsoft-foundry-latest-generation/ba-p/4517096">
+<article class="featured" data-category="Foundry" data-tags="NVIDIA Dynamo|AKS|KEDA|TTFT|GPU node pool" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/nvidia-dynamo-on-aks-autoscaling-llm-inference/ba-p/4499545">
   <div class="featured-kicker">TOP STORY · FOUNDRY · 14 MAY 2026</div>
-  <h1 class="featured-headline"><a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-grok-4-3-on-microsoft-foundry-latest-generation/ba-p/4517096" target="_blank" rel="noopener">Microsoft FoundryでGrok 4.3を提供開始</a></h1>
+  <h1 class="featured-headline"><a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/nvidia-dynamo-on-aks-autoscaling-llm-inference/ba-p/4499545" target="_blank" rel="noopener">NVIDIA DynamoとAKSでLLM推論を自動スケール</a></h1>
 
   <div class="featured-section">
     <h3>📌 概要</h3>
-    <p>Tech Community の Microsoft Foundry 記事で、xAI の最新フラッグシップモデル Grok 4.3 が Microsoft Foundry に追加されたと案内しています。対象は Foundry の利用者で、Public Preview として利用可能です。大規模運用向けの安全制御や監視機能を備え、評価から本番展開までを支援します。</p>
+    <p>Azure Kubernetes Service (AKS) と NVIDIA Dynamo を組み合わせ、LLM推論を本番運用向けに拡張する方法を解説した記事です。LLM推論をprefill・routing・decodeの複数段階として捉え、GPUの供給制約やコスト、待ち時間を踏まえた autoscaling の考え方を紹介しています。</p>
   </div>
 
   <div class="featured-section">
     <h3>🆕 What's New / Update</h3>
-    <p>Grok 4.3 が Microsoft Foundry で Public Preview となり、Global Standard のデプロイで利用できます。価格は Input 1M tokens あたり $1.25、Output 1M tokens あたり $2.50、Cached 1M tokens あたり $0.20 です。Foundry 上では最大 200k token の context window をサポートし、tool calling、instruction following、hallucination 抑制、Web search、X search、Python code execution、File search (RAG)、Excel/PDF/PowerPoint 生成といった native capabilities を備えます。</p>
+    <p>本記事では、NVIDIA Dynamo on AKS による LLM inference の autoscaling を具体例付きで説明しています。Dynamo は Kubernetes の scale subresource を公開し、HPA、KEDA、Dynamo Planner、custom controllers と連携可能です。AKS の cluster autoscaler により GPU node pool を拡張し、Azure Managed Prometheus と Grafana で latency、throughput、queue depth を可視化します。さらに、aggregated serving では KEDA が TTFT p95 &gt; 300 ms をトリガーに 2→4 replicas へ拡張し、NC-H100 上で約 8 分の cold node provisioning 後に TTFT が改善する流れを示しています。</p>
   </div>
 
   <div class="featured-section">
     <h3>💡 Key Takeaway</h3>
-    <p>Grok 4.3 は、エージェント型ワークフローや業務文書処理、コード生成を含む実運用を見据えた選択肢です。特に金融・公共・製造業のように、長文コンテキスト、検索連携、ガバナンスが重要な組織で評価価値があります。Foundry では Azure AI Content Safety が既定で有効で、red teaming や monitoring も使えるため、PoC から本番移行までの統制を取りやすい点が重要です。</p>
+    <p>LLM推論は CPU や GPU 使用率だけでは正しくスケールできず、サービス種別ごとに TTFT、queue depth、KV cache utilization など実態に合った指標を使う必要があります。金融・公共・製造のように遅延許容が厳しい環境では、Dynamo Planner や KEDA を使った段階的な autoscaling と、node provisioning の遅さを前提にした容量設計が重要です。</p>
   </div>
 
   <div class="featured-meta">
     <span>📰 techcommunity.microsoft.com</span>
-    <span>📅 53m ago</span>
-    <span>🏷 Microsoft Foundry · Grok 4.3 · xAI · Azure AI Content Safety · RAG</span>
+    <span>📅 1h ago</span>
+    <span>🏷 NVIDIA Dynamo · AKS · KEDA · TTFT · GPU node pool</span>
   </div>
 </article>
     <section class="section">
       <div class="section-head">
         <h2 class="section-title"><span class="icon">▎</span>Today's Stories</h2>
-        <span class="section-meta">Thu, May 14, 2026 · 121 items</span>
+        <span class="section-meta">Thu, May 14, 2026 · 142 items</span>
       </div>
       <div class="stories-grid">
-<article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Eventstream|Business Events|Preview|Microsoft Fabric|Eventstream" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Fabric-Eventstream-can-now-publish-Business-Events-Preview/ba-p/5180050">
+<article class="story" data-category="Data &amp; Fabric" data-tags="Data Agent|Eventhouse Functions|Materialized Views|Shortcuts|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Data-Agent-Now-Supports-Eventhouse-Functions-Materialized-Views/ba-p/5181801">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">6m ago</span>
+    <span class="story-time">20m ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Data-Agent-Now-Supports-Eventhouse-Functions-Materialized-Views/ba-p/5181801" target="_blank" rel="noopener">Data AgentがEventhouse Functionsなどに対応</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blogの更新で、Data Agent が Eventhouse Functions、Materialized Views、Shortcuts をサポートする Preview 版として案内された記事です。Fabric 上のデータ参照・分析の対象を広げ、より複雑なデータ資産を Data Agent から扱えるようにする内容です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Data Agent が新たに Eventhouse Functions、Materialized Views、Shortcuts をサポートする Preview として追加されました。これにより、Eventhouse の関数や事前集計済みの Materialized Views、別データソースへの Shortcuts を含む Fabric のデータ構成を、Data Agent 経由で参照・活用できるようになります。記事では機能追加の発表が中心で、価格や GA 化、制限変更などの記載はありません。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Fabric を使っている企業にとって、Data Agent がより多様なデータ構造を扱えるようになる点は、分析や業務アプリ向けのデータアクセス設計を広げる材料になります。特に、Eventhouse や Shortcuts を活用している環境では、既存資産を活かしながら Data Agent の適用範囲を拡張できる可能性があります。Preview のため、本番導入前には利用可否と制約確認が必要です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Data Agent</span><span class="story-tag-chip">#Eventhouse Functions</span><span class="story-tag-chip">#Materialized Views</span><span class="story-tag-chip">#Shortcuts</span><span class="story-tag-chip">#Microsoft Fabric</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric|Data Agents|Service Principal|Preview|Microsoft Fabric Blog" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Service-Principal-Support-for-Data-Agents-in-Fabric-Preview/ba-p/5181634">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">42m ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Service-Principal-Support-for-Data-Agents-in-Fabric-Preview/ba-p/5181634" target="_blank" rel="noopener">Fabric の Data Agents で Service Principal 対応をPreview提供</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog の記事で、Data Agents in Fabric に対する Service Principal Support が Preview として案内されています。対象は Microsoft Fabric の Data Agents 機能で、企業向けの自動化やアプリケーション連携における認証方式の拡張を示す内容です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Fabric の Data Agents で、ユーザー主体の認証だけでなく Service Principal を使った接続・利用が可能になる Preview が追加されました。これにより、アプリケーションや自動化ジョブから Data Agents を呼び出す際の運用設計がしやすくなり、共有アカウント依存を減らした権限管理を検討しやすくなります。記事では Principal Product Manager と Senior Product Marketing Manager からの案内として公開されており、現時点のステータスは Preview です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>エンタープライズでは、Data Agents を人手操作ではなくサービス間連携の一部として組み込みやすくなる点が重要です。特に金融・公共・製造業のように、監査性や最小権限、運用の標準化が求められる環境では、Service Principal 対応が導入の障壁を下げる可能性があります。Preview なので、本番適用前に権限設計と運用フローの検証が必要です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Fabric</span><span class="story-tag-chip">#Data Agents</span><span class="story-tag-chip">#Service Principal</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Microsoft Fabric Blog</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Eventstream|Business Events|Preview|Microsoft Fabric|Eventstream" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Fabric-Eventstream-can-now-publish-Business-Events-Preview/ba-p/5180050">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">2h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Fabric-Eventstream-can-now-publish-Business-Events-Preview/ba-p/5180050" target="_blank" rel="noopener">Fabric EventstreamでBusiness Eventsを配信可能に（Preview）</a>
@@ -134,10 +192,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Fabric Eventstream</span><span class="story-tag-chip">#Business Events</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Eventstream</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Eventstream|Business Events|Preview|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Fabric-Eventstream-can-now-publish-Business-Events-Preview/ba-p/5180050">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">2h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Fabric-Eventstream-can-now-publish-Business-Events-Preview/ba-p/5180050" target="_blank" rel="noopener">Fabric Eventstream で Business Events を配信可能に</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog の記事で、Fabric Eventstream が Business Events を publish できるようになった Preview 版の追加が案内されています。対象は Fabric のイベントストリーミング機能で、ビジネスイベントを他の処理や連携先へ流せるようにする更新です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Fabric Eventstream に、新たに Business Events を publish する機能が Preview で追加されました。これにより、Eventstream で受け取ったイベントをビジネスイベントとして外部や後続処理へ配信できるようになります。記事では、Fabric のイベント処理パイプラインにおける新しい連携手段として位置づけられており、現時点のステータスは Preview です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>イベント駆動で業務システムをつなぐ企業にとって、Fabric 内で Business Events を扱えることは連携設計をシンプルにする可能性があります。特に日本の金融・製造・公共のように、イベントを基点にした通知や後続処理を標準化したい組織で関心が高い更新です。Preview のため、本番採用時は要件と運用確認が必要です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Fabric Eventstream</span><span class="story-tag-chip">#Business Events</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Microsoft Fabric</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|database schema|Git|version control|Data &amp; Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Why-your-database-schema-belongs-in-Git/ba-p/5179521">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">25m ago</span>
+    <span class="story-time">2h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Why-your-database-schema-belongs-in-Git/ba-p/5179521" target="_blank" rel="noopener">Database schema を Git で管理すべき理由</a>
@@ -163,10 +250,68 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#database schema</span><span class="story-tag-chip">#Git</span><span class="story-tag-chip">#version control</span><span class="story-tag-chip">#Data &amp; Fabric</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|Git|database schema|version control|Data &amp; Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Why-your-database-schema-belongs-in-Git/ba-p/5179521">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">2h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Why-your-database-schema-belongs-in-Git/ba-p/5179521" target="_blank" rel="noopener">Database schema を Git で管理する理由</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog の記事で、データベースの schema を Git に置くべき理由を解説しています。作者は Product Manager 2 の Iqra Shaikh。Fabric の開発運用において、schema 変更をコードとして扱い、履歴管理や共同作業、変更の追跡性を高める考え方を示す内容です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>本記事は、データベース schema を Git 管理することで得られる利点を整理しています。具体的には、schema 変更をバージョン管理できること、変更履歴をチームで追跡しやすいこと、レビューや共同開発の流れに組み込みやすいことがポイントです。Fabric の文脈で、データベース設計を単なる手作業ではなく、ソース管理された資産として扱う重要性を訴えています。Preview や GA などの機能ステータスは本文からは確認できません。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>エンタープライズでは、schema 変更の属人化や本番差分の見落としが障害や監査対応の負担につながります。Git 管理により、変更申請、レビュー、ロールバックの流れを標準化しやすくなり、金融・公共・製造のように統制が重視される環境で特に有効です。既存の CI/CD や開発標準へ組み込むことが次の一歩です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Git</span><span class="story-tag-chip">#database schema</span><span class="story-tag-chip">#version control</span><span class="story-tag-chip">#Data &amp; Fabric</span>  </div>
+</article><article class="story" data-category="Foundry" data-tags="Microsoft Foundry|Grok 4.3|xAI|Azure AI Content Safety|RAG" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-grok-4-3-on-microsoft-foundry-latest-generation/ba-p/4517096">
+  <div class="story-meta-top">
+    <span class="tag cat-foundry">Foundry</span>
+    <span class="story-time">3h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-grok-4-3-on-microsoft-foundry-latest-generation/ba-p/4517096" target="_blank" rel="noopener">Microsoft FoundryでGrok 4.3を提供開始</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">techcommunity.microsoft.com — Tech Community - Microsoft Foundry</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Tech Community の Microsoft Foundry 記事で、xAI の最新フラッグシップモデル Grok 4.3 が Microsoft Foundry に追加されたと案内しています。対象は Foundry の利用者で、Public Preview として利用可能です。大規模運用向けの安全制御や監視機能を備え、評価から本番展開までを支援します。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Grok 4.3 が Microsoft Foundry で Public Preview となり、Global Standard のデプロイで利用できます。価格は Input 1M tokens あたり $1.25、Output 1M tokens あたり $2.50、Cached 1M tokens あたり $0.20 です。Foundry 上では最大 200k token の context window をサポートし、tool calling、instruction following、hallucination 抑制、Web search、X search、Python code execution、File search (RAG)、Excel/PDF/PowerPoint 生成といった native capabilities を備えます。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Grok 4.3 は、エージェント型ワークフローや業務文書処理、コード生成を含む実運用を見据えた選択肢です。特に金融・公共・製造業のように、長文コンテキスト、検索連携、ガバナンスが重要な組織で評価価値があります。Foundry では Azure AI Content Safety が既定で有効で、red teaming や monitoring も使えるため、PoC から本番移行までの統制を取りやすい点が重要です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Microsoft Foundry</span><span class="story-tag-chip">#Grok 4.3</span><span class="story-tag-chip">#xAI</span><span class="story-tag-chip">#Azure AI Content Safety</span><span class="story-tag-chip">#RAG</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric|Data Agents|Service Principal|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Service-Principal-Support-for-Data-Agents-in-Fabric-Preview/ba-p/5181634">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">59m ago</span>
+    <span class="story-time">3h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Service-Principal-Support-for-Data-Agents-in-Fabric-Preview/ba-p/5181634" target="_blank" rel="noopener">Fabric の Data Agents に Service Principal 対応を追加</a>
@@ -195,7 +340,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Blog|NetHack|Cataclysm: Dark Days Ahead|Dungeon Crawl Stone Soup|Angband" data-url="https://github.blog/open-source/gaming/dungeons-desktops-10-roguelikes-that-never-die-because-their-communities-wont-let-them/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">1h ago</span>
+    <span class="story-time">3h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/open-source/gaming/dungeons-desktops-10-roguelikes-that-never-die-because-their-communities-wont-let-them/" target="_blank" rel="noopener">GitHubが選ぶ、長く愛される10のオープンソース roguelike</a>
@@ -224,7 +369,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="SharePoint Framework|SPFx 1.23|SPFx CLI|ListView command set|Adaptive Card Extensions" data-url="https://devblogs.microsoft.com/microsoft365dev/general-availability-of-sharepoint-framework-1-23-advancing-the-modern-developer-experience/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">4h ago</span>
+    <span class="story-time">6h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://devblogs.microsoft.com/microsoft365dev/general-availability-of-sharepoint-framework-1-23-advancing-the-modern-developer-experience/" target="_blank" rel="noopener">SharePoint Framework 1.23 が GA、開発体験を強化</a>
@@ -253,7 +398,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Microsoft Defender|MITRE ATT&amp;CK|synthetic logs|agentic workflow|detection engineering" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/12/accelerating-detection-engineering-using-ai-assisted-synthetic-attack-logs-generation/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">18h ago</span>
+    <span class="story-time">20h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/accelerating-detection-engineering-using-ai-assisted-synthetic-attack-logs-generation/" target="_blank" rel="noopener">AIでサイバー攻撃ログ生成を高速化する新手法</a>
@@ -279,10 +424,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Microsoft Defender</span><span class="story-tag-chip">#MITRE ATT&amp;CK</span><span class="story-tag-chip">#synthetic logs</span><span class="story-tag-chip">#agentic workflow</span><span class="story-tag-chip">#detection engineering</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|Feature Summary|Fabric Blog|Preview|GA" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Fabric-April-2026-Feature-Summary/ba-p/5176490">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">21h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Fabric-April-2026-Feature-Summary/ba-p/5176490" target="_blank" rel="noopener">Fabric 2026年4月の機能まとめを公開</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog で、2026年4月時点の Fabric の機能更新をまとめた記事です。著者は Senior Program Manager の Katie Murray。Fabric の各ワークロードや関連機能に関する最新の追加・改善点を整理した更新情報であり、既存利用者が新機能の把握や導入判断を行うための月次サマリーとして読むのが適しています。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>2026年4月に Fabric で追加・更新された機能を横断的に整理したまとめ記事です。特定の単一機能ではなく、Fabric 全体のアップデートを一覧で確認できる内容で、各ワークロードや周辺機能の変更点を追いやすくしています。記事本文の詳細項目はここでは示されていませんが、月次の Feature Summary として GA、Preview、Update を含む最新状況を確認する用途に向きます。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Fabric を業務基盤として使う企業にとって、月次の機能更新を継続的に追うことは、導入済みワークロードの改善機会を逃さないうえで重要です。特に運用部門やデータ基盤担当は、Preview 機能の採用可否、GA 機能への移行、既存設計への影響を定期的に確認することで、将来の拡張や標準化を進めやすくなります。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Feature Summary</span><span class="story-tag-chip">#Fabric Blog</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#GA</span>  </div>
 </article><article class="story" data-category="Foundry" data-tags="Foundry|Private Endpoint|Managed VNet|BYO VNet|Private DNS" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/private-networking-and-inference-in-microsoft-foundry/ba-p/4513822">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">18h ago</span>
+    <span class="story-time">21h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/private-networking-and-inference-in-microsoft-foundry/ba-p/4513822" target="_blank" rel="noopener">Microsoft Foundryのprivate networking設計と推論基盤</a>
@@ -311,7 +485,7 @@
 </article><article class="story" data-category="AI Security" data-tags="MDASH|Microsoft Security|vulnerability discovery|agentic scanning harness|CyberGym" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">19h ago</span>
+    <span class="story-time">21h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/" target="_blank" rel="noopener">Microsoftの多モデル型AI防御で脆弱性発見を加速</a>
@@ -340,7 +514,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot|usage-based billing|flex allotment|Pro+|Max plan" data-url="https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">23h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/" target="_blank" rel="noopener">GitHub Copilot個人向けにflex配分とMax追加</a>
@@ -369,7 +543,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake|storage tiers|lifecycle management|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Optimize-your-storage-costs-with-OneLake-storage-tiers-and/ba-p/5179295">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">23h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Optimize-your-storage-costs-with-OneLake-storage-tiers-and/ba-p/5179295" target="_blank" rel="noopener">OneLake のストレージ階層とライフサイクル管理をPreview</a>
@@ -395,10 +569,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#OneLake</span><span class="story-tag-chip">#storage tiers</span><span class="story-tag-chip">#lifecycle management</span><span class="story-tag-chip">#Microsoft Fabric</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake|storage tiers|lifecycle management|Microsoft Fabric|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Optimize-your-storage-costs-with-OneLake-storage-tiers-and/ba-p/5179295">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">1d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Optimize-your-storage-costs-with-OneLake-storage-tiers-and/ba-p/5179295" target="_blank" rel="noopener">OneLakeのストレージ階層とライフサイクル管理を最適化</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blogで、OneLakeのストレージコストを抑えるためのstorage tiersとlifecycle managementのPreviewが紹介されました。OneLake内のデータを利用頻度に応じて管理し、ストレージ運用をより効率化するための新機能です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回のPreviewでは、OneLakeに保存されたデータに対してstorage tiersを活用し、ライフサイクル管理を組み合わせることで、コスト最適化とデータ管理の両立を狙います。頻繁に使うデータと長期保管データを分けて扱えるため、無駄なストレージ費用を抑えながら、必要なデータはOneLake内で引き続き管理できます。現時点ではPreview段階であり、本番導入に向けた評価・検証が前提です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>データ量が大きい企業ほど、OneLake上の保存データを一律に扱うとコストが膨らみやすくなります。この機能は、保管方針を細かく設計してコストと運用負荷を下げたい企業に有効です。金融・公共・製造業では、アクセス頻度別の保管設計やデータ保持ポリシーの見直しに活用できます。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#OneLake</span><span class="story-tag-chip">#storage tiers</span><span class="story-tag-chip">#lifecycle management</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Preview</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|Warehouse|Data Retention|Preview|Data Governance" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Configurable-Data-Retention-in-Microsoft-Fabric-Warehouse/ba-p/5181211">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">23h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Configurable-Data-Retention-in-Microsoft-Fabric-Warehouse/ba-p/5181211" target="_blank" rel="noopener">Microsoft Fabric Warehouse の保持期間を設定可能に</a>
@@ -424,6 +627,35 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Warehouse</span><span class="story-tag-chip">#Data Retention</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Data Governance</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric Warehouse|data retention|Preview|Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Configurable-Data-Retention-in-Microsoft-Fabric-Warehouse/ba-p/5181211">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">1d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Configurable-Data-Retention-in-Microsoft-Fabric-Warehouse/ba-p/5181211" target="_blank" rel="noopener">Microsoft Fabric Warehouse の保持期間を柔軟に設定可能に</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog で、Fabric Warehouse におけるデータ保持期間を設定できる Preview 機能が紹介されています。対象は Warehouse で、保存データの管理や運用要件に応じて保持方針を調整できる点が主題です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Microsoft Fabric Warehouse に configurable data retention が Preview で追加されました。これにより、Warehouse のデータ保持期間を柔軟に設定でき、既定の保持動作に依存せず運用ポリシーに合わせた管理が可能になります。記事では、Ambika Jagadish, Senior Product Manager による発信として、この機能がデータ管理とコンプライアンス運用の調整に役立つことが示されています。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>金融・公共・製造業では、データ保持期間は監査、法令順守、コスト管理に直結します。今回の Preview は、Fabric Warehouse を使う組織が保存方針をより細かく制御する第一歩として重要です。既存の保管ルールとの整合を確認し、Preview 段階で適用可否を検証するのが次のアクションです。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Microsoft Fabric Warehouse</span><span class="story-tag-chip">#data retention</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Fabric</span>  </div>
 </article><article class="story" data-category="Foundry" data-tags="Foundry Local|Live Transcription API|Responses API|text embeddings|WebGPU" data-url="https://devblogs.microsoft.com/foundry/foundry-local-v1-1/">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
@@ -601,7 +833,7 @@
 </article><article class="story" data-category="Foundry" data-tags="Azure Red Hat OpenShift|OpenShift Virtualization|Managed Identities|Workload Identities|Confidential Containers" data-url="https://azure.microsoft.com/en-us/blog/red-hat-summit-2026-platform-modernization-and-ai-on-azure-microsoft-red-hat-openshift/">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://azure.microsoft.com/en-us/blog/red-hat-summit-2026-platform-modernization-and-ai-on-azure-microsoft-red-hat-openshift/" target="_blank" rel="noopener">Azure Red Hat OpenShiftでAI本番運用を加速</a>
@@ -656,6 +888,35 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Fabric Data Warehouse</span><span class="story-tag-chip">#Data Warehouse Monitor</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Fabric</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Data Warehouse|Data Warehouse Monitor|Preview|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Data-Warehouse-Monitor-A-Unified-Monitoring-Experience-for/ba-p/5180024">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">2d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Data-Warehouse-Monitor-A-Unified-Monitoring-Experience-for/ba-p/5180024" target="_blank" rel="noopener">Fabric Data Warehouse向け統合監視機能がPreview</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blogで、Fabric Data Warehouseを一元的に監視できる「Data Warehouse Monitor」のPreview提供が案内されました。著者はMariya Ali氏とTwinkle Cyril氏で、Fabric内のData Warehouse運用を対象とした監視体験の更新です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>新たに、Fabric Data Warehouseに対する統合的な監視エクスペリエンスとしてData Warehouse MonitorがPreview公開されました。これにより、既存の監視方法をまとめて確認しやすくし、Warehouseの状態把握や運用確認をより効率化することが狙いです。記事ではPreviewである点が明記されており、正式提供ではありません。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Fabric Data Warehouseを運用する企業にとって、監視の入口が統合されることは日常の運用負荷を下げる重要な改善です。特に日本の金融・公共・製造業のように可用性や障害対応の可視化が重視される環境では、Preview段階から評価し、既存の監視運用との整合や導入手順を検証しておく価値があります。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Fabric Data Warehouse</span><span class="story-tag-chip">#Data Warehouse Monitor</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Microsoft Fabric</span>  </div>
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot Chat|good first issue|CONTRIBUTING.md|fork|pull request" data-url="https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-oss-contributions/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
@@ -776,7 +1037,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Dirty Frag|CVE-2026-43284|CVE-2026-43500|Microsoft Defender for Cloud|Linux privilege escalation" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">4d ago</span>
+    <span class="story-time">5d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/" target="_blank" rel="noopener">Dirty FragでLinuxの権限昇格リスクが拡大</a>
@@ -979,7 +1240,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot code review|pull request|CI|technical debt|agent-generated code" data-url="https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">5d ago</span>
+    <span class="story-time">6d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/" target="_blank" rel="noopener">Agent生成PRを見抜くレビューの要点</a>
@@ -1009,7 +1270,7 @@
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">5d ago</span>
+    <span class="story-time">6d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/a-new-chapter-for-realtime-ai-reasoning-translation-and-real/ba-p/4517124" target="_blank" rel="noopener">Microsoft Foundry にRealtime AI新モデル3種追加</a>
@@ -1122,6 +1383,35 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#OneLake security</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#GA</span><span class="story-tag-chip">#Data &amp; Fabric</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake security|Microsoft Fabric|OneLake|GA" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/OneLake-security-Generally-Available/ba-p/5176756">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">6d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/OneLake-security-Generally-Available/ba-p/5176756" target="_blank" rel="noopener">OneLake security が Generally Available に</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog で、OneLake security の Generally Available (GA) 版が公開されました。Author は Aaron Merrill（Principal Program Manager）です。記事は OneLake におけるセキュリティ機能の正式提供を知らせる内容で、Fabric を利用する組織がデータ保護とアクセス制御を一元的に扱えるようになる点が主題です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>OneLake security が Generally Available となり、OneLake 上のデータに対するセキュリティ管理を正式に利用できるようになりました。記事では、Fabric のデータ基盤上でアクセス制御をより一貫して適用できることが示されており、従来の個別管理よりも運用を整理しやすくなります。GA のため、プレビュー段階ではなく本番導入を前提に検討できる状態です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Fabric を中核にデータを集約している企業にとって、OneLake security の GA はガバナンスと運用標準化を進める重要な節目です。特に金融・公共・製造業のようにデータ統制が厳しい環境では、アクセス管理の一元化が監査対応や権限設計の簡素化に直結します。既存の権限運用を見直す好機です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#OneLake security</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#OneLake</span><span class="story-tag-chip">#GA</span>  </div>
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot Coding Agent|Agent Mode|Computer Use|GitHub Actions|Trust Layer" data-url="https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
@@ -1180,10 +1470,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Fabric Livy API</span><span class="story-tag-chip">#Spark</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Concurrency</span>  </div>
-</article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|monitoring hub|Schedule failures|通知管理|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Manage-failure-notifications-from-the-monitoring-hub-in-Fabric/ba-p/5160381">
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Livy API|Spark automation|High concurrency|Preview|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/High-Concurrency-Support-for-the-Fabric-Livy-API-Scalable-Spark/ba-p/5178390">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
     <span class="story-time">6d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/High-Concurrency-Support-for-the-Fabric-Livy-API-Scalable-Spark/ba-p/5178390" target="_blank" rel="noopener">Fabric Livy APIで高並列Spark自動化をPreview提供</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog の記事で、Fabric の Livy API における高並列実行サポートを紹介しています。対象は Spark 自動化のスケール拡張で、公開日は 2026-05-06、ステータスは Preview です。Fabric 上で大量のジョブを扱う利用者向けの更新です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Fabric Livy API に高並列実行のサポートが追加され、Spark ジョブの自動化をより大規模に扱えるようになりました。これにより、従来より多くのリクエストやジョブを同時に処理しやすくなり、バッチ処理や運用自動化のスケーラビリティ向上が期待できます。記事ではこの機能が Preview と明記されており、正式提供前の段階です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Fabric で Spark を運用している企業にとって、Livy API の高並列対応はジョブ投入のボトルネック解消に直結する可能性があります。特に大量データ処理や定期バッチを持つ金融・製造・公共系では、まず Preview として検証し、同時実行時の制御、失敗時の再試行、運用監視の設計を見直す価値があります。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Fabric Livy API</span><span class="story-tag-chip">#Spark automation</span><span class="story-tag-chip">#High concurrency</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Microsoft Fabric</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|monitoring hub|Schedule failures|通知管理|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Manage-failure-notifications-from-the-monitoring-hub-in-Fabric/ba-p/5160381">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Manage-failure-notifications-from-the-monitoring-hub-in-Fabric/ba-p/5160381" target="_blank" rel="noopener">Fabric の monitoring hub で失敗通知を一元管理</a>
@@ -1209,10 +1528,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#monitoring hub</span><span class="story-tag-chip">#Schedule failures</span><span class="story-tag-chip">#通知管理</span><span class="story-tag-chip">#Preview</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|monitoring hub|Schedule failures|Preview|failure notifications" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Manage-failure-notifications-from-the-monitoring-hub-in-Fabric/ba-p/5160381">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">7d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Manage-failure-notifications-from-the-monitoring-hub-in-Fabric/ba-p/5160381" target="_blank" rel="noopener">Fabricの監視ハブで失敗通知を一元管理可能に</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog で、監視ハブに新たに Schedule failures ページを追加した Preview 更新が案内されました。Microsoft Fabric の定期実行アイテムで失敗通知の送信先を、各アイテムを開かずに一か所で確認・設定・更新できるようになります。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Microsoft Fabric の monitoring hub に Schedule failures ページが追加され、スケジュールされたアイテムの失敗通知を単一画面で管理できるようになりました。これにより、各アイテムごとに個別設定を開いて受信者を変更する手間がなくなり、通知先の確認、構成、更新をまとめて行えます。ステータスは Preview です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>定期実行ジョブやパイプライン、レポートなどを多数運用する組織では、失敗通知の設定変更が運用負荷になりがちです。今回の更新は、監視・対応の入口を集約することで、通知先の統制や保守作業を簡素化します。日本企業の運用現場でも、担当変更や組織改編時の設定更新を効率化しやすい点が有益です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#monitoring hub</span><span class="story-tag-chip">#Schedule failures</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#failure notifications</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake catalog|Foundry|Microsoft Fabric|GA" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-catalog-is-now-natively-available-in-Foundry-Generally/ba-p/5178376">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-catalog-is-now-natively-available-in-Foundry-Generally/ba-p/5178376" target="_blank" rel="noopener">FoundryでOneLake catalogがネイティブ提供に</a>
@@ -1233,6 +1581,35 @@
     <details>
       <summary class="story-summary-section-label">💡 Key Takeaway</summary>
       <p>データを中心に AI/分析基盤を運用する企業にとって、Foundry と Fabric の境界が薄れ、データ探索から活用までの流れを揃えやすくなります。特に既に OneLake を使っている組織は、既存資産を活かしたまま Foundry 側の利用を進めやすくなるため、導入・展開の摩擦低減が期待できます。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#OneLake catalog</span><span class="story-tag-chip">#Foundry</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#GA</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake catalog|Foundry|Microsoft Fabric|GA" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/OneLake-catalog-is-now-natively-available-in-Foundry-Generally/ba-p/5178376">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">7d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/OneLake-catalog-is-now-natively-available-in-Foundry-Generally/ba-p/5178376" target="_blank" rel="noopener">FoundryでOneLake catalogがネイティブにGA提供</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blogで、OneLake catalog が Foundry にネイティブ統合され、Generally Available（GA）になったことが案内されました。Foundry から OneLake のデータ資産を直接扱えるようになり、データ探索と利用の導線がより一体化します。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の更新では、OneLake catalog が Foundry 内でネイティブに利用可能になり、Generally Available（GA）として提供開始されました。これにより、Foundry から OneLake のカタログ機能へ直接アクセスでき、データ資産の発見、参照、利用の体験が統合されます。記事では、この統合によって Fabric のデータカタログと Foundry の作業体験がつながる点が示されています。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>エンタープライズにとっては、データ探索と利用の入口が Foundry に集約されることで、部門横断でのデータ活用を進めやすくなります。特に、統制されたデータ基盤を前提に AI や分析を展開したい企業では、OneLake catalog の GA により運用導入の判断がしやすくなるでしょう。</p>
     </details>
   </div>
 
@@ -1470,6 +1847,35 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Capacity health</span><span class="story-tag-chip">#timepoint summary</span><span class="story-tag-chip">#timepoint detail</span><span class="story-tag-chip">#chargeback</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|capacity health|timepoint summary|timepoint detail|chargeback" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Providing-more-insights-amp-tools-Capacity-health-timepoint/ba-p/5176753">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">7d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Providing-more-insights-amp-tools-Capacity-health-timepoint/ba-p/5176753" target="_blank" rel="noopener">Capacity health と chargeback が GA、分析機能を拡充</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog で、capacity health、timepoint summary、timepoint detail、chargeback の各機能が generally available (GA) になったと案内しています。Fabric の容量運用とコスト把握をより細かく行うための更新で、既存の管理・分析ワークフローを補完する内容です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の更新では、capacity の健全性を確認する capacity health、時点ごとの状況を俯瞰する timepoint summary、詳細を掘り下げる timepoint detail、そして利用状況に基づく chargeback がいずれも generally available (GA) になりました。これにより、Fabric 管理者は容量の状態把握から原因分析、部門別の費用配賦までを一連の流れで扱いやすくなります。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Fabric を本番運用する企業にとって、容量の可視化とコスト配賦は導入拡大の前提条件です。今回の GA により、運用部門はボトルネックの把握と説明責任を果たしやすくなり、利用部門には chargeback によるコスト意識を促せます。特に大規模利用や複数部門展開の組織で効果が大きい更新です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#capacity health</span><span class="story-tag-chip">#timepoint summary</span><span class="story-tag-chip">#timepoint detail</span><span class="story-tag-chip">#chargeback</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake|Dremio|Microsoft Fabric|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Bring-your-Dremio-data-into-OneLake-Preview/ba-p/5171986">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
@@ -1502,7 +1908,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="On-premises data gateway|Microsoft Fabric|Data gateway|Fabric Blog" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/On-premises-data-gateway-April-2026-release/ba-p/5171981">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 06</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/On-premises-data-gateway-April-2026-release/ba-p/5171981" target="_blank" rel="noopener">On-premises data gateway の2026年4月リリース</a>
@@ -1528,10 +1934,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#On-premises data gateway</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Data gateway</span><span class="story-tag-chip">#Fabric Blog</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="On-premises data gateway|Microsoft Fabric|Gateway|Data connectivity" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/On-premises-data-gateway-April-2026-release/ba-p/5171981">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">May 06</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/On-premises-data-gateway-April-2026-release/ba-p/5171981" target="_blank" rel="noopener">On-premises data gateway の2026年4月版を公開</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog で、On-premises data gateway の April 2026 release が案内されました。著者は Principal Program Manager の Leo Li です。オンプレミス環境と Microsoft Fabric／関連サービスを接続するゲートウェイの更新内容を知らせる記事で、公開版のリリース情報として読む内容です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>本記事は On-premises data gateway の 2026年4月版リリースを告知する更新情報です。新しい機能追加や動作変更、修正内容を含む月次更新として案内されており、対象はオンプレミスデータソースとクラウド側の Fabric サービスをつなぐゲートウェイです。記事本文は短く、個別の機能名やバージョン差分の詳細は示されていませんが、最新リリースへの更新を促す内容です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>オンプレミス接続を使う企業にとって、data gateway の月次更新は可用性や接続安定性に直結します。特に金融・公共・製造では、Fabric 側の新機能利用よりも先に、ゲートウェイ更新の適用可否や検証手順を確認することが重要です。運用担当は定期アップデート前提で、影響範囲とロールバック手順を整備すべきです。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#On-premises data gateway</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Gateway</span><span class="story-tag-chip">#Data connectivity</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Eventstreams|workspace monitoring|Microsoft Fabric|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Monitor-your-Eventstreams-with-workspace-monitoring-Preview/ba-p/5161116">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 06</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Monitor-your-Eventstreams-with-workspace-monitoring-Preview/ba-p/5161116" target="_blank" rel="noopener">Eventstreams を workspace monitoring で監視可能にする Preview</a>
@@ -1557,10 +1992,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Eventstreams</span><span class="story-tag-chip">#workspace monitoring</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Preview</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric|Eventstreams|workspace monitoring|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Monitor-your-Eventstreams-with-workspace-monitoring-Preview/ba-p/5161116">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">May 06</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Monitor-your-Eventstreams-with-workspace-monitoring-Preview/ba-p/5161116" target="_blank" rel="noopener">Workspace monitoring で Eventstreams を監視できる Preview</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog で、Eventstreams を workspace monitoring から監視できる Preview 機能が紹介されています。対象は Fabric の Eventstreams で、運用時の可視性を高めるための更新です。公開日は 2026-05-05 で、現時点では Preview ステータスです。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の更新では、Eventstreams を workspace monitoring に接続して、ワークスペース単位で稼働状況を把握できるようになりました。これにより、Eventstreams の監視を個別画面だけでなく Fabric の監視基盤からまとめて確認しやすくなります。機能は Preview 提供であり、正式 GA ではありません。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Eventstreams を運用する企業にとって、監視の入口が workspace monitoring に統合されるのは、障害検知や運用標準化の面で有効です。特に複数ワークスペースを扱う組織では、監視手順の統一や可視化の一元化につながります。Preview のため、本番適用前に検証が必要です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Fabric</span><span class="story-tag-chip">#Eventstreams</span><span class="story-tag-chip">#workspace monitoring</span><span class="story-tag-chip">#Preview</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|Feature Summary|Preview|GA|Deprecation" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Fabric-April-2026-Feature-Summary/ba-p/5176490">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 06</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Fabric-April-2026-Feature-Summary/ba-p/5176490" target="_blank" rel="noopener">Fabric 2026年4月の機能更新まとめ</a>
@@ -1589,7 +2053,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake Catalog|Search API|MCP|CLI tools|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Discover-items-across-workspaces-with-the-OneLake-Catalog-Search/ba-p/5176768">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 06</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Discover-items-across-workspaces-with-the-OneLake-Catalog-Search/ba-p/5176768" target="_blank" rel="noopener">OneLake Catalog Search APIでワークスペース横断検索が可能に</a>
@@ -1615,10 +2079,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#OneLake Catalog</span><span class="story-tag-chip">#Search API</span><span class="story-tag-chip">#MCP</span><span class="story-tag-chip">#CLI tools</span><span class="story-tag-chip">#Preview</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake Catalog|Search API|MCP|CLI|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Discover-items-across-workspaces-with-the-OneLake-Catalog-Search/ba-p/5176768">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">May 06</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Discover-items-across-workspaces-with-the-OneLake-Catalog-Search/ba-p/5176768" target="_blank" rel="noopener">OneLake Catalog Search APIでワークスペース横断検索をPreview提供</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blogで、OneLake Catalog を横断してアイテムを検索できる Search API、MCP、CLI ツールの Preview 提供が案内されています。対象は複数ワークスペースにまたがる Fabric アイテムで、開発者や運用担当が必要な資産を見つけやすくするための機能追加です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の更新では、OneLake Catalog に対してワークスペース横断でアイテムを検索できる Search API が Preview として追加され、あわせて MCP と CLI ツールも利用可能になりました。これにより、UI を開かずにプログラムやコマンドラインから検索でき、探索や自動化の導線が強化されます。発表時点のステータスは Preview です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Fabric を複数ワークスペースで運用する企業では、データ資産の所在把握や再利用が課題になりがちです。本機能は、開発・運用チームが必要なアイテムを素早く見つけるための入口を増やし、手作業の探索を減らします。まずは Preview として評価し、既存の運用フローにどう組み込めるか確認するのが有効です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#OneLake Catalog</span><span class="story-tag-chip">#Search API</span><span class="story-tag-chip">#MCP</span><span class="story-tag-chip">#CLI</span><span class="story-tag-chip">#Microsoft Fabric</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|Pipelines|ETL|Data Engineering" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Pipelines-are-evolving-beyond-ETL/ba-p/5177527">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 06</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Pipelines-are-evolving-beyond-ETL/ba-p/5177527" target="_blank" rel="noopener">PipelinesがETLの枠を超えて進化する</a>
@@ -1644,10 +2137,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Pipelines</span><span class="story-tag-chip">#ETL</span><span class="story-tag-chip">#Data Engineering</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|Data Pipeline|ETL|Data Integration|Orchestration" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Pipelines-are-evolving-beyond-ETL/ba-p/5177527">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">May 06</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Pipelines-are-evolving-beyond-ETL/ba-p/5177527" target="_blank" rel="noopener">ETLを超えて進化するパイプラインの新潮流</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric BlogのConnie Xu氏による記事で、従来のETL中心だったデータパイプラインがどのように進化しているかを扱う。Fabric上でのデータ統合・変換・配信の考え方を見直し、より広い業務要件に対応するパイプライン設計の方向性を示す内容である。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>この記事では、パイプラインが単なる抽出・変換・格納の流れにとどまらず、複数のデータソースや処理パターンをまたいで、より柔軟にデータをつなぐ役割へ拡張している点を取り上げている。Fabricの文脈で、従来のETLに加えてオーケストレーション、変換、配信を一体的に扱う考え方を示し、データ基盤の設計を再定義する流れを紹介している。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>企業にとっては、データ基盤を「ETLジョブの集合」として捉えるだけでは不十分になっていることを示唆する。Fabricを前提に、業務アプリ、分析、共有先まで見据えたパイプライン設計へ移行することで、運用の複雑さを抑えながら拡張性を高められる。既存のETL資産をどう再編成するかが次の検討ポイントになる。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Data Pipeline</span><span class="story-tag-chip">#ETL</span><span class="story-tag-chip">#Data Integration</span><span class="story-tag-chip">#Orchestration</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Data Warehouse|ALTER COLUMN|Preview|Schema Changes|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Simplify-Schema-Changes-in-Fabric-Data-Warehouse-with-ALTER/ba-p/5177593">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 06</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Simplify-Schema-Changes-in-Fabric-Data-Warehouse-with-ALTER/ba-p/5177593" target="_blank" rel="noopener">Fabric Data Warehouseのスキーマ変更をALTER COLUMNで簡素化</a>
@@ -1673,10 +2195,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Fabric Data Warehouse</span><span class="story-tag-chip">#ALTER COLUMN</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#Schema Changes</span><span class="story-tag-chip">#Microsoft Fabric</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Data Warehouse|ALTER COLUMN|Schema Change|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Simplify-Schema-Changes-in-Fabric-Data-Warehouse-with-ALTER/ba-p/5177593">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">May 06</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Simplify-Schema-Changes-in-Fabric-Data-Warehouse-with-ALTER/ba-p/5177593" target="_blank" rel="noopener">Fabric Data Warehouse で ALTER COLUMN によるスキーマ変更を簡素化</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog で、Fabric Data Warehouse におけるスキーマ変更を簡単にする ALTER COLUMN の Preview が案内されています。Senior Product Manager の Twinkle Cyril による記事で、既存の Data Warehouse の列定義変更をより扱いやすくする機能追加として位置づけられています。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Fabric Data Warehouse で ALTER COLUMN が Preview 提供され、既存列の定義変更をより直接的に行えるようになりました。これにより、データ型や列属性の変更を伴うスキーマ調整を、従来より簡潔な操作で実施できるようになります。記事タイトル上、ステータスは Preview であり、GA ではありません。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>Fabric 上の Data Warehouse を運用する企業では、スキーマ変更のたびに発生する手作業や運用負荷の低減が期待できます。特に開発・検証・本番で列定義の修正が頻繁に起きる環境では、変更作業の標準化や移行手順の簡素化に有効です。Preview のため、本番採用時は制約や互換性の確認が重要です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Fabric Data Warehouse</span><span class="story-tag-chip">#ALTER COLUMN</span><span class="story-tag-chip">#Schema Change</span><span class="story-tag-chip">#Preview</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Dataflow Gen2|My queries|Microsoft Fabric|データ準備|再利用" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/From-repetition-to-reuse-accelerate-data-prep-with-My-queries-in/ba-p/5176763">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 06</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/From-repetition-to-reuse-accelerate-data-prep-with-My-queries-in/ba-p/5176763" target="_blank" rel="noopener">Dataflow Gen2 の My queries でデータ準備を再利用可能に</a>
@@ -1702,10 +2253,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Dataflow Gen2</span><span class="story-tag-chip">#My queries</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#データ準備</span><span class="story-tag-chip">#再利用</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Dataflow Gen2|My queries|Microsoft Fabric|データ準備" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/From-repetition-to-reuse-accelerate-data-prep-with-My-queries-in/ba-p/5176763">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">May 06</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/From-repetition-to-reuse-accelerate-data-prep-with-My-queries-in/ba-p/5176763" target="_blank" rel="noopener">Dataflow Gen2のMy queriesでデータ準備を再利用可能に</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blogの記事で、Dataflow Gen2に追加された「My queries」機能を紹介しています。作者はSenior Product ManagerのMiguel Escobarです。繰り返し発生しがちなデータ準備処理を再利用しやすくし、Fabric上でのデータ整形・準備作業の効率化を狙った更新です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Dataflow Gen2に「My queries」が追加され、個人が作成したクエリを再利用しやすくなりました。これにより、同じ変換ロジックや前処理を毎回作り直す必要が減り、データ準備の重複作業を抑えられます。記事タイトルのとおり、repetition から reuse への移行を促す改善であり、Dataflow Gen2を使ったFabric内のデータ準備プロセスをより効率的に扱えるようにする更新です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>データ準備の標準化や再利用は、分析基盤の保守性と開発速度に直結します。特に複数チームで似た変換処理を繰り返している企業では、My queries によって作業の重複を減らし、属人化の抑制や変更時の影響範囲の把握をしやすくなります。Fabric採用企業は、既存の準備フローを再利用前提で見直す価値があります。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Dataflow Gen2</span><span class="story-tag-chip">#My queries</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#データ準備</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Data Warehouse|Direct Lake|SQL|Microsoft Fabric|Data &amp; Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Direct-Lake-on-SQL-with-Fabric-Data-Warehouse/ba-p/5177641">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 06</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Direct-Lake-on-SQL-with-Fabric-Data-Warehouse/ba-p/5177641" target="_blank" rel="noopener">Fabric Data WarehouseでDirect Lake on SQLを利用可能に</a>
@@ -1731,6 +2311,35 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Fabric Data Warehouse</span><span class="story-tag-chip">#Direct Lake</span><span class="story-tag-chip">#SQL</span><span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#Data &amp; Fabric</span>  </div>
+</article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Data Warehouse|Direct Lake|SQL|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Direct-Lake-on-SQL-with-Fabric-Data-Warehouse/ba-p/5177641">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">May 06</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Direct-Lake-on-SQL-with-Fabric-Data-Warehouse/ba-p/5177641" target="_blank" rel="noopener">Fabric Data Warehouse の SQL で Direct Lake を利用可能に</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog の記事で、Fabric Data Warehouse において SQL から Direct Lake を使う新しい連携について紹介しています。公開日は 2026-05-05 で、著者は Justin Barry 氏（Sr. Cloud Solution Architect）です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Fabric Data Warehouse と SQL の組み合わせで Direct Lake を利用できるようになった点が主題です。これにより、Fabric 上のデータを従来のような複雑な移動や複製に頼らず、SQL からより直接的に扱える構成が示されています。記事は Microsoft Fabric Blog の Update 系情報として、Data &amp; Fabric 領域の機能強化を伝えています。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>SQL を中心に運用してきた企業にとって、Direct Lake を使える範囲が広がることは、分析基盤の統合と運用簡素化の両面で重要です。特に既存の SQL スキルやワークロードを活かしながら Fabric へ段階移行したい組織に有効で、データ移動の最小化による設計見直しの起点になります。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Fabric Data Warehouse</span><span class="story-tag-chip">#Direct Lake</span><span class="story-tag-chip">#SQL</span><span class="story-tag-chip">#Microsoft Fabric</span>  </div>
 </article><article class="story" data-category="Copilot Studio" data-tags="Dataverse|Microsoft 365 Copilot|Business skills|Dataverse Search|Dataverse Plugin" data-url="https://www.microsoft.com/en-us/power-platform/blog/2026/05/05/dataverse-agent-data-platform/">
   <div class="story-meta-top">
     <span class="tag cat-studio">Copilot Studio</span>
@@ -3629,16 +4238,46 @@
         <div class="zone-banner-title">Partner Updates</div>
         <div class="zone-banner-subtitle">Microsoft 戦略パートナーの公式アップデート</div>
       </div>
-      <div class="zone-banner-counts"><b>53</b> stories</div>
+      <div class="zone-banner-counts"><b>54</b> stories</div>
     </div>
 
     <section class="section">
       <div class="section-head partner-head">
         <h2 class="section-title"><span class="icon">●</span>OpenAI</h2>
-        <span class="section-meta">openai.com/news · 37 items</span>
+        <span class="section-meta">openai.com/news · 38 items</span>
       </div>
       <div class="stories-grid">
-<article class="story" data-category="OpenAI" data-tags="Codex|Finance team|MBR|reporting pack|variance bridge" data-url="https://openai.com/academy/codex-for-work/how-finance-teams-use-codex">
+<article class="story" data-category="OpenAI" data-tags="Codex|Windows|sandbox|file access|network restrictions" data-url="https://openai.com/index/building-codex-windows-sandbox">
+  <div class="story-meta-top">
+    <span class="tag cat-openai">OpenAI</span>
+    <span class="tag partner">Partner</span>
+    <span class="story-time">19h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://openai.com/index/building-codex-windows-sandbox" target="_blank" rel="noopener">Windows版Codexを安全に動かすサンドボックス設計</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">openai.com — OpenAI News</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>OpenAI News が、Windows 上で Codex を安全かつ効率的に動かすためのサンドボックス設計を紹介しています。対象は Codex のコーディングエージェント実行環境で、ファイルアクセスやネットワーク通信を制御しながら、実務利用に耐える安全性を確保する取り組みです。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の記事では、Windows 環境で Codex を実行する際に、安全なサンドボックスをどう構築したかを解説しています。具体的には、Codex に許可するファイルアクセス範囲を制限し、ネットワーク接続も厳格に抑制することで、コード実行時のリスクを低減しています。OpenAI はこの仕組みにより、エージェントの自動化能力を損なわずに、より安全で効率的な開発支援を実現したと説明しています。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>エンタープライズでは、AI コーディングエージェントの導入可否は「何ができるか」だけでなく「何をできないか」の設計が重要です。本記事は、Windows 上でのファイル・ネットワーク制御を前提に安全境界を作る発想を示しており、金融・公共・製造業のような厳格な環境でも参考になります。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Codex</span><span class="story-tag-chip">#Windows</span><span class="story-tag-chip">#sandbox</span><span class="story-tag-chip">#file access</span><span class="story-tag-chip">#network restrictions</span>  </div>
+</article><article class="story" data-category="OpenAI" data-tags="Codex|Finance team|MBR|reporting pack|variance bridge" data-url="https://openai.com/academy/codex-for-work/how-finance-teams-use-codex">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
@@ -4761,7 +5400,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">14m ago</span>
+    <span class="story-time">2h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/claude-for-small-business" target="_blank" rel="noopener">Anthropic、Claude for Small Businessを発表</a>
@@ -5321,8 +5960,8 @@
           <button type="button" class="tag-pill" data-tag="Microsoft Fabric">#Microsoft Fabric</button>
           <button type="button" class="tag-pill" data-tag="Preview">#Preview</button>
           <button type="button" class="tag-pill" data-tag="GA">#GA</button>
-          <button type="button" class="tag-pill" data-tag="OneLake">#OneLake</button>
-          <button type="button" class="tag-pill" data-tag="Data &amp; Fabric">#Data &amp; Fabric</button>
+          <button type="button" class="tag-pill" data-tag="Fabric">#Fabric</button>
+          <button type="button" class="tag-pill" data-tag="Fabric Data Warehouse">#Fabric Data Warehouse</button>
         </div>
       </div>
       <div class="tag-group">
@@ -5383,9 +6022,9 @@
   <div class="side-block">
     <h3 class="side-title"><span class="icon">📰</span>Sources Today</h3>
     <div class="source-list">
-      <div class="source-list-item"><span>openai.com</span><span class="count">38</span></div>
-      <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">33</span></div>
-      <div class="source-list-item"><span>community.fabric.microsoft.com</span><span class="count">28</span></div>
+      <div class="source-list-item"><span>community.fabric.microsoft.com</span><span class="count">48</span></div>
+      <div class="source-list-item"><span>openai.com</span><span class="count">39</span></div>
+      <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">34</span></div>
       <div class="source-list-item"><span>github.blog</span><span class="count">16</span></div>
       <div class="source-list-item"><span>microsoft.com/security</span><span class="count">16</span></div>
       <div class="source-list-item"><span>anthropic.com/news</span><span class="count">12</span></div>
