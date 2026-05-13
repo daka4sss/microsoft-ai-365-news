@@ -30,7 +30,7 @@
 
 <div class="cat-nav-wrap">
   <nav class="cat-nav">
-    <a href="#" class="active" data-filter="all">All <span class="num">164</span></a>
+    <a href="#" class="active" data-filter="all">All <span class="num">167</span></a>
     <a href="#" data-filter="Overview">Overview <span class="num">4</span></a>
     <a href="#" data-filter="M365 Copilot">M365 Copilot <span class="num">6</span></a>
     <a href="#" data-filter="Copilot Studio">Copilot Studio <span class="num">4</span></a>
@@ -38,8 +38,8 @@
     <a href="#" data-filter="Azure AI Infra">Azure AI Infra <span class="num">10</span></a>
     <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">25</span></a>
     <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">17</span></a>
-    <a href="#" data-filter="AI Security">AI Security <span class="num">15</span></a>
-    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">36</span></a>
+    <a href="#" data-filter="AI Security">AI Security <span class="num">17</span></a>
+    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">37</span></a>
     <a href="#" class="anthropic-tab" data-filter="Anthropic">Anthropic <span class="num">15</span></a>
     <button class="mark-read-btn" id="mark-all-read" style="display:none">✓ 0件 既読にする</button>
   </nav>
@@ -48,10 +48,10 @@
   <div class="subbar-inner">
     <div class="subbar-stats">
       <span><span class="live-dot"></span><b>Live</b></span>
-      <span><b>164</b> stories today</span>
+      <span><b>167</b> stories today</span>
       <span><b>13</b> sources</span>
-      <span><b>164</b> this month</span>
-      <span>Updated <b>07:56 JST</b></span>
+      <span><b>167</b> this month</span>
+      <span>Updated <b>10:48 JST</b></span>
     </div>
     <div>Curated by GPT-5.4 mini · @daka1</div>
   </div>
@@ -71,7 +71,7 @@
         <div class="zone-banner-title">Microsoft AI Updates</div>
         <div class="zone-banner-subtitle">9 categories · Microsoft 公式ブログ・Tech Community・Dev Blog から</div>
       </div>
-      <div class="zone-banner-counts"><b>113</b> stories</div>
+      <div class="zone-banner-counts"><b>115</b> stories</div>
     </div>
 
 <article class="featured" data-category="Foundry" data-tags="Foundry|Private Endpoint|Managed VNet|BYO VNet|Private DNS" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/private-networking-and-inference-in-microsoft-foundry/ba-p/4513822">
@@ -95,20 +95,78 @@
 
   <div class="featured-meta">
     <span>📰 techcommunity.microsoft.com</span>
-    <span>📅 45m ago</span>
+    <span>📅 3h ago</span>
     <span>🏷 Foundry · Private Endpoint · Managed VNet · BYO VNet · Private DNS</span>
   </div>
 </article>
     <section class="section">
       <div class="section-head">
         <h2 class="section-title"><span class="icon">▎</span>Today's Stories</h2>
-        <span class="section-meta">Wed, May 13, 2026 · 112 items</span>
+        <span class="section-meta">Wed, May 13, 2026 · 114 items</span>
       </div>
       <div class="stories-grid">
-<article class="story" data-category="Dev Tools" data-tags="GitHub Copilot|usage-based billing|flex allotment|Pro+|Max plan" data-url="https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/">
+<article class="story" data-category="AI Security" data-tags="Microsoft Defender|MITRE ATT&amp;CK|synthetic logs|agentic workflow|detection engineering" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/12/accelerating-detection-engineering-using-ai-assisted-synthetic-attack-logs-generation/">
+  <div class="story-meta-top">
+    <span class="tag cat-security">AI Security</span>
+    <span class="story-time">2h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/accelerating-detection-engineering-using-ai-assisted-synthetic-attack-logs-generation/" target="_blank" rel="noopener">AIでサイバー攻撃ログ生成を高速化する新手法</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">microsoft.com/security — Microsoft Security Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Security Blog による解説記事で、MITRE ATT&amp;CK の TTP と具体的な攻撃アクションを入力に、AIで高忠実度の synthetic security attack logs を生成する手法を紹介しています。Microsoft Defender の検知ルール作成や検証を、ラボ実行に依存せず効率化する狙いです。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>本記事の新規性は、実攻撃をラボで再現してログを収集する従来手法に代え、AI-assisted synthetic attack log generation を検証している点です。Prompt-Engineered Generation に加え、Generator Agent・Evaluator Agent・Improver Agent からなる agentic workflow-based generation を提示し、反復的に生成・評価・改善する構成を示しています。出力は Command Line、Process Name、Parent Process Name などを含む構造化テレメトリで、単なる逐語的再現ではなく、検知を正しく発火させる意味的に整合したログ生成を目指しています。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>高品質な攻撃ログ不足は、検知エンジニアリングの速度と品質を直接左右します。本手法は、機微情報を含む実データやコストの高いラボ環境への依存を減らしつつ、希少・新興攻撃のシナリオ検証を広げられる点が重要です。金融・公共・製造など、検証データの持ち出し制約が厳しい組織では、初期設計やカバレッジ拡大の補助手段として有効です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Microsoft Defender</span><span class="story-tag-chip">#MITRE ATT&amp;CK</span><span class="story-tag-chip">#synthetic logs</span><span class="story-tag-chip">#agentic workflow</span><span class="story-tag-chip">#detection engineering</span>  </div>
+</article><article class="story" data-category="AI Security" data-tags="MDASH|Microsoft Security|vulnerability discovery|agentic scanning harness|CyberGym" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/">
+  <div class="story-meta-top">
+    <span class="tag cat-security">AI Security</span>
+    <span class="story-time">3h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/" target="_blank" rel="noopener">Microsoftの多モデル型AI防御で脆弱性発見を加速</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">microsoft.com/security — Microsoft Security Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Security Blog が、AIを用いた脆弱性探索の新システム「codename MDASH」を発表した記事。Windows のネットワーク／認証スタックを対象に、16件の新脆弱性を発見し、CyberGym ベンチマークでも 1,507 件中トップとなる 88.45% を記録した。Private Preview 提供中で、Microsoft のセキュリティ研究・防御体制への実装が進む。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>新たに公開されたのは、Microsoft Security の multi-model agentic scanning harness「codename MDASH」。100超の specialized AI agents を、frontier model と distilled model の複数構成で連携させ、発見・議論・実証までを一連で行う。private test driver では 21/21 の planted vulnerabilities を false positive なしで検出し、clfs.sys で 96%、tcpip.sys で 100% の recall を示した。さらに public CyberGym benchmark では 1,507 件の実在脆弱性に対して 88.45% を獲得し、leaderboard 首位となった。Limited Private Preview として一部顧客向けに試験提供中。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>企業にとって重要なのは、脆弱性発見の主戦場が「単体モデルの性能」から「複数エージェントをどう設計・統制するか」へ移りつつある点だ。特に大規模な自社コードや重要基盤を抱える組織では、誤検知を抑えつつ検証可能な findings を出せる仕組みが価値を持つ。Microsoft はこの仕組みを実運用へ寄せており、今後の防御自動化の参考になる。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#MDASH</span><span class="story-tag-chip">#Microsoft Security</span><span class="story-tag-chip">#vulnerability discovery</span><span class="story-tag-chip">#agentic scanning harness</span><span class="story-tag-chip">#CyberGym</span>  </div>
+</article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot|usage-based billing|flex allotment|Pro+|Max plan" data-url="https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">5h ago</span>
+    <span class="story-time">8h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/" target="_blank" rel="noopener">GitHub Copilot個人向けにflex配分とMax追加</a>
@@ -137,7 +195,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake|storage tiers|lifecycle management|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Optimize-your-storage-costs-with-OneLake-storage-tiers-and/ba-p/5179295">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">5h ago</span>
+    <span class="story-time">8h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Optimize-your-storage-costs-with-OneLake-storage-tiers-and/ba-p/5179295" target="_blank" rel="noopener">OneLake のストレージ階層とライフサイクル管理をPreview</a>
@@ -166,7 +224,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|Warehouse|Data Retention|Preview|Data Governance" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Configurable-Data-Retention-in-Microsoft-Fabric-Warehouse/ba-p/5181211">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">5h ago</span>
+    <span class="story-time">8h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Configurable-Data-Retention-in-Microsoft-Fabric-Warehouse/ba-p/5181211" target="_blank" rel="noopener">Microsoft Fabric Warehouse の保持期間を設定可能に</a>
@@ -195,7 +253,7 @@
 </article><article class="story" data-category="Foundry" data-tags="Foundry Local|Live Transcription API|Responses API|text embeddings|WebGPU" data-url="https://devblogs.microsoft.com/foundry/foundry-local-v1-1/">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">6h ago</span>
+    <span class="story-time">8h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://devblogs.microsoft.com/foundry/foundry-local-v1-1/" target="_blank" rel="noopener">Foundry Local 1.1で音声文字起こしとResponses API対応</a>
@@ -224,7 +282,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Azure DDoS Protection|Azure Front Door|WAF|DDoS|JA4" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/12/defending-consumer-web-properties-against-modern-ddos-attacks/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">6h ago</span>
+    <span class="story-time">9h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defending-consumer-web-properties-against-modern-ddos-attacks/" target="_blank" rel="noopener">モダンDDoS攻撃から消費者向けWebを守る設計指針</a>
@@ -253,7 +311,7 @@
 </article><article class="story" data-category="Foundry" data-tags="Microsoft Foundry|AI agents|bug triage|test optimization|system validation" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/driving-efficiency-in-modern-system-engineering-with-ai-agents/ba-p/4516181">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">7h ago</span>
+    <span class="story-time">10h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/driving-efficiency-in-modern-system-engineering-with-ai-agents/ba-p/4516181" target="_blank" rel="noopener">AI Agentsで現代のシステム設計を効率化する方法</a>
@@ -282,7 +340,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Trusted Relationship|HPE Operations Agent|HPOM|Microsoft Defender|MITRE ATT&amp;CK T1199" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">7h ago</span>
+    <span class="story-time">10h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/" target="_blank" rel="noopener">第三者委託経由で信頼境界を崩す侵入手口</a>
@@ -311,7 +369,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot CLI|/delegate|Binary Space Partitioning|Go|procedural generation" data-url="https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">7h ago</span>
+    <span class="story-time">10h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli/" target="_blank" rel="noopener">GitHub Copilot CLIで作るローグライク dungeon</a>
@@ -340,7 +398,7 @@
 </article><article class="story" data-category="Foundry" data-tags="Foundry Local|GPT-5.5|Agent Framework tracing|Agent Monitoring Dashboard|Continuous evaluation" data-url="https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">15h ago</span>
+    <span class="story-time">18h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-apr-2026/" target="_blank" rel="noopener">Microsoft Foundryの最新更新まとめ、GPT-5.5提供開始</a>
@@ -602,7 +660,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Agentic Workflows|GitHub Actions|MCP|GitHub CLI|token efficiency" data-url="https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">4d ago</span>
+    <span class="story-time">5d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/" target="_blank" rel="noopener">GitHub Agentic Workflowsのtoken効率を改善</a>
@@ -3368,20 +3426,20 @@
         <div class="zone-banner-title">Partner Updates</div>
         <div class="zone-banner-subtitle">Microsoft 戦略パートナーの公式アップデート</div>
       </div>
-      <div class="zone-banner-counts"><b>51</b> stories</div>
+      <div class="zone-banner-counts"><b>52</b> stories</div>
     </div>
 
     <section class="section">
       <div class="section-head partner-head">
         <h2 class="section-title"><span class="icon">●</span>OpenAI</h2>
-        <span class="section-meta">openai.com/news · 36 items</span>
+        <span class="section-meta">openai.com/news · 37 items</span>
       </div>
       <div class="stories-grid">
 <article class="story" data-category="OpenAI" data-tags="Codex|Finance team|MBR|reporting pack|variance bridge" data-url="https://openai.com/academy/codex-for-work/how-finance-teams-use-codex">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">7h ago</span>
+    <span class="story-time">10h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/academy/codex-for-work/how-finance-teams-use-codex" target="_blank" rel="noopener">財務チーム向けにCodex活用例を紹介</a>
@@ -3407,11 +3465,41 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Codex</span><span class="story-tag-chip">#Finance team</span><span class="story-tag-chip">#MBR</span><span class="story-tag-chip">#reporting pack</span><span class="story-tag-chip">#variance bridge</span>  </div>
+</article><article class="story" data-category="OpenAI" data-tags="Codex|財務部門|MBR|reporting packs|variance bridges" data-url="https://openai.com/academy/how-finance-teams-use-codex">
+  <div class="story-meta-top">
+    <span class="tag cat-openai">OpenAI</span>
+    <span class="tag partner">Partner</span>
+    <span class="story-time">10h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://openai.com/academy/how-finance-teams-use-codex" target="_blank" rel="noopener">Codexで財務チームの月次報告を効率化する方法</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">openai.com — OpenAI News</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>OpenAI Newsによる記事で、Codexを使って財務チームがMBR（月次業績レビュー）、reporting packs、variance bridges、model checks、planning scenariosを実務入力から作成する方法を紹介しています。Codexの活用イメージを財務業務に絞って示す内容です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>本記事では、Codexを財務部門の実務に適用する具体例が新たに示されています。MBR作成、reporting packsの生成、variance bridgesの整理、model checksの実施、planning scenariosの作成までを、実際の業務入力を起点に支援できる点がポイントです。製品の新機能追加や価格、バージョン情報の記載はありませんが、Codexのユースケースを財務ワークフローへ拡張するOpenAI公式の案内です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>財務部門にとっては、レポート作成や差異分析、計画シナリオ作成のような反復業務をCodexで支援できる可能性があります。特に、定型資料の下書きや確認作業の負荷軽減に有効です。一方で、金融・公共の現場では、生成内容の検証責任や入力データの管理を前提に、既存の承認フローへどう組み込むかが重要になります。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Codex</span><span class="story-tag-chip">#財務部門</span><span class="story-tag-chip">#MBR</span><span class="story-tag-chip">#reporting packs</span><span class="story-tag-chip">#variance bridges</span>  </div>
 </article><article class="story" data-category="OpenAI" data-tags="Parameter Golf|AI-assisted research|coding agents|quantization|model design" data-url="https://openai.com/index/what-parameter-golf-taught-us">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">22h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/what-parameter-golf-taught-us" target="_blank" rel="noopener">Parameter Golfが示したAI支援研究の可能性</a>
@@ -3441,7 +3529,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">22h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/nvidia" target="_blank" rel="noopener">NVIDIAのエンジニアがCodexとGPT-5.5で開発</a>
@@ -3471,7 +3559,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">22h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/autoscout24" target="_blank" rel="noopener">AutoScout24がCodexとChatGPTで開発を加速</a>
@@ -3711,7 +3799,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">5d ago</span>
+    <span class="story-time">6d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/introducing-trusted-contact-in-chatgpt" target="_blank" rel="noopener">ChatGPTに信頼できる連絡先通知機能を追加</a>
@@ -3741,7 +3829,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">5d ago</span>
+    <span class="story-time">6d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/simplex" target="_blank" rel="noopener">SimplexがCodexでソフトウェア開発を再設計</a>
@@ -3801,7 +3889,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/introducing-b2b-signals" target="_blank" rel="noopener">フロンティア企業がAI優位を築く方法</a>
@@ -3831,7 +3919,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/introducing-chatgpt-futures-class-of-2026" target="_blank" rel="noopener">ChatGPT Futures 2026年版、26人の学生を紹介</a>
@@ -3861,7 +3949,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/uber" target="_blank" rel="noopener">UberがOpenAIで配車と収益化を高速化</a>
@@ -3891,7 +3979,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/singular-bank" target="_blank" rel="noopener">Singular BankがChatGPTとCodexで業務を加速</a>
@@ -4011,7 +4099,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 05</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/new-ways-to-buy-chatgpt-ads" target="_blank" rel="noopener">ChatGPT広告にbeta Ads Managerを追加</a>
@@ -4041,7 +4129,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 05</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/advancing-youth-safety-in-emea" target="_blank" rel="noopener">EMEAの若者の安全と福祉を支えるOpenAIの新施策</a>
@@ -4560,7 +4648,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 05</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">Claude Opus 4.7 GA、ソフト開発と推論を強化</a>
@@ -5026,8 +5114,8 @@
           <button type="button" class="tag-pill" data-tag="Microsoft Defender">#Microsoft Defender</button>
           <button type="button" class="tag-pill" data-tag="Agent 365">#Agent 365</button>
           <button type="button" class="tag-pill" data-tag="Kubernetes">#Kubernetes</button>
-          <button type="button" class="tag-pill" data-tag="AWS CloudTrail">#AWS CloudTrail</button>
-          <button type="button" class="tag-pill" data-tag="Agentic SOC">#Agentic SOC</button>
+          <button type="button" class="tag-pill" data-tag="MITRE ATT&amp;CK">#MITRE ATT&amp;CK</button>
+          <button type="button" class="tag-pill" data-tag="agentic workflow">#agentic workflow</button>
         </div>
       </div>
       <div class="tag-group">
@@ -5036,8 +5124,8 @@
           OpenAI
         </div>
         <div class="tag-pills">
-          <button type="button" class="tag-pill" data-tag="ChatGPT">#ChatGPT</button>
           <button type="button" class="tag-pill" data-tag="Codex">#Codex</button>
+          <button type="button" class="tag-pill" data-tag="ChatGPT">#ChatGPT</button>
           <button type="button" class="tag-pill" data-tag="OpenAI">#OpenAI</button>
           <button type="button" class="tag-pill" data-tag="OpenAI News">#OpenAI News</button>
           <button type="button" class="tag-pill" data-tag="AI agents">#AI agents</button>
@@ -5062,11 +5150,11 @@
   <div class="side-block">
     <h3 class="side-title"><span class="icon">📰</span>Sources Today</h3>
     <div class="source-list">
-      <div class="source-list-item"><span>openai.com</span><span class="count">37</span></div>
+      <div class="source-list-item"><span>openai.com</span><span class="count">38</span></div>
       <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">33</span></div>
       <div class="source-list-item"><span>community.fabric.microsoft.com</span><span class="count">25</span></div>
+      <div class="source-list-item"><span>microsoft.com/security</span><span class="count">16</span></div>
       <div class="source-list-item"><span>github.blog</span><span class="count">15</span></div>
-      <div class="source-list-item"><span>microsoft.com/security</span><span class="count">14</span></div>
       <div class="source-list-item"><span>anthropic.com/news</span><span class="count">11</span></div>
       <div class="source-list-item"><span>devblogs.microsoft.com/foundry</span><span class="count">6</span></div>
       <div class="source-list-item"><span>devblogs.microsoft.com</span><span class="count">6</span></div>
