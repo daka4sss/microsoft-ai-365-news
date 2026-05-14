@@ -117,6 +117,7 @@
   "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/",
   "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/",
   "https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-oss-contributions/",
+  "https://github.blog/engineering/architecture-optimization/from-latency-to-instant-modernizing-github-issues-navigation-performance/",
   "https://github.blog/news-insights/company-news/an-update-on-github-availability/",
   "https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/",
   "https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/",
@@ -1139,6 +1140,7 @@
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-post-stream-refinement-higher-accuracy-real-time/ba-p/4510038",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/now-in-foundry-ibm-granite-4-1-nvidia-nemotron-nano-omni-and/ba-p/4516858",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/nvidia-dynamo-on-aks-autoscaling-llm-inference/ba-p/4499545",
+  "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/open-model-inference-at-scale-on-foundry-what-s-new-with/ba-p/4519534",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/organaize-what-happens-when-you-let-ai-agents-organize/ba-p/4509792",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/private-networking-and-inference-in-microsoft-foundry/ba-p/4513822",
   "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/prompt-flow-is-being-retired/ba-p/4513587",
@@ -1156,6 +1158,7 @@
   "https://www.anthropic.com/news/election-safeguards-update",
   "https://www.anthropic.com/news/enterprise-ai-services-company",
   "https://www.anthropic.com/news/finance-agents",
+  "https://www.anthropic.com/news/gates-foundation-partnership",
   "https://www.anthropic.com/news/higher-limits-spacex",
   "https://www.anthropic.com/news/model-context-protocol",
   "https://www.anthropic.com/news/the-long-term-benefit-trust",
@@ -1213,5 +1216,7 @@
   "https://www.microsoft.com/en-us/security/blog/2026/05/12/accelerating-detection-engineering-using-ai-assisted-synthetic-attack-logs-generation/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/12/defending-consumer-web-properties-against-modern-ddos-attacks/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/",
-  "https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/"
+  "https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/",
+  "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/",
+  "https://www.microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet/"
 ]
