@@ -306,6 +306,7 @@
   "https://openai.com/index/chatgpt-for-veterans",
   "https://openai.com/index/chatgpt-plugins",
   "https://openai.com/index/chatgpt-plus",
+  "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations",
   "https://openai.com/index/chatgpt-shopping-research",
   "https://openai.com/index/chatgpt-study-mode",
   "https://openai.com/index/chatgpt-whatsapp-transition",
@@ -1218,5 +1219,6 @@
   "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/",
+  "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/",
   "https://www.microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet/"
 ]
