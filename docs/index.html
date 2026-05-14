@@ -30,16 +30,16 @@
 
 <div class="cat-nav-wrap">
   <nav class="cat-nav">
-    <a href="#" class="active" data-filter="all">All <span class="num">204</span></a>
+    <a href="#" class="active" data-filter="all">All <span class="num">210</span></a>
     <a href="#" data-filter="Overview">Overview <span class="num">5</span></a>
     <a href="#" data-filter="M365 Copilot">M365 Copilot <span class="num">6</span></a>
-    <a href="#" data-filter="Copilot Studio">Copilot Studio <span class="num">4</span></a>
-    <a href="#" data-filter="Foundry">Foundry <span class="num">34</span></a>
+    <a href="#" data-filter="Copilot Studio">Copilot Studio <span class="num">7</span></a>
+    <a href="#" data-filter="Foundry">Foundry <span class="num">35</span></a>
     <a href="#" data-filter="Azure AI Infra">Azure AI Infra <span class="num">9</span></a>
-    <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">49</span></a>
+    <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">50</span></a>
     <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">20</span></a>
     <a href="#" data-filter="AI Security">AI Security <span class="num">20</span></a>
-    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">40</span></a>
+    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">41</span></a>
     <a href="#" class="anthropic-tab" data-filter="Anthropic">Anthropic <span class="num">17</span></a>
     <button class="mark-read-btn" id="mark-all-read" style="display:none">✓ 0件 既読にする</button>
   </nav>
@@ -48,10 +48,10 @@
   <div class="subbar-inner">
     <div class="subbar-stats">
       <span><span class="live-dot"></span><b>Live</b></span>
-      <span><b>204</b> stories today</span>
+      <span><b>210</b> stories today</span>
       <span><b>13</b> sources</span>
-      <span><b>204</b> this month</span>
-      <span>Updated <b>04:25 JST</b></span>
+      <span><b>210</b> this month</span>
+      <span>Updated <b>06:58 JST</b></span>
     </div>
     <div>Curated by GPT-5.4 mini · @daka1</div>
   </div>
@@ -71,44 +71,102 @@
         <div class="zone-banner-title">Microsoft AI Updates</div>
         <div class="zone-banner-subtitle">9 categories · Microsoft 公式ブログ・Tech Community・Dev Blog から</div>
       </div>
-      <div class="zone-banner-counts"><b>147</b> stories</div>
+      <div class="zone-banner-counts"><b>152</b> stories</div>
     </div>
 
-<article class="featured" data-category="Foundry" data-tags="Foundry|Fireworks AI|PTU|US Data Zone|Kimi K2.6|DeepSeek V4 Pro" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/open-model-inference-at-scale-on-foundry-what-s-new-with/ba-p/4519534">
+<article class="featured" data-category="Foundry" data-tags="Foundry Agent Service|Model Context Protocol|Docusign Navigator|Maestro|Azure App Service" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-an-ai-powered-contract-price-adjustment-agent-with/ba-p/4515997">
   <div class="featured-kicker">TOP STORY · FOUNDRY · 15 MAY 2026</div>
-  <h1 class="featured-headline"><a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/open-model-inference-at-scale-on-foundry-what-s-new-with/ba-p/4519534" target="_blank" rel="noopener">FoundryでFireworks AIの推論基盤を拡張</a></h1>
+  <h1 class="featured-headline"><a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-an-ai-powered-contract-price-adjustment-agent-with/ba-p/4515997" target="_blank" rel="noopener">Docusign MCPとFoundryで契約価格調整Agentを構築</a></h1>
 
   <div class="featured-section">
     <h3>📌 概要</h3>
-    <p>Microsoft Foundry 上で Fireworks AI の public preview から2か月後の進展をまとめた記事。Azure内で低遅延・高スループットの open model inference を提供し、US Data Zone への PTU 対応、新モデル追加、企業向け統制の強化を紹介している。</p>
+    <p>Tech Community の記事では、Docusign MCP と Microsoft Foundry を使い、契約更新時の価格調整を自動化するAgent構成を紹介しています。GPT-5.1 を Foundry Agent Service で動かし、契約検索、CPI取得、承認ワークフロー起動、監視ダッシュボードまでを一連で処理する内容です。</p>
   </div>
 
   <div class="featured-section">
     <h3>🆕 What's New / Update</h3>
-    <p>Fireworks AI on Foundry に US Data Zone 向けの PTU サポートが追加され、米国リージョン内でデータを保持しながら予測可能なスループットを確保できるようになった。あわせて、Kimi K2.6 と DeepSeek V4 Pro が新たに利用可能になり、どちらも serverless と PTU の両方に対応する。Kimi K2.6 は入力 $0.95/1M、cached $0.16/1M、出力 $4.00/1M、DeepSeek V4 Pro は入力 $1.75/1M、cached $0.15/1M、出力 $3.48/1M。</p>
+    <p>新しい点は、契約管理の各工程を Model Context Protocol (MCP) で統合し、Docusign Navigator、BLS API、Maestro を3段階のAgentで連携させたことです。30日以内に失効する契約を抽出し、CPIに基づく調整額を計算し、更新後の契約を Maestro へ渡して承認・署名フローを起動します。Foundry Agent Service でオーケストレーションし、Azure App Service 上で非同期実行とリアルタイム監視を実現しています。</p>
   </div>
 
   <div class="featured-section">
     <h3>💡 Key Takeaway</h3>
-    <p>本記事の要点は、open model を本番運用する際の障壁を、性能と企業統制の両面から下げている点にある。特に金融・公共・製造業のようにデータ所在や監査が重要な組織では、US Data Zone の PTU と Azure の統制を組み合わせる価値が大きい。まずは serverless で評価し、負荷が安定した段階で PTU へ移行するのが現実的な導入パスだ。</p>
+    <p>契約更新や価格改定のような定型だが例外が多い業務は、MCP と Agent の組み合わせで大きく自動化できます。金融・公共・製造業のように契約数が多く、監査性や権限管理が重要な組織では、手作業の削減だけでなく、承認経路の標準化や可視化にも効果があります。既存 API 個別実装より、拡張性の高い統合基盤として有効です。</p>
   </div>
 
   <div class="featured-meta">
     <span>📰 techcommunity.microsoft.com</span>
-    <span>📅 3h ago</span>
-    <span>🏷 Foundry · Fireworks AI · PTU · US Data Zone · Kimi K2.6 · DeepSeek V4 Pro</span>
+    <span>📅 1h ago</span>
+    <span>🏷 Foundry Agent Service · Model Context Protocol · Docusign Navigator · Maestro · Azure App Service</span>
   </div>
 </article>
     <section class="section">
       <div class="section-head">
         <h2 class="section-title"><span class="icon">▎</span>Today's Stories</h2>
-        <span class="section-meta">Fri, May 15, 2026 · 146 items</span>
+        <span class="section-meta">Fri, May 15, 2026 · 151 items</span>
       </div>
       <div class="stories-grid">
-<article class="story" data-category="Dev Tools" data-tags="GitHub Issues|IndexedDB|service worker|HPC|Web performance" data-url="https://github.blog/engineering/architecture-optimization/from-latency-to-instant-modernizing-github-issues-navigation-performance/">
+<article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|API for GraphQL|custom authorization|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Custom-authorization-for-API-for-GraphQL-in-Microsoft-Fabric/ba-p/5182352">
+  <div class="story-meta-top">
+    <span class="tag cat-data">Data &amp; Fabric</span>
+    <span class="story-time">58m ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Custom-authorization-for-API-for-GraphQL-in-Microsoft-Fabric/ba-p/5182352" target="_blank" rel="noopener">Microsoft Fabric の API for GraphQL にカスタム認可を追加（Preview）</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">community.fabric.microsoft.com — Microsoft Fabric Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Fabric Blog で、API for GraphQL に対する custom authorization の Preview 提供が案内されました。本文では、Fabric 上で GraphQL API を公開する際に、独自の認可ロジックを適用できるようになる点が主題です。対象は API for GraphQL で、ステータスは Preview です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の更新では、Microsoft Fabric の API for GraphQL に custom authorization を設定できる Preview 機能が追加されました。これにより、標準的な認証だけでなく、アプリケーション要件に応じた独自のアクセス制御を GraphQL API 側に実装しやすくなります。公開元は Microsoft Fabric Blog で、機能ステータスは Preview です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>企業で GraphQL を共通 API 層として使う場合、データソースごとの細かな権限制御を API 層に寄せられる点が重要です。特に金融・公共・製造のようにアクセス条件が複雑な環境では、認可ロジックの集約により設計の一貫性を保ちやすくなります。Preview のため、本番適用前に制約や運用手順の検証が必要です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#API for GraphQL</span><span class="story-tag-chip">#custom authorization</span><span class="story-tag-chip">#Preview</span>  </div>
+</article><article class="story" data-category="Foundry" data-tags="Foundry|Fireworks AI|PTU|US Data Zone|Kimi K2.6|DeepSeek V4 Pro" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/open-model-inference-at-scale-on-foundry-what-s-new-with/ba-p/4519534">
+  <div class="story-meta-top">
+    <span class="tag cat-foundry">Foundry</span>
+    <span class="story-time">5h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/open-model-inference-at-scale-on-foundry-what-s-new-with/ba-p/4519534" target="_blank" rel="noopener">FoundryでFireworks AIの推論基盤を拡張</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">techcommunity.microsoft.com — Tech Community - Microsoft Foundry</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Microsoft Foundry 上で Fireworks AI の public preview から2か月後の進展をまとめた記事。Azure内で低遅延・高スループットの open model inference を提供し、US Data Zone への PTU 対応、新モデル追加、企業向け統制の強化を紹介している。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Fireworks AI on Foundry に US Data Zone 向けの PTU サポートが追加され、米国リージョン内でデータを保持しながら予測可能なスループットを確保できるようになった。あわせて、Kimi K2.6 と DeepSeek V4 Pro が新たに利用可能になり、どちらも serverless と PTU の両方に対応する。Kimi K2.6 は入力 $0.95/1M、cached $0.16/1M、出力 $4.00/1M、DeepSeek V4 Pro は入力 $1.75/1M、cached $0.15/1M、出力 $3.48/1M。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>本記事の要点は、open model を本番運用する際の障壁を、性能と企業統制の両面から下げている点にある。特に金融・公共・製造業のようにデータ所在や監査が重要な組織では、US Data Zone の PTU と Azure の統制を組み合わせる価値が大きい。まずは serverless で評価し、負荷が安定した段階で PTU へ移行するのが現実的な導入パスだ。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Foundry</span><span class="story-tag-chip">#Fireworks AI</span><span class="story-tag-chip">#PTU</span><span class="story-tag-chip">#US Data Zone</span><span class="story-tag-chip">#Kimi K2.6</span><span class="story-tag-chip">#DeepSeek V4 Pro</span>  </div>
+</article><article class="story" data-category="Dev Tools" data-tags="GitHub Issues|IndexedDB|service worker|HPC|Web performance" data-url="https://github.blog/engineering/architecture-optimization/from-latency-to-instant-modernizing-github-issues-navigation-performance/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">3h ago</span>
+    <span class="story-time">5h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/engineering/architecture-optimization/from-latency-to-instant-modernizing-github-issues-navigation-performance/" target="_blank" rel="noopener">GitHub Issuesの体感速度を即時化へ刷新</a>
@@ -137,7 +195,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Entra Agent ID|human-in-the-loop|least privilege|zero trust|agent security" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">3h ago</span>
+    <span class="story-time">5h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/" target="_blank" rel="noopener">自律型AIエージェントを守る多層防御の考え方</a>
@@ -166,7 +224,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Kazuar|Secret Blizzard|P2P botnet|Kernel module|Bridge module" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">4h ago</span>
+    <span class="story-time">6h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet/" target="_blank" rel="noopener">KazuarのP2Pボットネット化と構造を解説</a>
@@ -195,7 +253,7 @@
 </article><article class="story" data-category="AI Security" data-tags="MCP servers|Mage AI|Defender for Cloud|Kubernetes|exploitable misconfiguration" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">5h ago</span>
+    <span class="story-time">7h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/" target="_blank" rel="noopener">AIアプリの設定不備が招く重大な脆弱性</a>
@@ -250,6 +308,35 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Data Agent</span><span class="story-tag-chip">#Eventhouse Functions</span><span class="story-tag-chip">#Materialized Views</span><span class="story-tag-chip">#Shortcuts</span><span class="story-tag-chip">#Microsoft Fabric</span>  </div>
+</article><article class="story" data-category="Copilot Studio" data-tags="Power Fx|User Defined Types|Power Apps Studio|ParseJSON|User Defined Functions" data-url="https://www.microsoft.com/en-us/power-platform/blog/power-apps/power-fx-user-defined-types-generally-available/">
+  <div class="story-meta-top">
+    <span class="tag cat-studio">Copilot Studio</span>
+    <span class="story-time">1d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://www.microsoft.com/en-us/power-platform/blog/power-apps/power-fx-user-defined-types-generally-available/" target="_blank" rel="noopener">Power Fx の User Defined Types が一般提供開始</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">powerplatform.microsoft.com — Power Platform Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Power Platform Blog で、Power Fx の User Defined Types (UDTs) が一般提供開始になったと発表しました。Power Apps Studio version 3.26044 以降で、新規アプリは既定で有効、既存アプリは Settings &gt; Updates &gt; New &gt; User-Defined types から有効化できます。User Defined Functions、Enhanced Component Properties に続く GA です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>Power Fx で、Type と RecordOf を使って UDT を App object の Formulas property に定義できるようになり、Records や Tables を型付きで受け渡しできるようになりました。これにより、Book のような複合データを明示的な型で扱え、JSON からの ParseJSON でも ISO 8601 形式の日時などを型変換できます。さらに IsType と AsType により、変換前の判定や安全な型変換も可能です。Power Apps Studio version 3.26044 以降で GA、既存アプリは手動有効化が必要です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>大規模な Power Apps を分割・再利用しやすい部品に整理し、型の不整合や JSON 取り込み時のエラーを減らせる点が重要です。特に金融・公共・製造のように、入力データの正確性と保守性が求められる現場では、UDF と UDT を組み合わせることで、アプリの品質向上と変更影響の局所化が期待できます。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Power Fx</span><span class="story-tag-chip">#User Defined Types</span><span class="story-tag-chip">#Power Apps Studio</span><span class="story-tag-chip">#ParseJSON</span><span class="story-tag-chip">#User Defined Functions</span>  </div>
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric|Data Agents|Service Principal|Preview|Microsoft Fabric Blog" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Service-Principal-Support-for-Data-Agents-in-Fabric-Preview/ba-p/5181634">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
@@ -917,6 +1004,35 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Azure DDoS Protection</span><span class="story-tag-chip">#Azure Front Door</span><span class="story-tag-chip">#WAF</span><span class="story-tag-chip">#DDoS</span><span class="story-tag-chip">#JA4</span>  </div>
+</article><article class="story" data-category="Copilot Studio" data-tags="Power Apps MCP server|closed-loop learning|Agent feed|Genetic-Pareto optimization|data entry tool" data-url="https://www.microsoft.com/en-us/power-platform/blog/power-apps/power-apps-mcp-server-introduces-closed-loop-learning-for-enterprise-agents/">
+  <div class="story-meta-top">
+    <span class="tag cat-studio">Copilot Studio</span>
+    <span class="story-time">2d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://www.microsoft.com/en-us/power-platform/blog/power-apps/power-apps-mcp-server-introduces-closed-loop-learning-for-enterprise-agents/" target="_blank" rel="noopener">Power Apps MCP serverに閉ループ学習を導入</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">powerplatform.microsoft.com — Power Platform Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Power Platform Blog が、Power Apps MCP server に接続されたエージェント向けの closed-loop learning を発表した記事。対象はまず data entry tool で、ユーザーの修正を Agent feed に構造化メモリとして保存し、次回以降の推論に反映する。記憶の一般化とプロンプト最適化により、業務全体の精度向上を狙う内容。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>新機能は、エージェントが受けた修正をその場限りで終わらせず、永続化された structured memory として再利用する点。Memory-based optimization で個別修正を次回推論に使い、Genetic-Pareto optimization で複数の修正を一般化したルールへまとめ、エージェントの既定動作に組み込む。どちらも data entry tool で利用可能で、追加設定やデータパイプラインは不要。GA/Preview の明記はなく、本文では production で自動稼働すると説明している。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>この更新は、企業エージェントを「作って終わり」ではなく、運用しながら業務ルールに適応させる方向へ進めるもの。特に請求書処理のように、抽出は正しいが正規化が必要な業務で効果が大きい。日本の金融・公共・製造業でも、部門ごとの表記ゆれや例外処理を人手で教え直す負担を減らし、組織全体で精度を底上げする運用設計が重要になる。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Power Apps MCP server</span><span class="story-tag-chip">#closed-loop learning</span><span class="story-tag-chip">#Agent feed</span><span class="story-tag-chip">#Genetic-Pareto optimization</span><span class="story-tag-chip">#data entry tool</span>  </div>
 </article><article class="story" data-category="Foundry" data-tags="Microsoft Foundry|AI agents|bug triage|test optimization|system validation" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/driving-efficiency-in-modern-system-engineering-with-ai-agents/ba-p/4516181">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
@@ -946,6 +1062,35 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Microsoft Foundry</span><span class="story-tag-chip">#AI agents</span><span class="story-tag-chip">#bug triage</span><span class="story-tag-chip">#test optimization</span><span class="story-tag-chip">#system validation</span>  </div>
+</article><article class="story" data-category="Copilot Studio" data-tags="Dataverse Admin Skills|PAC CLI|Dataverse Web API|bulk delete|retention" data-url="https://www.microsoft.com/en-us/power-platform/blog/2026/05/12/dataverse-agentic-administration/">
+  <div class="story-meta-top">
+    <span class="tag cat-studio">Copilot Studio</span>
+    <span class="story-time">2d ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://www.microsoft.com/en-us/power-platform/blog/2026/05/12/dataverse-agentic-administration/" target="_blank" rel="noopener">Dataverse Admin Skills の Public Preview 開始</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">powerplatform.microsoft.com — Power Platform Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Power Platform Blog は、Dataverse 環境の管理を自然言語で行える Dataverse Admin Skills（dv-admin）の Public Preview を発表した。Claude Code や GitHub Copilot 内で動作し、PAC CLI と Dataverse Web API を使って複数環境の設定変更や bulk delete、retention などを実行できる。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の Public Preview では、Dataverse Skills Plugin に含まれる dv-admin を使って、Power Platform admin center の 37 個の allowlisted 設定を自然言語で一括管理できるようになった。MCP、audit、retention、recycle bin、search、Fabric、security などの切り替えに加え、bulk delete の予定作成・停止・再開・取消、長期保持の有効化も可能。PAC CLI v2.6+ と Dataverse Web API を共通基盤とし、確認プロンプトや FetchXML 検証、システムテーブル警告、複数環境の並列実行などの安全機構を備える。Capacity Management は coming soon。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>複数の Dataverse 環境を運用する企業では、PPAC を1件ずつ操作する手作業を大きく減らせる可能性がある。特に金融・公共・製造のように統制と一括変更が重要な組織で、設定の標準化や定型運用の自動化に向く。一方で、削除系や保持設定は確認フローを含むため、既存の承認手順や運用ルールとの整合が重要。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Dataverse Admin Skills</span><span class="story-tag-chip">#PAC CLI</span><span class="story-tag-chip">#Dataverse Web API</span><span class="story-tag-chip">#bulk delete</span><span class="story-tag-chip">#retention</span>  </div>
 </article><article class="story" data-category="AI Security" data-tags="Trusted Relationship|HPE Operations Agent|HPOM|Microsoft Defender|MITRE ATT&amp;CK T1199" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
@@ -1211,7 +1356,7 @@
 </article><article class="story" data-category="M365 Copilot" data-tags="Microsoft 365 Copilot|Agent Evaluations|Microsoft 365 Agents Toolkit|Azure OpenAI|CI/CD" data-url="https://devblogs.microsoft.com/microsoft365dev/announcing-the-public-preview-of-the-microsoft-365-copilot-agent-evaluations-tool/">
   <div class="story-meta-top">
     <span class="tag cat-m365">M365 Copilot</span>
-    <span class="story-time">5d ago</span>
+    <span class="story-time">6d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://devblogs.microsoft.com/microsoft365dev/announcing-the-public-preview-of-the-microsoft-365-copilot-agent-evaluations-tool/" target="_blank" rel="noopener">Microsoft 365 Copilot向けAgent Evaluationsを公開プレビュー</a>
@@ -1385,7 +1530,7 @@
 </article><article class="story" data-category="M365 Copilot" data-tags="Microsoft Graph|Exchange Online|mailbox import/export|EWS|GA" data-url="https://devblogs.microsoft.com/microsoft365dev/announcing-general-availability-of-the-mailbox-import-and-export-microsoft-graph-apis/">
   <div class="story-meta-top">
     <span class="tag cat-m365">M365 Copilot</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://devblogs.microsoft.com/microsoft365dev/announcing-general-availability-of-the-mailbox-import-and-export-microsoft-graph-apis/" target="_blank" rel="noopener">Mailbox import/export Microsoft Graph APIs が GA</a>
@@ -1414,7 +1559,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Semantic Kernel|CVE-2026-26030|CVE-2026-25592|prompt injection|RCE" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/" target="_blank" rel="noopener">AI agent frameworkのRCE脆弱性を解説</a>
@@ -1560,7 +1705,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake security|Microsoft Fabric|GA|Data &amp; Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-security-Generally-Available/ba-p/5176756">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 07</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/OneLake-security-Generally-Available/ba-p/5176756" target="_blank" rel="noopener">OneLake security が GA で提供開始</a>
@@ -1589,7 +1734,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="OneLake security|Microsoft Fabric|OneLake|GA" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/OneLake-security-Generally-Available/ba-p/5176756">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 07</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/OneLake-security-Generally-Available/ba-p/5176756" target="_blank" rel="noopener">OneLake security が Generally Available に</a>
@@ -1618,7 +1763,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot Coding Agent|Agent Mode|Computer Use|GitHub Actions|Trust Layer" data-url="https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 07</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic/" target="_blank" rel="noopener">非決定的なagent行動を検証する新しいTrust Layer</a>
@@ -1647,7 +1792,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Livy API|Spark|Preview|Microsoft Fabric|Concurrency" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/High-Concurrency-Support-for-the-Fabric-Livy-API-Scalable-Spark/ba-p/5178390">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 07</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/High-Concurrency-Support-for-the-Fabric-Livy-API-Scalable-Spark/ba-p/5178390" target="_blank" rel="noopener">Fabric Livy API に高同時実行対応を追加</a>
@@ -1676,7 +1821,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Livy API|Spark automation|High concurrency|Preview|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/High-Concurrency-Support-for-the-Fabric-Livy-API-Scalable-Spark/ba-p/5178390">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 07</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/High-Concurrency-Support-for-the-Fabric-Livy-API-Scalable-Spark/ba-p/5178390" target="_blank" rel="noopener">Fabric Livy APIで高並列Spark自動化をPreview提供</a>
@@ -4354,20 +4499,20 @@
         <div class="zone-banner-title">Partner Updates</div>
         <div class="zone-banner-subtitle">Microsoft 戦略パートナーの公式アップデート</div>
       </div>
-      <div class="zone-banner-counts"><b>57</b> stories</div>
+      <div class="zone-banner-counts"><b>58</b> stories</div>
     </div>
 
     <section class="section">
       <div class="section-head partner-head">
         <h2 class="section-title"><span class="icon">●</span>OpenAI</h2>
-        <span class="section-meta">openai.com/news · 40 items</span>
+        <span class="section-meta">openai.com/news · 41 items</span>
       </div>
       <div class="stories-grid">
 <article class="story" data-category="OpenAI" data-tags="Codex|Windows|sandbox|file access|network restrictions" data-url="https://openai.com/index/building-codex-windows-sandbox">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">19h ago</span>
+    <span class="story-time">21h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/building-codex-windows-sandbox" target="_blank" rel="noopener">Windows版Codexを安全に動かすサンドボックス設計</a>
@@ -4393,11 +4538,41 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Codex</span><span class="story-tag-chip">#Windows</span><span class="story-tag-chip">#sandbox</span><span class="story-tag-chip">#file access</span><span class="story-tag-chip">#network restrictions</span>  </div>
+</article><article class="story" data-category="OpenAI" data-tags="Codex|ChatGPT mobile app|coding tasks|remote environments" data-url="https://openai.com/index/work-with-codex-from-anywhere">
+  <div class="story-meta-top">
+    <span class="tag cat-openai">OpenAI</span>
+    <span class="tag partner">Partner</span>
+    <span class="story-time">8h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://openai.com/index/work-with-codex-from-anywhere" target="_blank" rel="noopener">ChatGPTモバイルでCodexをどこからでも操作可能に</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">openai.com — OpenAI News</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>OpenAI News で、ChatGPT mobile app から Codex をどこからでも使えるようになったことが紹介されています。複数デバイスやリモート環境にまたがって、coding tasks の進行状況を監視し、指示を出し、承認できる点が主眼です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>OpenAI は、ChatGPT mobile app から Codex を利用し、場所や端末を問わず coding tasks を操作できるようにしました。新たに、タスクの進行をリアルタイムで monitor し、必要に応じて steer し、承認まで行えることが明示されています。特定のプランや価格、GA/Preview の区分は本文では示されていません。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>開発作業をデスクトップ前提から切り離し、移動中やリモート環境でもレビュー・承認を回せる点が重要です。エンタープライズでは、担当者不在時の待ち時間短縮や、進行中タスクの可視化に価値があります。一方で、実運用では承認フローと権限管理をどう設計するかが導入の要点になります。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Codex</span><span class="story-tag-chip">#ChatGPT mobile app</span><span class="story-tag-chip">#coding tasks</span><span class="story-tag-chip">#remote environments</span>  </div>
 </article><article class="story" data-category="OpenAI" data-tags="ChatGPT|safety|context awareness|OpenAI News" data-url="https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">19h ago</span>
+    <span class="story-time">21h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations" target="_blank" rel="noopener">ChatGPTの機微な会話で文脈認識を強化</a>
@@ -5576,7 +5751,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">3h ago</span>
+    <span class="story-time">5h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/gates-foundation-partnership" target="_blank" rel="noopener">Anthropic、Gates Foundationと2億ドル提携</a>
@@ -5636,7 +5811,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener">AI連携標準「Model Context Protocol」を公開</a>
@@ -5666,7 +5841,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 07</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/finance-agents" target="_blank" rel="noopener">Claudeが金融向けエージェント10種とMicrosoft 365連携を強化</a>
@@ -6126,9 +6301,9 @@
         <div class="tag-pills">
           <button type="button" class="tag-pill" data-tag="Dataverse">#Dataverse</button>
           <button type="button" class="tag-pill" data-tag="Power Apps">#Power Apps</button>
+          <button type="button" class="tag-pill" data-tag="Agent feed">#Agent feed</button>
           <button type="button" class="tag-pill" data-tag="Business skills">#Business skills</button>
           <button type="button" class="tag-pill" data-tag="Claude Code CLI">#Claude Code CLI</button>
-          <button type="button" class="tag-pill" data-tag="Dataverse MCP server">#Dataverse MCP server</button>
         </div>
       </div>
       <div class="tag-group">
@@ -6140,8 +6315,8 @@
           <button type="button" class="tag-pill" data-tag="Microsoft Foundry">#Microsoft Foundry</button>
           <button type="button" class="tag-pill" data-tag="Foundry">#Foundry</button>
           <button type="button" class="tag-pill" data-tag="Copilot Studio">#Copilot Studio</button>
+          <button type="button" class="tag-pill" data-tag="Foundry Agent Service">#Foundry Agent Service</button>
           <button type="button" class="tag-pill" data-tag="Microsoft Agent Framework">#Microsoft Agent Framework</button>
-          <button type="button" class="tag-pill" data-tag="Azure OpenAI">#Azure OpenAI</button>
         </div>
       </div>
       <div class="tag-group">
@@ -6228,16 +6403,16 @@
   <div class="side-block">
     <h3 class="side-title"><span class="icon">📰</span>Sources Today</h3>
     <div class="source-list">
-      <div class="source-list-item"><span>community.fabric.microsoft.com</span><span class="count">48</span></div>
-      <div class="source-list-item"><span>openai.com</span><span class="count">41</span></div>
-      <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">32</span></div>
+      <div class="source-list-item"><span>community.fabric.microsoft.com</span><span class="count">49</span></div>
+      <div class="source-list-item"><span>openai.com</span><span class="count">42</span></div>
+      <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">33</span></div>
       <div class="source-list-item"><span>microsoft.com/security</span><span class="count">19</span></div>
       <div class="source-list-item"><span>github.blog</span><span class="count">17</span></div>
       <div class="source-list-item"><span>anthropic.com/news</span><span class="count">13</span></div>
       <div class="source-list-item"><span>azure.microsoft.com</span><span class="count">9</span></div>
+      <div class="source-list-item"><span>powerplatform.microsoft.com</span><span class="count">7</span></div>
       <div class="source-list-item"><span>devblogs.microsoft.com</span><span class="count">7</span></div>
       <div class="source-list-item"><span>devblogs.microsoft.com/foundry</span><span class="count">6</span></div>
-      <div class="source-list-item"><span>powerplatform.microsoft.com</span><span class="count">4</span></div>
       <div class="source-list-item"><span>blogs.microsoft.com</span><span class="count">3</span></div>
       <div class="source-list-item"><span>anthropic.com/engineering</span><span class="count">3</span></div>
     </div>
