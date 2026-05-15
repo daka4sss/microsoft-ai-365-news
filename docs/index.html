@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="header-tools">
-      <span class="header-date">Fri, May 15, 2026</span>
+      <span class="header-date">Sat, May 16, 2026</span>
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
     </div>
   </div>
@@ -30,16 +30,16 @@
 
 <div class="cat-nav-wrap">
   <nav class="cat-nav">
-    <a href="#" class="active" data-filter="all">All <span class="num">215</span></a>
+    <a href="#" class="active" data-filter="all">All <span class="num">219</span></a>
     <a href="#" data-filter="Overview">Overview <span class="num">5</span></a>
     <a href="#" data-filter="M365 Copilot">M365 Copilot <span class="num">6</span></a>
     <a href="#" data-filter="Copilot Studio">Copilot Studio <span class="num">9</span></a>
-    <a href="#" data-filter="Foundry">Foundry <span class="num">35</span></a>
+    <a href="#" data-filter="Foundry">Foundry <span class="num">36</span></a>
     <a href="#" data-filter="Azure AI Infra">Azure AI Infra <span class="num">9</span></a>
     <a href="#" data-filter="Data &amp; Fabric">Data &amp; Fabric <span class="num">50</span></a>
-    <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">21</span></a>
+    <a href="#" data-filter="Dev Tools">Dev Tools <span class="num">23</span></a>
     <a href="#" data-filter="AI Security">AI Security <span class="num">20</span></a>
-    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">42</span></a>
+    <a href="#" class="openai-tab" data-filter="OpenAI">OpenAI <span class="num">43</span></a>
     <a href="#" class="anthropic-tab" data-filter="Anthropic">Anthropic <span class="num">18</span></a>
     <button class="mark-read-btn" id="mark-all-read" style="display:none">✓ 0件 既読にする</button>
   </nav>
@@ -48,10 +48,10 @@
   <div class="subbar-inner">
     <div class="subbar-stats">
       <span><span class="live-dot"></span><b>Live</b></span>
-      <span><b>215</b> stories today</span>
+      <span><b>219</b> stories today</span>
       <span><b>13</b> sources</span>
-      <span><b>215</b> this month</span>
-      <span>Updated <b>22:21 JST</b></span>
+      <span><b>219</b> this month</span>
+      <span>Updated <b>01:31 JST</b></span>
     </div>
     <div>Curated by GPT-5.4 mini · @daka1</div>
   </div>
@@ -71,44 +71,102 @@
         <div class="zone-banner-title">Microsoft AI Updates</div>
         <div class="zone-banner-subtitle">9 categories · Microsoft 公式ブログ・Tech Community・Dev Blog から</div>
       </div>
-      <div class="zone-banner-counts"><b>155</b> stories</div>
+      <div class="zone-banner-counts"><b>158</b> stories</div>
     </div>
 
-<article class="featured" data-category="Foundry" data-tags="Foundry Agent Service|Model Context Protocol|Docusign Navigator|Maestro|Azure App Service" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-an-ai-powered-contract-price-adjustment-agent-with/ba-p/4515997">
-  <div class="featured-kicker">TOP STORY · FOUNDRY · 15 MAY 2026</div>
-  <h1 class="featured-headline"><a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-an-ai-powered-contract-price-adjustment-agent-with/ba-p/4515997" target="_blank" rel="noopener">Docusign MCPとFoundryで契約価格調整Agentを構築</a></h1>
+<article class="featured" data-category="Foundry" data-tags="Foundry|Azure Monitor|LLM-as-judge|Content Safety|Agentic AI" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/designing-ai-driven-observability-for-trustworthy-agentic-ai/ba-p/4508844">
+  <div class="featured-kicker">TOP STORY · FOUNDRY · 16 MAY 2026</div>
+  <h1 class="featured-headline"><a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/designing-ai-driven-observability-for-trustworthy-agentic-ai/ba-p/4508844" target="_blank" rel="noopener">Agentic AIを信頼するための観測設計</a></h1>
 
   <div class="featured-section">
     <h3>📌 概要</h3>
-    <p>Tech Community の記事では、Docusign MCP と Microsoft Foundry を使い、契約更新時の価格調整を自動化するAgent構成を紹介しています。GPT-5.1 を Foundry Agent Service で動かし、契約検索、CPI取得、承認ワークフロー起動、監視ダッシュボードまでを一連で処理する内容です。</p>
+    <p>Microsoft Foundry の記事は、従来のサーバー監視では捉えきれない agentic AI systems の observability 設計を解説する。モデル更新、prompt 変更、tool 呼び出し、RAG の drift により、HTTP 200 でも誤答や policy violation が起こり得るため、品質・安全性・コストを継続監視する必要性を示す。</p>
   </div>
 
   <div class="featured-section">
     <h3>🆕 What's New / Update</h3>
-    <p>新しい点は、契約管理の各工程を Model Context Protocol (MCP) で統合し、Docusign Navigator、BLS API、Maestro を3段階のAgentで連携させたことです。30日以内に失効する契約を抽出し、CPIに基づく調整額を計算し、更新後の契約を Maestro へ渡して承認・署名フローを起動します。Foundry Agent Service でオーケストレーションし、Azure App Service 上で非同期実行とリアルタイム監視を実現しています。</p>
+    <p>新たに示されたのは、AI agent の実行を plan → reasoning → tool calls → guardrail checks として追跡し、Foundry の evaluators や Azure Monitor の AI-Tailored Trace View で可視化するアプローチである。LLM-as-judge による判定、groundedness や hallucination 検出、Content Safety の severity 0–7 スコア、baseline safety guardrail の自動適用など、従来ログにない品質・安全・コストの評価軸が追加される。</p>
   </div>
 
   <div class="featured-section">
     <h3>💡 Key Takeaway</h3>
-    <p>契約更新や価格改定のような定型だが例外が多い業務は、MCP と Agent の組み合わせで大きく自動化できます。金融・公共・製造業のように契約数が多く、監査性や権限管理が重要な組織では、手作業の削減だけでなく、承認経路の標準化や可視化にも効果があります。既存 API 個別実装より、拡張性の高い統合基盤として有効です。</p>
+    <p>エンタープライズでは、AI を「動かす」だけでなく「信頼できる状態で運用する」体制が必要になる。本記事は、性能指標だけでなく、task success rate、tool usage、latency、token 消費、grounding、policy 違反を継続的に測るべきだと示す。金融・公共・製造では、誤答や prompt injection の早期検知、カスタム guardrail 設定、監査可能な trace の整備が導入判断の鍵になる。</p>
   </div>
 
   <div class="featured-meta">
     <span>📰 techcommunity.microsoft.com</span>
-    <span>📅 16h ago</span>
-    <span>🏷 Foundry Agent Service · Model Context Protocol · Docusign Navigator · Maestro · Azure App Service</span>
+    <span>📅 7m ago</span>
+    <span>🏷 Foundry · Azure Monitor · LLM-as-judge · Content Safety · Agentic AI</span>
   </div>
 </article>
     <section class="section">
       <div class="section-head">
         <h2 class="section-title"><span class="icon">▎</span>Today's Stories</h2>
-        <span class="section-meta">Fri, May 15, 2026 · 154 items</span>
+        <span class="section-meta">Sat, May 16, 2026 · 157 items</span>
       </div>
       <div class="stories-grid">
-<article class="story" data-category="Dev Tools" data-tags="GitHub Pages|Copilot coding agent|audit log|code search|availability report" data-url="https://github.blog/news-insights/company-news/github-availability-report-april-2026/">
+<article class="story" data-category="Dev Tools" data-tags="GitHub Copilot CLI|Copilot VS Code|accessibility agent|WCAG 2.1 AA|Pull Request" data-url="https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">15h ago</span>
+    <span class="story-time">31m ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/" target="_blank" rel="noopener">GitHubがアクセシビリティAgentを試験導入</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">github.blog — GitHub Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>GitHub Blogは、コード変更に対してアクセシビリティ課題を自動検出・修正する一般目的のaccessibility agentを試験運用していると紹介した。GitHub Copilot CLIとCopilot VS Code統合での即時回答支援と、フロントエンド変更時の事前評価が主目的で、実運用での知見と課題もまとめている。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>新しく公開されたのは、GitHubが試験運用中のgeneral-purpose accessibility agentの取り組みと学びである。エンジニア向けにアクセシビリティ質問へ just-in-time で答える機能に加え、フロントエンド変更を自動評価し、単純で客観的な問題を本番前に修正する。これまでに3,535件の pull request をレビューし、68% の解決率を記録。主な検出項目は、構造と関係性の明確化、操作可能な要素名、重要通知、非テキスト内容の代替、キーボードフォーカス順など。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>この事例は、アクセシビリティを人手レビューの代替ではなく、既存の問題管理資産を活用して拡張する実践例として重要である。特に日本の金融・公共・製造業では、WCAG対応や監査対応の観点から、Issueの構造化、PRとの紐づけ、修正検証の仕組みがAgent導入の前提になる。まずは既存のアクセシビリティ記録を整理し、限定領域で自動評価を試すのが現実的である。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#GitHub Copilot CLI</span><span class="story-tag-chip">#Copilot VS Code</span><span class="story-tag-chip">#accessibility agent</span><span class="story-tag-chip">#WCAG 2.1 AA</span><span class="story-tag-chip">#Pull Request</span>  </div>
+</article><article class="story" data-category="Dev Tools" data-tags="bug bounty|shared responsibility|AI-assisted security research|proof of concept|HackerOne" data-url="https://github.blog/security/raising-the-bar-quality-shared-responsibility-and-the-future-of-githubs-bug-bounty-program/">
+  <div class="story-meta-top">
+    <span class="tag cat-dev">Dev Tools</span>
+    <span class="story-time">2h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://github.blog/security/raising-the-bar-quality-shared-responsibility-and-the-future-of-githubs-bug-bounty-program/" target="_blank" rel="noopener">GitHub bug bountyの基準強化とAI活用の考え方</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">github.blog — GitHub Blog</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>GitHub Blog による、bug bounty program の評価基準見直しに関する記事。対象は GitHub のセキュリティ研究者コミュニティで、2026年5月15日公開。AI を含む新しい研究ツールの普及で投稿数が増える一方、実害のない報告も急増しているため、提出品質と shared responsibility の考え方を改めて示している。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今後の bug bounty では、Working proof of concept と具体的な security impact の提示、scope と ineligible findings の事前確認、ツール出力の検証をより厳格に求める。DMARC/SPF/DKIM 設定不備、user enumeration、実証のない missing security headers など既知の対象外報告は Not Applicable としてクローズされ、HackerOne Signal と reputation に影響し得る。また、AI ツールの利用自体は歓迎し、verified・reproduced・PoC 付きの報告であれば高く評価する一方、未検証の出力のそのまま提出は認めない。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>企業にとって重要なのは、AI を使ったセキュリティ調査が増えても、最終責任は人間の研究者にあるという明確化。日本の金融・公共・製造業でも、外部報告の受け入れ基準、対象外条件、PoC 要件を明文化しておくことで、ノイズを減らし、実害のある脆弱性対応に集中しやすくなる。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#bug bounty</span><span class="story-tag-chip">#shared responsibility</span><span class="story-tag-chip">#AI-assisted security research</span><span class="story-tag-chip">#proof of concept</span><span class="story-tag-chip">#HackerOne</span>  </div>
+</article><article class="story" data-category="Dev Tools" data-tags="GitHub Pages|Copilot coding agent|audit log|code search|availability report" data-url="https://github.blog/news-insights/company-news/github-availability-report-april-2026/">
+  <div class="story-meta-top">
+    <span class="tag cat-dev">Dev Tools</span>
+    <span class="story-time">18h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/news-insights/company-news/github-availability-report-april-2026/" target="_blank" rel="noopener">GitHubの2026年4月障害レポートを公開</a>
@@ -137,7 +195,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Microsoft Fabric|API for GraphQL|custom authorization|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Custom-authorization-for-API-for-GraphQL-in-Microsoft-Fabric/ba-p/5182352">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">16h ago</span>
+    <span class="story-time">19h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Custom-authorization-for-API-for-GraphQL-in-Microsoft-Fabric/ba-p/5182352" target="_blank" rel="noopener">Microsoft Fabric の API for GraphQL にカスタム認可を追加（Preview）</a>
@@ -163,10 +221,39 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Microsoft Fabric</span><span class="story-tag-chip">#API for GraphQL</span><span class="story-tag-chip">#custom authorization</span><span class="story-tag-chip">#Preview</span>  </div>
+</article><article class="story" data-category="Foundry" data-tags="Foundry Agent Service|Model Context Protocol|Docusign Navigator|Maestro|Azure App Service" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-an-ai-powered-contract-price-adjustment-agent-with/ba-p/4515997">
+  <div class="story-meta-top">
+    <span class="tag cat-foundry">Foundry</span>
+    <span class="story-time">20h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-an-ai-powered-contract-price-adjustment-agent-with/ba-p/4515997" target="_blank" rel="noopener">Docusign MCPとFoundryで契約価格調整Agentを構築</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">techcommunity.microsoft.com — Tech Community - Microsoft Foundry</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>Tech Community の記事では、Docusign MCP と Microsoft Foundry を使い、契約更新時の価格調整を自動化するAgent構成を紹介しています。GPT-5.1 を Foundry Agent Service で動かし、契約検索、CPI取得、承認ワークフロー起動、監視ダッシュボードまでを一連で処理する内容です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>新しい点は、契約管理の各工程を Model Context Protocol (MCP) で統合し、Docusign Navigator、BLS API、Maestro を3段階のAgentで連携させたことです。30日以内に失効する契約を抽出し、CPIに基づく調整額を計算し、更新後の契約を Maestro へ渡して承認・署名フローを起動します。Foundry Agent Service でオーケストレーションし、Azure App Service 上で非同期実行とリアルタイム監視を実現しています。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>契約更新や価格改定のような定型だが例外が多い業務は、MCP と Agent の組み合わせで大きく自動化できます。金融・公共・製造業のように契約数が多く、監査性や権限管理が重要な組織では、手作業の削減だけでなく、承認経路の標準化や可視化にも効果があります。既存 API 個別実装より、拡張性の高い統合基盤として有効です。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#Foundry Agent Service</span><span class="story-tag-chip">#Model Context Protocol</span><span class="story-tag-chip">#Docusign Navigator</span><span class="story-tag-chip">#Maestro</span><span class="story-tag-chip">#Azure App Service</span>  </div>
 </article><article class="story" data-category="Copilot Studio" data-tags="Power Fx|User Defined Types|generative pages|MCP|InfoPath Migration" data-url="https://www.microsoft.com/en-us/power-platform/blog/2026/05/14/whats-new-in-power-platform-may-2026-feature-update/">
   <div class="story-meta-top">
     <span class="tag cat-studio">Copilot Studio</span>
-    <span class="story-time">19h ago</span>
+    <span class="story-time">22h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/power-platform/blog/2026/05/14/whats-new-in-power-platform-may-2026-feature-update/" target="_blank" rel="noopener">Power Platformの2026年5月更新、AI活用を拡充</a>
@@ -195,7 +282,7 @@
 </article><article class="story" data-category="Foundry" data-tags="Foundry|Fireworks AI|PTU|US Data Zone|Kimi K2.6|DeepSeek V4 Pro" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/open-model-inference-at-scale-on-foundry-what-s-new-with/ba-p/4519534">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">21h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/open-model-inference-at-scale-on-foundry-what-s-new-with/ba-p/4519534" target="_blank" rel="noopener">FoundryでFireworks AIの推論基盤を拡張</a>
@@ -224,7 +311,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Issues|IndexedDB|service worker|HPC|Web performance" data-url="https://github.blog/engineering/architecture-optimization/from-latency-to-instant-modernizing-github-issues-navigation-performance/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">21h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/engineering/architecture-optimization/from-latency-to-instant-modernizing-github-issues-navigation-performance/" target="_blank" rel="noopener">GitHub Issuesの体感速度を即時化へ刷新</a>
@@ -253,7 +340,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Entra Agent ID|human-in-the-loop|least privilege|zero trust|agent security" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">21h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/" target="_blank" rel="noopener">自律型AIエージェントを守る多層防御の考え方</a>
@@ -282,7 +369,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Kazuar|Secret Blizzard|P2P botnet|Kernel module|Bridge module" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">22h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet/" target="_blank" rel="noopener">KazuarのP2Pボットネット化と構造を解説</a>
@@ -311,7 +398,7 @@
 </article><article class="story" data-category="AI Security" data-tags="MCP servers|Mage AI|Defender for Cloud|Kubernetes|exploitable misconfiguration" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">23h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/" target="_blank" rel="noopener">AIアプリの設定不備が招く重大な脆弱性</a>
@@ -572,7 +659,7 @@
 </article><article class="story" data-category="Foundry" data-tags="Microsoft Foundry|Grok 4.3|xAI|Azure AI Content Safety|RAG" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-grok-4-3-on-microsoft-foundry-latest-generation/ba-p/4517096">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-grok-4-3-on-microsoft-foundry-latest-generation/ba-p/4517096" target="_blank" rel="noopener">Microsoft FoundryでGrok 4.3を提供開始</a>
@@ -601,7 +688,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric|Data Agents|Service Principal|Preview" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Service-Principal-Support-for-Data-Agents-in-Fabric-Preview/ba-p/5181634">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Service-Principal-Support-for-Data-Agents-in-Fabric-Preview/ba-p/5181634" target="_blank" rel="noopener">Fabric の Data Agents に Service Principal 対応を追加</a>
@@ -630,7 +717,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Blog|NetHack|Cataclysm: Dark Days Ahead|Dungeon Crawl Stone Soup|Angband" data-url="https://github.blog/open-source/gaming/dungeons-desktops-10-roguelikes-that-never-die-because-their-communities-wont-let-them/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/open-source/gaming/dungeons-desktops-10-roguelikes-that-never-die-because-their-communities-wont-let-them/" target="_blank" rel="noopener">GitHubが選ぶ、長く愛される10のオープンソース roguelike</a>
@@ -659,7 +746,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="PostgreSQL|Azure Database for PostgreSQL|Azure HorizonDB|Visual Studio Code extension|GitHub Copilot" data-url="https://azure.microsoft.com/en-us/blog/from-commit-to-cloud-powering-whats-next-for-postgresql/">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">1d ago</span>
+    <span class="story-time">2d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://azure.microsoft.com/en-us/blog/from-commit-to-cloud-powering-whats-next-for-postgresql/" target="_blank" rel="noopener">PostgreSQL強化へ、Azureの新基盤と開発支援</a>
@@ -1036,7 +1123,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Azure DDoS Protection|Azure Front Door|WAF|DDoS|JA4" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/12/defending-consumer-web-properties-against-modern-ddos-attacks/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">2d ago</span>
+    <span class="story-time">3d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defending-consumer-web-properties-against-modern-ddos-attacks/" target="_blank" rel="noopener">モダンDDoS攻撃から消費者向けWebを守る設計指針</a>
@@ -1065,7 +1152,7 @@
 </article><article class="story" data-category="Copilot Studio" data-tags="Power Apps MCP server|closed-loop learning|Agent feed|Genetic-Pareto optimization|data entry tool" data-url="https://www.microsoft.com/en-us/power-platform/blog/power-apps/power-apps-mcp-server-introduces-closed-loop-learning-for-enterprise-agents/">
   <div class="story-meta-top">
     <span class="tag cat-studio">Copilot Studio</span>
-    <span class="story-time">2d ago</span>
+    <span class="story-time">3d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/power-platform/blog/power-apps/power-apps-mcp-server-introduces-closed-loop-learning-for-enterprise-agents/" target="_blank" rel="noopener">Power Apps MCP serverに閉ループ学習を導入</a>
@@ -1094,7 +1181,7 @@
 </article><article class="story" data-category="Foundry" data-tags="Microsoft Foundry|AI agents|bug triage|test optimization|system validation" data-url="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/driving-efficiency-in-modern-system-engineering-with-ai-agents/ba-p/4516181">
   <div class="story-meta-top">
     <span class="tag cat-foundry">Foundry</span>
-    <span class="story-time">2d ago</span>
+    <span class="story-time">3d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/driving-efficiency-in-modern-system-engineering-with-ai-agents/ba-p/4516181" target="_blank" rel="noopener">AI Agentsで現代のシステム設計を効率化する方法</a>
@@ -1123,7 +1210,7 @@
 </article><article class="story" data-category="Copilot Studio" data-tags="Dataverse Admin Skills|PAC CLI|Dataverse Web API|bulk delete|retention" data-url="https://www.microsoft.com/en-us/power-platform/blog/2026/05/12/dataverse-agentic-administration/">
   <div class="story-meta-top">
     <span class="tag cat-studio">Copilot Studio</span>
-    <span class="story-time">2d ago</span>
+    <span class="story-time">3d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/power-platform/blog/2026/05/12/dataverse-agentic-administration/" target="_blank" rel="noopener">Dataverse Admin Skills の Public Preview 開始</a>
@@ -1152,7 +1239,7 @@
 </article><article class="story" data-category="AI Security" data-tags="Trusted Relationship|HPE Operations Agent|HPOM|Microsoft Defender|MITRE ATT&amp;CK T1199" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">2d ago</span>
+    <span class="story-time">3d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/" target="_blank" rel="noopener">第三者委託経由で信頼境界を崩す侵入手口</a>
@@ -1181,7 +1268,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot CLI|/delegate|Binary Space Partitioning|Go|procedural generation" data-url="https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">2d ago</span>
+    <span class="story-time">3d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli/" target="_blank" rel="noopener">GitHub Copilot CLIで作るローグライク dungeon</a>
@@ -1297,7 +1384,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Data Warehouse|Data Warehouse Monitor|Preview|Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Data-Warehouse-Monitor-A-Unified-Monitoring-Experience-for/ba-p/5180024">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">3d ago</span>
+    <span class="story-time">4d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blogs/Data-Warehouse-Monitor-A-Unified-Monitoring-Experience-for/ba-p/5180024" target="_blank" rel="noopener">Fabric Data Warehouse向け統合監視のPreview提供</a>
@@ -1326,7 +1413,7 @@
 </article><article class="story" data-category="Data &amp; Fabric" data-tags="Fabric Data Warehouse|Data Warehouse Monitor|Preview|Microsoft Fabric" data-url="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Data-Warehouse-Monitor-A-Unified-Monitoring-Experience-for/ba-p/5180024">
   <div class="story-meta-top">
     <span class="tag cat-data">Data &amp; Fabric</span>
-    <span class="story-time">3d ago</span>
+    <span class="story-time">4d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Data-Warehouse-Monitor-A-Unified-Monitoring-Experience-for/ba-p/5180024" target="_blank" rel="noopener">Fabric Data Warehouse向け統合監視機能がPreview</a>
@@ -1355,7 +1442,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Copilot Chat|good first issue|CONTRIBUTING.md|fork|pull request" data-url="https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-oss-contributions/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">3d ago</span>
+    <span class="story-time">4d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-oss-contributions/" target="_blank" rel="noopener">GitHubで学ぶOSS貢献の始め方と初回PR</a>
@@ -1384,7 +1471,7 @@
 </article><article class="story" data-category="Overview" data-tags="Azure Cosmos DB|serverless|semantic search|coding agents|AI app development" data-url="https://azure.microsoft.com/en-us/blog/build-ai-apps-with-azure-cosmos-db-key-trends-from-cosmos-conf-2026/">
   <div class="story-meta-top">
     <span class="tag cat-overview">Overview</span>
-    <span class="story-time">3d ago</span>
+    <span class="story-time">4d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://azure.microsoft.com/en-us/blog/build-ai-apps-with-azure-cosmos-db-key-trends-from-cosmos-conf-2026/" target="_blank" rel="noopener">Azure Cosmos DBで学ぶAIアプリ設計の潮流</a>
@@ -1501,7 +1588,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="age assurance|open source|operating system|app store|GitHub" data-url="https://github.blog/news-insights/policy-news-and-insights/why-age-assurance-laws-matter-for-developers/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/news-insights/policy-news-and-insights/why-age-assurance-laws-matter-for-developers/" target="_blank" rel="noopener">age assurance法が開発者に及ぼす影響</a>
@@ -1530,7 +1617,7 @@
 </article><article class="story" data-category="Dev Tools" data-tags="GitHub Innovation Graph|Economic Complexity Index|GraphQL API|software bundles" data-url="https://github.blog/news-insights/policy-news-and-insights/how-researchers-are-using-github-innovation-graph-data-to-reveal-the-digital-complexity-of-nations/">
   <div class="story-meta-top">
     <span class="tag cat-dev">Dev Tools</span>
-    <span class="story-time">6d ago</span>
+    <span class="story-time">7d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://github.blog/news-insights/policy-news-and-insights/how-researchers-are-using-github-innovation-graph-data-to-reveal-the-digital-complexity-of-nations/" target="_blank" rel="noopener">GitHub Innovation Graphで国の複雑性を可視化</a>
@@ -1734,7 +1821,7 @@
 </article><article class="story" data-category="AI Security" data-tags="passkey|Microsoft Entra ID|Windows Hello|Microsoft Entra External ID|account recovery" data-url="https://www.microsoft.com/en-us/security/blog/2026/05/07/world-passkey-day-advancing-passwordless-authentication/">
   <div class="story-meta-top">
     <span class="tag cat-security">AI Security</span>
-    <span class="story-time">7d ago</span>
+    <span class="story-time">May 08</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/world-passkey-day-advancing-passwordless-authentication/" target="_blank" rel="noopener">World Passkey Day、パスワードレス認証を加速</a>
@@ -4586,20 +4673,20 @@
         <div class="zone-banner-title">Partner Updates</div>
         <div class="zone-banner-subtitle">Microsoft 戦略パートナーの公式アップデート</div>
       </div>
-      <div class="zone-banner-counts"><b>60</b> stories</div>
+      <div class="zone-banner-counts"><b>61</b> stories</div>
     </div>
 
     <section class="section">
       <div class="section-head partner-head">
         <h2 class="section-title"><span class="icon">●</span>OpenAI</h2>
-        <span class="section-meta">openai.com/news · 42 items</span>
+        <span class="section-meta">openai.com/news · 43 items</span>
       </div>
       <div class="stories-grid">
 <article class="story" data-category="OpenAI" data-tags="Codex|Windows|sandbox|file access|network restrictions" data-url="https://openai.com/index/building-codex-windows-sandbox">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">13h ago</span>
+    <span class="story-time">16h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/building-codex-windows-sandbox" target="_blank" rel="noopener">Windows版Codexを安全に動かすサンドボックス設計</a>
@@ -4625,11 +4712,41 @@
 
   <div class="story-tags">
 <span class="story-tag-chip">#Codex</span><span class="story-tag-chip">#Windows</span><span class="story-tag-chip">#sandbox</span><span class="story-tag-chip">#file access</span><span class="story-tag-chip">#network restrictions</span>  </div>
-</article><article class="story" data-category="OpenAI" data-tags="Codex|AI-native software development|Engineering teams|OpenAI News|Sea Limited" data-url="https://openai.com/index/sea-david-chen">
+</article><article class="story" data-category="OpenAI" data-tags="ChatGPT|OpenAI|Preview|financial accounts" data-url="https://openai.com/index/personal-finance-chatgpt">
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
     <span class="story-time">16h ago</span>
+  </div>
+  <h3 class="story-headline">
+    <a href="https://openai.com/index/personal-finance-chatgpt" target="_blank" rel="noopener">ChatGPTで個人向け資産管理体験をPreview</a>
+  </h3>
+  <div class="story-source">
+    <span class="domain">openai.com — OpenAI News</span>
+  </div>
+
+  <div class="story-summary">
+    <details open>
+      <summary class="story-summary-section-label">📌 概要</summary>
+      <p>OpenAI News が、米国の Pro ユーザー向けに ChatGPT 上の新しい個人向け資産管理体験をPreviewとして公開しました。金融アカウントを安全に接続し、利用者の財務状況、目標、優先事項に基づいた AI の洞察とガイダンスを得られるのが特徴です。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">🆕 What's New / Update</summary>
+      <p>今回の更新は、ChatGPT で個人の金融情報を扱う新しい体験をPreview提供する点です。対象は米国の Pro ユーザーで、金融アカウントを安全に接続することで、財務コンテキストに根ざした AI-powered insights と guidance を受けられます。公開形態は Preview であり、現時点では一般提供（GA）ではありません。</p>
+    </details>
+    <details>
+      <summary class="story-summary-section-label">💡 Key Takeaway</summary>
+      <p>企業向けの直接機能ではありませんが、AI が個人の機微情報を扱う設計とユーザー体験の方向性を示す動きです。金融・公共・製造業では、将来的に従業員向け財務支援やパーソナルアシスタントに発展する可能性があり、認証、データ接続、プライバシー管理の実装要件を早めに検討する価値があります。</p>
+    </details>
+  </div>
+
+  <div class="story-tags">
+<span class="story-tag-chip">#ChatGPT</span><span class="story-tag-chip">#OpenAI</span><span class="story-tag-chip">#Preview</span><span class="story-tag-chip">#financial accounts</span>  </div>
+</article><article class="story" data-category="OpenAI" data-tags="Codex|AI-native software development|Engineering teams|OpenAI News|Sea Limited" data-url="https://openai.com/index/sea-david-chen">
+  <div class="story-meta-top">
+    <span class="tag cat-openai">OpenAI</span>
+    <span class="tag partner">Partner</span>
+    <span class="story-time">20h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/index/sea-david-chen" target="_blank" rel="noopener">SeaがCodexを全社展開しAIネイティブ開発を加速</a>
@@ -4749,7 +4866,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">2d ago</span>
+    <span class="story-time">3d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/academy/codex-for-work/how-finance-teams-use-codex" target="_blank" rel="noopener">財務チーム向けにCodex活用例を紹介</a>
@@ -4779,7 +4896,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">2d ago</span>
+    <span class="story-time">3d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/academy/how-finance-teams-use-codex" target="_blank" rel="noopener">Codexで財務チームの月次報告を効率化する方法</a>
@@ -4899,7 +5016,7 @@
   <div class="story-meta-top">
     <span class="tag cat-openai">OpenAI</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">3d ago</span>
+    <span class="story-time">4d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://openai.com/signals/research/2026q1-update" target="_blank" rel="noopener">2026年初頭のChatGPT利用拡大をOpenAIが報告</a>
@@ -5868,7 +5985,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">12h ago</span>
+    <span class="story-time">15h ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/pwc-expanded-partnership" target="_blank" rel="noopener">PwCがClaude導入を拡大し業務変革を加速</a>
@@ -5898,7 +6015,7 @@
   <div class="story-meta-top">
     <span class="tag cat-anthropic">Anthropic</span>
     <span class="tag partner">Partner</span>
-    <span class="story-time">21h ago</span>
+    <span class="story-time">1d ago</span>
   </div>
   <h3 class="story-headline">
     <a href="https://www.anthropic.com/news/gates-foundation-partnership" target="_blank" rel="noopener">Anthropic、Gates Foundationと2億ドル提携</a>
@@ -6551,10 +6668,10 @@
     <h3 class="side-title"><span class="icon">📰</span>Sources Today</h3>
     <div class="source-list">
       <div class="source-list-item"><span>community.fabric.microsoft.com</span><span class="count">49</span></div>
-      <div class="source-list-item"><span>openai.com</span><span class="count">43</span></div>
-      <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">33</span></div>
+      <div class="source-list-item"><span>openai.com</span><span class="count">44</span></div>
+      <div class="source-list-item"><span>techcommunity.microsoft.com</span><span class="count">34</span></div>
+      <div class="source-list-item"><span>github.blog</span><span class="count">20</span></div>
       <div class="source-list-item"><span>microsoft.com/security</span><span class="count">19</span></div>
-      <div class="source-list-item"><span>github.blog</span><span class="count">18</span></div>
       <div class="source-list-item"><span>anthropic.com/news</span><span class="count">14</span></div>
       <div class="source-list-item"><span>azure.microsoft.com</span><span class="count">9</span></div>
       <div class="source-list-item"><span>powerplatform.microsoft.com</span><span class="count">8</span></div>
